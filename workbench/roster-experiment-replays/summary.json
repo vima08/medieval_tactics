@@ -1,0 +1,551 @@
+﻿{
+    "rows":  [
+                 {
+                     "id":  "incumbent-blue-hh",
+                     "candidateId":  "incumbent",
+                     "candidateTeam":  "blue",
+                     "difficultyBlue":  "hard",
+                     "difficultyRed":  "hard",
+                     "cost":  22,
+                     "winner":  "red",
+                     "candidateWon":  false,
+                     "turn":  8,
+                     "commands":  79,
+                     "scores":  {
+                                    "blue":  0,
+                                    "red":  5
+                                },
+                     "survivors":  {
+                                       "blue":  2,
+                                       "red":  4
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "incumbent-blue-hn",
+                     "candidateId":  "incumbent",
+                     "candidateTeam":  "blue",
+                     "difficultyBlue":  "hard",
+                     "difficultyRed":  "normal",
+                     "cost":  22,
+                     "winner":  "red",
+                     "candidateWon":  false,
+                     "turn":  8,
+                     "commands":  88,
+                     "scores":  {
+                                    "blue":  0,
+                                    "red":  5
+                                },
+                     "survivors":  {
+                                       "blue":  2,
+                                       "red":  3
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "incumbent-blue-nh",
+                     "candidateId":  "incumbent",
+                     "candidateTeam":  "blue",
+                     "difficultyBlue":  "normal",
+                     "difficultyRed":  "hard",
+                     "cost":  22,
+                     "winner":  "red",
+                     "candidateWon":  false,
+                     "turn":  6,
+                     "commands":  71,
+                     "scores":  {
+                                    "blue":  0,
+                                    "red":  5
+                                },
+                     "survivors":  {
+                                       "blue":  3,
+                                       "red":  4
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "incumbent-blue-nn",
+                     "candidateId":  "incumbent",
+                     "candidateTeam":  "blue",
+                     "difficultyBlue":  "normal",
+                     "difficultyRed":  "normal",
+                     "cost":  22,
+                     "winner":  "red",
+                     "candidateWon":  false,
+                     "turn":  6,
+                     "commands":  71,
+                     "scores":  {
+                                    "blue":  0,
+                                    "red":  5
+                                },
+                     "survivors":  {
+                                       "blue":  4,
+                                       "red":  4
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "incumbent-red-hh",
+                     "candidateId":  "incumbent",
+                     "candidateTeam":  "red",
+                     "difficultyBlue":  "hard",
+                     "difficultyRed":  "hard",
+                     "cost":  22,
+                     "winner":  "blue",
+                     "candidateWon":  false,
+                     "turn":  8,
+                     "commands":  90,
+                     "scores":  {
+                                    "blue":  5,
+                                    "red":  0
+                                },
+                     "survivors":  {
+                                       "blue":  3,
+                                       "red":  1
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "incumbent-red-hn",
+                     "candidateId":  "incumbent",
+                     "candidateTeam":  "red",
+                     "difficultyBlue":  "hard",
+                     "difficultyRed":  "normal",
+                     "cost":  22,
+                     "winner":  "blue",
+                     "candidateWon":  false,
+                     "turn":  9,
+                     "commands":  101,
+                     "scores":  {
+                                    "blue":  5,
+                                    "red":  0
+                                },
+                     "survivors":  {
+                                       "blue":  4,
+                                       "red":  1
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "incumbent-red-nh",
+                     "candidateId":  "incumbent",
+                     "candidateTeam":  "red",
+                     "difficultyBlue":  "normal",
+                     "difficultyRed":  "hard",
+                     "cost":  22,
+                     "winner":  "blue",
+                     "candidateWon":  false,
+                     "turn":  9,
+                     "commands":  103,
+                     "scores":  {
+                                    "blue":  5,
+                                    "red":  0
+                                },
+                     "survivors":  {
+                                       "blue":  3,
+                                       "red":  1
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "incumbent-red-nn",
+                     "candidateId":  "incumbent",
+                     "candidateTeam":  "red",
+                     "difficultyBlue":  "normal",
+                     "difficultyRed":  "normal",
+                     "cost":  22,
+                     "winner":  "blue",
+                     "candidateWon":  false,
+                     "turn":  11,
+                     "commands":  115,
+                     "scores":  {
+                                    "blue":  5,
+                                    "red":  0
+                                },
+                     "survivors":  {
+                                       "blue":  3,
+                                       "red":  2
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "mobileEngineer-blue-nn",
+                     "candidateId":  "mobileEngineer",
+                     "candidateTeam":  "blue",
+                     "difficultyBlue":  "normal",
+                     "difficultyRed":  "normal",
+                     "cost":  20,
+                     "winner":  "red",
+                     "candidateWon":  false,
+                     "turn":  8,
+                     "commands":  94,
+                     "scores":  {
+                                    "blue":  1,
+                                    "red":  2
+                                },
+                     "survivors":  {
+                                       "blue":  2,
+                                       "red":  3
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "mobileEngineer-red-nn",
+                     "candidateId":  "mobileEngineer",
+                     "candidateTeam":  "red",
+                     "difficultyBlue":  "normal",
+                     "difficultyRed":  "normal",
+                     "cost":  20,
+                     "winner":  "blue",
+                     "candidateWon":  false,
+                     "turn":  7,
+                     "commands":  71,
+                     "scores":  {
+                                    "blue":  3,
+                                    "red":  1
+                                },
+                     "survivors":  {
+                                       "blue":  4,
+                                       "red":  2
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "mobileSword-blue-hh",
+                     "candidateId":  "mobileSword",
+                     "candidateTeam":  "blue",
+                     "difficultyBlue":  "hard",
+                     "difficultyRed":  "hard",
+                     "cost":  20,
+                     "winner":  "blue",
+                     "candidateWon":  true,
+                     "turn":  8,
+                     "commands":  84,
+                     "scores":  {
+                                    "blue":  3,
+                                    "red":  3
+                                },
+                     "survivors":  {
+                                       "blue":  3,
+                                       "red":  1
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "mobileSword-blue-hn",
+                     "candidateId":  "mobileSword",
+                     "candidateTeam":  "blue",
+                     "difficultyBlue":  "hard",
+                     "difficultyRed":  "normal",
+                     "cost":  20,
+                     "winner":  "blue",
+                     "candidateWon":  true,
+                     "turn":  7,
+                     "commands":  70,
+                     "scores":  {
+                                    "blue":  0,
+                                    "red":  2
+                                },
+                     "survivors":  {
+                                       "blue":  3,
+                                       "red":  2
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "mobileSword-blue-nh",
+                     "candidateId":  "mobileSword",
+                     "candidateTeam":  "blue",
+                     "difficultyBlue":  "normal",
+                     "difficultyRed":  "hard",
+                     "cost":  20,
+                     "winner":  "red",
+                     "candidateWon":  false,
+                     "turn":  8,
+                     "commands":  93,
+                     "scores":  {
+                                    "blue":  0,
+                                    "red":  0
+                                },
+                     "survivors":  {
+                                       "blue":  1,
+                                       "red":  4
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "mobileSword-blue-nn",
+                     "candidateId":  "mobileSword",
+                     "candidateTeam":  "blue",
+                     "difficultyBlue":  "normal",
+                     "difficultyRed":  "normal",
+                     "cost":  20,
+                     "winner":  "red",
+                     "candidateWon":  false,
+                     "turn":  9,
+                     "commands":  95,
+                     "scores":  {
+                                    "blue":  0,
+                                    "red":  5
+                                },
+                     "survivors":  {
+                                       "blue":  2,
+                                       "red":  3
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "mobileSword-red-hh",
+                     "candidateId":  "mobileSword",
+                     "candidateTeam":  "red",
+                     "difficultyBlue":  "hard",
+                     "difficultyRed":  "hard",
+                     "cost":  20,
+                     "winner":  "red",
+                     "candidateWon":  true,
+                     "turn":  7,
+                     "commands":  75,
+                     "scores":  {
+                                    "blue":  0,
+                                    "red":  5
+                                },
+                     "survivors":  {
+                                       "blue":  3,
+                                       "red":  2
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "mobileSword-red-hn",
+                     "candidateId":  "mobileSword",
+                     "candidateTeam":  "red",
+                     "difficultyBlue":  "hard",
+                     "difficultyRed":  "normal",
+                     "cost":  20,
+                     "winner":  "blue",
+                     "candidateWon":  false,
+                     "turn":  7,
+                     "commands":  73,
+                     "scores":  {
+                                    "blue":  0,
+                                    "red":  1
+                                },
+                     "survivors":  {
+                                       "blue":  4,
+                                       "red":  2
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "mobileSword-red-nh",
+                     "candidateId":  "mobileSword",
+                     "candidateTeam":  "red",
+                     "difficultyBlue":  "normal",
+                     "difficultyRed":  "hard",
+                     "cost":  20,
+                     "winner":  "red",
+                     "candidateWon":  true,
+                     "turn":  6,
+                     "commands":  60,
+                     "scores":  {
+                                    "blue":  0,
+                                    "red":  5
+                                },
+                     "survivors":  {
+                                       "blue":  3,
+                                       "red":  3
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "mobileSword-red-nn",
+                     "candidateId":  "mobileSword",
+                     "candidateTeam":  "red",
+                     "difficultyBlue":  "normal",
+                     "difficultyRed":  "normal",
+                     "cost":  20,
+                     "winner":  "blue",
+                     "candidateWon":  false,
+                     "turn":  9,
+                     "commands":  85,
+                     "scores":  {
+                                    "blue":  0,
+                                    "red":  3
+                                },
+                     "survivors":  {
+                                       "blue":  3,
+                                       "red":  1
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "sword-blue-hh",
+                     "candidateId":  "sword",
+                     "candidateTeam":  "blue",
+                     "difficultyBlue":  "hard",
+                     "difficultyRed":  "hard",
+                     "cost":  22,
+                     "winner":  "red",
+                     "candidateWon":  false,
+                     "turn":  8,
+                     "commands":  73,
+                     "scores":  {
+                                    "blue":  0,
+                                    "red":  5
+                                },
+                     "survivors":  {
+                                       "blue":  2,
+                                       "red":  4
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "sword-blue-hn",
+                     "candidateId":  "sword",
+                     "candidateTeam":  "blue",
+                     "difficultyBlue":  "hard",
+                     "difficultyRed":  "normal",
+                     "cost":  22,
+                     "winner":  "blue",
+                     "candidateWon":  true,
+                     "turn":  8,
+                     "commands":  75,
+                     "scores":  {
+                                    "blue":  0,
+                                    "red":  4
+                                },
+                     "survivors":  {
+                                       "blue":  3,
+                                       "red":  2
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "sword-blue-nh",
+                     "candidateId":  "sword",
+                     "candidateTeam":  "blue",
+                     "difficultyBlue":  "normal",
+                     "difficultyRed":  "hard",
+                     "cost":  22,
+                     "winner":  "red",
+                     "candidateWon":  false,
+                     "turn":  6,
+                     "commands":  64,
+                     "scores":  {
+                                    "blue":  0,
+                                    "red":  5
+                                },
+                     "survivors":  {
+                                       "blue":  2,
+                                       "red":  4
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "sword-blue-nn",
+                     "candidateId":  "sword",
+                     "candidateTeam":  "blue",
+                     "difficultyBlue":  "normal",
+                     "difficultyRed":  "normal",
+                     "cost":  22,
+                     "winner":  "red",
+                     "candidateWon":  false,
+                     "turn":  6,
+                     "commands":  67,
+                     "scores":  {
+                                    "blue":  0,
+                                    "red":  5
+                                },
+                     "survivors":  {
+                                       "blue":  3,
+                                       "red":  4
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "sword-red-hh",
+                     "candidateId":  "sword",
+                     "candidateTeam":  "red",
+                     "difficultyBlue":  "hard",
+                     "difficultyRed":  "hard",
+                     "cost":  22,
+                     "winner":  "blue",
+                     "candidateWon":  false,
+                     "turn":  8,
+                     "commands":  84,
+                     "scores":  {
+                                    "blue":  5,
+                                    "red":  0
+                                },
+                     "survivors":  {
+                                       "blue":  4,
+                                       "red":  1
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "sword-red-hn",
+                     "candidateId":  "sword",
+                     "candidateTeam":  "red",
+                     "difficultyBlue":  "hard",
+                     "difficultyRed":  "normal",
+                     "cost":  22,
+                     "winner":  "blue",
+                     "candidateWon":  false,
+                     "turn":  10,
+                     "commands":  108,
+                     "scores":  {
+                                    "blue":  5,
+                                    "red":  0
+                                },
+                     "survivors":  {
+                                       "blue":  4,
+                                       "red":  1
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "sword-red-nh",
+                     "candidateId":  "sword",
+                     "candidateTeam":  "red",
+                     "difficultyBlue":  "normal",
+                     "difficultyRed":  "hard",
+                     "cost":  22,
+                     "winner":  "red",
+                     "candidateWon":  true,
+                     "turn":  6,
+                     "commands":  68,
+                     "scores":  {
+                                    "blue":  0,
+                                    "red":  5
+                                },
+                     "survivors":  {
+                                       "blue":  3,
+                                       "red":  3
+                                   },
+                     "endedByLimit":  false
+                 },
+                 {
+                     "id":  "sword-red-nn",
+                     "candidateId":  "sword",
+                     "candidateTeam":  "red",
+                     "difficultyBlue":  "normal",
+                     "difficultyRed":  "normal",
+                     "cost":  22,
+                     "winner":  "red",
+                     "candidateWon":  true,
+                     "turn":  11,
+                     "commands":  101,
+                     "scores":  {
+                                    "blue":  3,
+                                    "red":  0
+                                },
+                     "survivors":  {
+                                       "blue":  2,
+                                       "red":  3
+                                   },
+                     "endedByLimit":  false
+                 }
+             ],
+    "note":  "Stopped after 26 complete games; mobileEngineer has only normal/normal runs"
+}

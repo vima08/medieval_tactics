@@ -1,0 +1,256 @@
+{
+  "initial": {
+    "map": "highland",
+    "mode": "pvp",
+    "seed": 1,
+    "blueprintA": {
+      "name": "Стражи перевала",
+      "units": [
+        {
+          "archetype": "shield",
+          "variant": "tower"
+        },
+        {
+          "archetype": "spear",
+          "variant": "raider"
+        },
+        {
+          "archetype": "archer",
+          "variant": "longbow"
+        },
+        {
+          "archetype": "engineer",
+          "variant": "sapper"
+        },
+        {
+          "archetype": "scout",
+          "variant": "runner"
+        }
+      ]
+    },
+    "blueprintB": {
+      "name": "Каменный дозор",
+      "units": [
+        {
+          "archetype": "shield",
+          "variant": "escort"
+        },
+        {
+          "archetype": "sword",
+          "variant": "duelist"
+        },
+        {
+          "archetype": "spear",
+          "variant": "pike"
+        },
+        {
+          "archetype": "archer",
+          "variant": "hunter"
+        },
+        {
+          "archetype": "scout",
+          "variant": "runner"
+        }
+      ]
+    }
+  },
+  "commands": [
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 3,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "blue-5",
+      "x": 2,
+      "y": 9
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-5",
+      "x": 4,
+      "y": 8
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 0,
+      "y": 5
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 1,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 2,
+      "y": 10
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 0,
+      "y": 4
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-2",
+      "x": 14,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "red-5",
+      "x": 13,
+      "y": 12
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 16,
+      "y": 8
+    },
+    {
+      "type": "move",
+      "unitId": "red-4",
+      "x": 16,
+      "y": 7
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 16,
+      "y": 9
+    },
+    {
+      "type": "ability",
+      "unitId": "red-1",
+      "x": 16,
+      "y": 8
+    },
+    {
+      "type": "ability",
+      "unitId": "red-5",
+      "x": 11,
+      "y": 14
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-5",
+      "x": 8,
+      "y": 9
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-5",
+      "x": 10,
+      "y": 10
+    },
+    {
+      "type": "move",
+      "unitId": "red-4",
+      "x": 13,
+      "y": 8
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 14,
+      "y": 8
+    },
+    {
+      "type": "ability",
+      "unitId": "red-5",
+      "x": 10,
+      "y": 8
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 15,
+      "y": 9
+    },
+    {
+      "type": "ability",
+      "unitId": "red-1",
+      "x": 14,
+      "y": 8
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-5",
+      "x": 9,
+      "y": 9
+    },
+    {
+      "type": "attack",
+      "unitId": "red-5",
+      "x": 8,
+      "y": 9
+    },
+    {
+      "type": "ability",
+      "unitId": "red-1",
+      "x": 14,
+      "y": 8
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 13,
+      "y": 7
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 14,
+      "y": 8
+    },
+    {
+      "type": "move",
+      "unitId": "red-4",
+      "x": 12,
+      "y": 7
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "endTurn"
+    }
+  ],
+  "result": {
+    "scenario": "swap-normal",
+    "winner": "blue",
+    "commands": 34,
+    "turn": 4,
+    "scores": {
+      "blue": 3,
+      "red": 0
+    },
+    "survivors": {
+      "blue": 5,
+      "red": 5
+    }
+  }
+}

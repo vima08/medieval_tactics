@@ -1,0 +1,16 @@
+export type Team = 'blue' | 'red';
+export type Archetype = 'archer' | 'sword' | 'spear' | 'shield' | 'scout' | 'engineer';
+export type Terrain = 'grass' | 'stone' | 'water' | 'bridge' | 'stairs' | 'rubble';
+export type ObjectKind = 'cover' | 'brazier' | 'trap' | 'objective' | 'fragile';
+export type Tile = { x: number; y: number; h: number; terrain: Terrain; object?: ObjectKind; hp?: number };
+export type GameMap = { id: 'tutorial' | 'highland'; name: string; width: number; height: number; tiles: Tile[] };
+export type Unit = { id: string; team: Team; archetype: Archetype; variant: string; modifier?: string; artifact?: string; x: number; y: number; hp: number; maxHp: number; moved: boolean; acted: boolean; guard: boolean; pinned: boolean; alive: boolean; undo?: { x: number; y: number; moved: boolean }; commander?: boolean };
+export type UnitChoice = { archetype: Archetype; variant?: string; modifier?: string; artifact?: string };
+export type Blueprint = { name: string; units: UnitChoice[] };
+export type Objective = { kind: 'control' | 'commander'; points: { x: number; y: number }[]; scores: Record<Team, number>; target: number };
+export type Command = { type: 'move' | 'attack' | 'ability'; unitId: string; x: number; y: number } | { type: 'undo'; unitId: string; x: number; y: number } | { type: 'endTurn' };
+export type LogEvent = { turn: number; team: Team; message: string; command?: Command };
+export type GameState = { map: GameMap; units: Unit[]; team: Team; turn: number; winner?: Team | 'draw'; mode: 'ai' | 'pvp'; log: LogEvent[]; history: Command[]; objective: Objective; seed: number; initial?: { map: 'tutorial' | 'highland'; mode: 'ai' | 'pvp'; seed: number; blueprintA?: Blueprint; blueprintB?: Blueprint } };
+export type ReachableCell = { x: number; y: number; cost: number; path: { x: number; y: number }[]; threatened: boolean };
+export type Preview = { valid: boolean; reason?: string; type: Command['type']; unitId?: string; from?: { x: number; y: number }; to?: { x: number; y: number }; path?: { x: number; y: number }[]; cost?: number; targetId?: string; damage?: number; counterDamage?: number; push?: { x: number; y: number }; fallDamage?: number; hazardDamage?: number; killed?: boolean; blockedBy?: string; explanation?: string; objectDamage?: number; tileChange?: { x: number; y: number; h: number; terrain: Tile['terrain']; object?: Tile['object']; hp?: number } };
+export type UnitRules = { move: number; range: number; minRange: number; damage: number; hp: number; cost: number; description: string; ability: string };

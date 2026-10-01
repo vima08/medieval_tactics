@@ -1,0 +1,217 @@
+{
+  "initial": {
+    "map": "tutorial",
+    "mode": "pvp",
+    "seed": 1,
+    "blueprintA": {
+      "name": "Учебный дозор",
+      "units": [
+        {
+          "archetype": "sword"
+        },
+        {
+          "archetype": "archer"
+        },
+        {
+          "archetype": "spear"
+        }
+      ]
+    },
+    "blueprintB": {
+      "name": "Учебный враг",
+      "units": [
+        {
+          "archetype": "sword"
+        },
+        {
+          "archetype": "spear"
+        },
+        {
+          "archetype": "archer"
+        }
+      ]
+    }
+  },
+  "commands": [
+    {
+      "type": "ability",
+      "unitId": "blue-2",
+      "x": 6,
+      "y": 2
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 1,
+      "y": 0
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "red-3",
+      "x": 1,
+      "y": 6
+    },
+    {
+      "type": "move",
+      "unitId": "red-2",
+      "x": 6,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 7,
+      "y": 3
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-2",
+      "x": 6,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 3,
+      "y": 0
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 3,
+      "y": 6
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 6,
+      "y": 6
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "red-3",
+      "x": 3,
+      "y": 6
+    },
+    {
+      "type": "move",
+      "unitId": "red-2",
+      "x": 7,
+      "y": 2
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 6,
+      "y": 1
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 4,
+      "y": 0
+    },
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 1,
+      "y": 2
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-2",
+      "x": 6,
+      "y": 1
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 7,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "red-2",
+      "x": 7,
+      "y": 0
+    },
+    {
+      "type": "ability",
+      "unitId": "red-2",
+      "x": 4,
+      "y": 0
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 6,
+      "y": 0
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-2",
+      "x": 6,
+      "y": 0
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 5,
+      "y": 0
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 6,
+      "y": 0
+    }
+  ],
+  "result": {
+    "map": "tutorial",
+    "seed": 1,
+    "winner": "blue",
+    "commands": 28,
+    "turns": 4,
+    "endTurns": 6,
+    "scores": {
+      "blue": 0,
+      "red": 0
+    },
+    "survivors": {
+      "blue": 2,
+      "red": 2
+    },
+    "byClass": {
+      "sword": {
+        "deployed": 2,
+        "survived": 1
+      },
+      "archer": {
+        "deployed": 2,
+        "survived": 2
+      },
+      "spear": {
+        "deployed": 2,
+        "survived": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,434 @@
+[
+  {
+    "map": "tutorial",
+    "seed": 1,
+    "winner": "blue",
+    "commands": 28,
+    "turns": 4,
+    "endTurns": 6,
+    "scores": {
+      "blue": 0,
+      "red": 0
+    },
+    "survivors": {
+      "blue": 2,
+      "red": 2
+    },
+    "byClass": {
+      "sword": {
+        "deployed": 2,
+        "survived": 1
+      },
+      "archer": {
+        "deployed": 2,
+        "survived": 2
+      },
+      "spear": {
+        "deployed": 2,
+        "survived": 1
+      }
+    }
+  },
+  {
+    "map": "tutorial",
+    "seed": 2,
+    "winner": "blue",
+    "commands": 28,
+    "turns": 4,
+    "endTurns": 6,
+    "scores": {
+      "blue": 0,
+      "red": 0
+    },
+    "survivors": {
+      "blue": 2,
+      "red": 2
+    },
+    "byClass": {
+      "sword": {
+        "deployed": 2,
+        "survived": 1
+      },
+      "archer": {
+        "deployed": 2,
+        "survived": 2
+      },
+      "spear": {
+        "deployed": 2,
+        "survived": 1
+      }
+    }
+  },
+  {
+    "map": "tutorial",
+    "seed": 3,
+    "winner": "blue",
+    "commands": 28,
+    "turns": 4,
+    "endTurns": 6,
+    "scores": {
+      "blue": 0,
+      "red": 0
+    },
+    "survivors": {
+      "blue": 2,
+      "red": 2
+    },
+    "byClass": {
+      "sword": {
+        "deployed": 2,
+        "survived": 1
+      },
+      "archer": {
+        "deployed": 2,
+        "survived": 2
+      },
+      "spear": {
+        "deployed": 2,
+        "survived": 1
+      }
+    }
+  },
+  {
+    "map": "tutorial",
+    "seed": 4,
+    "winner": "blue",
+    "commands": 28,
+    "turns": 4,
+    "endTurns": 6,
+    "scores": {
+      "blue": 0,
+      "red": 0
+    },
+    "survivors": {
+      "blue": 2,
+      "red": 2
+    },
+    "byClass": {
+      "sword": {
+        "deployed": 2,
+        "survived": 1
+      },
+      "archer": {
+        "deployed": 2,
+        "survived": 2
+      },
+      "spear": {
+        "deployed": 2,
+        "survived": 1
+      }
+    }
+  },
+  {
+    "map": "tutorial",
+    "seed": 5,
+    "winner": "blue",
+    "commands": 28,
+    "turns": 4,
+    "endTurns": 6,
+    "scores": {
+      "blue": 0,
+      "red": 0
+    },
+    "survivors": {
+      "blue": 2,
+      "red": 2
+    },
+    "byClass": {
+      "sword": {
+        "deployed": 2,
+        "survived": 1
+      },
+      "archer": {
+        "deployed": 2,
+        "survived": 2
+      },
+      "spear": {
+        "deployed": 2,
+        "survived": 1
+      }
+    }
+  },
+  {
+    "map": "tutorial",
+    "seed": 6,
+    "winner": "blue",
+    "commands": 28,
+    "turns": 4,
+    "endTurns": 6,
+    "scores": {
+      "blue": 0,
+      "red": 0
+    },
+    "survivors": {
+      "blue": 2,
+      "red": 2
+    },
+    "byClass": {
+      "sword": {
+        "deployed": 2,
+        "survived": 1
+      },
+      "archer": {
+        "deployed": 2,
+        "survived": 2
+      },
+      "spear": {
+        "deployed": 2,
+        "survived": 1
+      }
+    }
+  },
+  {
+    "map": "highland",
+    "seed": 1,
+    "winner": "blue",
+    "commands": 115,
+    "turns": 11,
+    "endTurns": 22,
+    "scores": {
+      "blue": 5,
+      "red": 0
+    },
+    "survivors": {
+      "blue": 3,
+      "red": 2
+    },
+    "byClass": {
+      "shield": {
+        "deployed": 2,
+        "survived": 2
+      },
+      "sword": {
+        "deployed": 1,
+        "survived": 1
+      },
+      "spear": {
+        "deployed": 2,
+        "survived": 1
+      },
+      "archer": {
+        "deployed": 2,
+        "survived": 1
+      },
+      "scout": {
+        "deployed": 2,
+        "survived": 0
+      },
+      "engineer": {
+        "deployed": 1,
+        "survived": 0
+      }
+    }
+  },
+  {
+    "map": "highland",
+    "seed": 2,
+    "winner": "blue",
+    "commands": 115,
+    "turns": 11,
+    "endTurns": 22,
+    "scores": {
+      "blue": 5,
+      "red": 0
+    },
+    "survivors": {
+      "blue": 3,
+      "red": 2
+    },
+    "byClass": {
+      "shield": {
+        "deployed": 2,
+        "survived": 2
+      },
+      "sword": {
+        "deployed": 1,
+        "survived": 1
+      },
+      "spear": {
+        "deployed": 2,
+        "survived": 1
+      },
+      "archer": {
+        "deployed": 2,
+        "survived": 1
+      },
+      "scout": {
+        "deployed": 2,
+        "survived": 0
+      },
+      "engineer": {
+        "deployed": 1,
+        "survived": 0
+      }
+    }
+  },
+  {
+    "map": "highland",
+    "seed": 3,
+    "winner": "blue",
+    "commands": 115,
+    "turns": 11,
+    "endTurns": 22,
+    "scores": {
+      "blue": 5,
+      "red": 0
+    },
+    "survivors": {
+      "blue": 3,
+      "red": 2
+    },
+    "byClass": {
+      "shield": {
+        "deployed": 2,
+        "survived": 2
+      },
+      "sword": {
+        "deployed": 1,
+        "survived": 1
+      },
+      "spear": {
+        "deployed": 2,
+        "survived": 1
+      },
+      "archer": {
+        "deployed": 2,
+        "survived": 1
+      },
+      "scout": {
+        "deployed": 2,
+        "survived": 0
+      },
+      "engineer": {
+        "deployed": 1,
+        "survived": 0
+      }
+    }
+  },
+  {
+    "map": "highland",
+    "seed": 4,
+    "winner": "blue",
+    "commands": 115,
+    "turns": 11,
+    "endTurns": 22,
+    "scores": {
+      "blue": 5,
+      "red": 0
+    },
+    "survivors": {
+      "blue": 3,
+      "red": 2
+    },
+    "byClass": {
+      "shield": {
+        "deployed": 2,
+        "survived": 2
+      },
+      "sword": {
+        "deployed": 1,
+        "survived": 1
+      },
+      "spear": {
+        "deployed": 2,
+        "survived": 1
+      },
+      "archer": {
+        "deployed": 2,
+        "survived": 1
+      },
+      "scout": {
+        "deployed": 2,
+        "survived": 0
+      },
+      "engineer": {
+        "deployed": 1,
+        "survived": 0
+      }
+    }
+  },
+  {
+    "map": "highland",
+    "seed": 5,
+    "winner": "blue",
+    "commands": 115,
+    "turns": 11,
+    "endTurns": 22,
+    "scores": {
+      "blue": 5,
+      "red": 0
+    },
+    "survivors": {
+      "blue": 3,
+      "red": 2
+    },
+    "byClass": {
+      "shield": {
+        "deployed": 2,
+        "survived": 2
+      },
+      "sword": {
+        "deployed": 1,
+        "survived": 1
+      },
+      "spear": {
+        "deployed": 2,
+        "survived": 1
+      },
+      "archer": {
+        "deployed": 2,
+        "survived": 1
+      },
+      "scout": {
+        "deployed": 2,
+        "survived": 0
+      },
+      "engineer": {
+        "deployed": 1,
+        "survived": 0
+      }
+    }
+  },
+  {
+    "map": "highland",
+    "seed": 6,
+    "winner": "blue",
+    "commands": 115,
+    "turns": 11,
+    "endTurns": 22,
+    "scores": {
+      "blue": 5,
+      "red": 0
+    },
+    "survivors": {
+      "blue": 3,
+      "red": 2
+    },
+    "byClass": {
+      "shield": {
+        "deployed": 2,
+        "survived": 2
+      },
+      "sword": {
+        "deployed": 1,
+        "survived": 1
+      },
+      "spear": {
+        "deployed": 2,
+        "survived": 1
+      },
+      "archer": {
+        "deployed": 2,
+        "survived": 1
+      },
+      "scout": {
+        "deployed": 2,
+        "survived": 0
+      },
+      "engineer": {
+        "deployed": 1,
+        "survived": 0
+      }
+    }
+  }
+]

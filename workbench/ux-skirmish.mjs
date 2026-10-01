@@ -1,0 +1,25 @@
+import { chromium } from '@playwright/test';
+import { homedir } from 'node:os';
+import { join } from 'node:path';
+
+const browser = await chromium.launch({ headless: true, executablePath: join(homedir(), 'AppData/Local/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-win64/chrome-headless-shell.exe') });
+const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+const errors = [];
+page.on('pageerror', e => errors.push(e.message));
+page.on('console', m => { if (m.type() === 'error') errors.push(m.text()); });
+page.on('framenavigated', f => console.log('navigation', f.url()));
+await page.goto('http://localhost:5173/', { waitUntil: 'networkidle' });
+await page.getByRole('button', { name: 'Схватка с ИИ' }).click();
+await page.waitForTimeout(200);
+console.log('roster', await page.locator('body').innerText());
+await page.screenshot({ path: 'workbench/ux-12-skirmish-setup.png' });
+console.log('buttons', await page.locator('button').allTextContents());
+console.log('scroll', await page.evaluate(() => ({ height: document.documentElement.scrollHeight, viewport: innerHeight, overflow: getComputedStyle(document.body).overflow })));
+await page.getByRole('button', { name: 'Начать битву →' }).scrollIntoViewIfNeeded();
+await page.screenshot({ path: 'workbench/ux-13-skirmish-bottom.png' });
+await page.getByRole('button', { name: 'Начать битву →' }).click();
+await page.waitForTimeout(400);
+console.log('battle', (await page.locator('body').innerText()).slice(0,4000));
+await page.screenshot({ path: 'workbench/ux-14-skirmish-start.png' });
+await browser.close();
+console.log('errors', errors);

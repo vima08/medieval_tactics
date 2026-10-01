@@ -1,0 +1,518 @@
+{
+  "initial": {
+    "map": "highland",
+    "mode": "pvp",
+    "seed": 1,
+    "blueprintA": {
+      "name": "Стражи перевала",
+      "units": [
+        {
+          "archetype": "shield",
+          "variant": "tower"
+        },
+        {
+          "archetype": "spear",
+          "variant": "raider"
+        },
+        {
+          "archetype": "archer",
+          "variant": "longbow"
+        },
+        {
+          "archetype": "engineer",
+          "variant": "sapper"
+        },
+        {
+          "archetype": "scout",
+          "variant": "runner"
+        }
+      ]
+    },
+    "blueprintB": {
+      "name": "Каменный дозор",
+      "units": [
+        {
+          "archetype": "shield",
+          "variant": "escort"
+        },
+        {
+          "archetype": "sword",
+          "variant": "duelist"
+        },
+        {
+          "archetype": "spear",
+          "variant": "pike"
+        },
+        {
+          "archetype": "archer",
+          "variant": "hunter"
+        },
+        {
+          "archetype": "scout",
+          "variant": "runner"
+        }
+      ]
+    }
+  },
+  "commands": [
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 3,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "blue-5",
+      "x": 2,
+      "y": 9
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-5",
+      "x": 4,
+      "y": 8
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 0,
+      "y": 5
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 1,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 2,
+      "y": 10
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 0,
+      "y": 4
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-2",
+      "x": 14,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "red-5",
+      "x": 13,
+      "y": 11
+    },
+    {
+      "type": "move",
+      "unitId": "red-4",
+      "x": 13,
+      "y": 3
+    },
+    {
+      "type": "ability",
+      "unitId": "red-5",
+      "x": 11,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 14,
+      "y": 6
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 16,
+      "y": 9
+    },
+    {
+      "type": "ability",
+      "unitId": "red-1",
+      "x": 14,
+      "y": 6
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-5",
+      "x": 8,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 4,
+      "y": 10
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 1,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 1,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 1,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 1,
+      "y": 2
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-5",
+      "x": 9,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 12,
+      "y": 7
+    },
+    {
+      "type": "move",
+      "unitId": "red-4",
+      "x": 12,
+      "y": 6
+    },
+    {
+      "type": "attack",
+      "unitId": "red-5",
+      "x": 8,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 15,
+      "y": 9
+    },
+    {
+      "type": "ability",
+      "unitId": "red-1",
+      "x": 12,
+      "y": 7
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 5,
+      "y": 9
+    },
+    {
+      "type": "attack",
+      "unitId": "blue-5",
+      "x": 9,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 3,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 2,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 2,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 3,
+      "y": 3
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 11,
+      "y": 9
+    },
+    {
+      "type": "attack",
+      "unitId": "red-5",
+      "x": 8,
+      "y": 9
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 9,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 3,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 3,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 4,
+      "y": 2
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 9,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "red-4",
+      "x": 11,
+      "y": 9
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 6,
+      "y": 9
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 9,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 6,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 3,
+      "y": 5
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 3,
+      "y": 5
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 6,
+      "y": 2
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-4",
+      "x": 10,
+      "y": 8
+    },
+    {
+      "type": "ability",
+      "unitId": "red-4",
+      "x": 6,
+      "y": 9
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 6,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 6,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 3,
+      "y": 6
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 3,
+      "y": 6
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 6,
+      "y": 3
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "red-1",
+      "x": 9,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 8,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 15,
+      "y": 7
+    },
+    {
+      "type": "move",
+      "unitId": "red-4",
+      "x": 10,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "red-4",
+      "x": 6,
+      "y": 4
+    },
+    {
+      "type": "endTurn"
+    }
+  ],
+  "result": {
+    "scenario": "swap-nh",
+    "map": "highland",
+    "seed": 1,
+    "bluePreset": 1,
+    "redPreset": 0,
+    "blueDifficulty": "normal",
+    "redDifficulty": "hard",
+    "winner": "red",
+    "turn": 6,
+    "commands": 71,
+    "scores": {
+      "blue": 0,
+      "red": 5
+    },
+    "deaths": [
+      "blue:archer:blue-3",
+      "blue:scout:blue-5",
+      "red:scout:red-5"
+    ],
+    "actions": {
+      "move": 35,
+      "attack": 3,
+      "ability": 21,
+      "endTurn": 12
+    },
+    "byTeamClass": {
+      "blue:shield": {
+        "deployed": 1,
+        "survived": 1
+      },
+      "blue:spear": {
+        "deployed": 1,
+        "survived": 1
+      },
+      "blue:archer": {
+        "deployed": 1,
+        "survived": 0
+      },
+      "blue:engineer": {
+        "deployed": 1,
+        "survived": 1
+      },
+      "blue:scout": {
+        "deployed": 1,
+        "survived": 0
+      },
+      "red:shield": {
+        "deployed": 1,
+        "survived": 1
+      },
+      "red:sword": {
+        "deployed": 1,
+        "survived": 1
+      },
+      "red:spear": {
+        "deployed": 1,
+        "survived": 1
+      },
+      "red:archer": {
+        "deployed": 1,
+        "survived": 1
+      },
+      "red:scout": {
+        "deployed": 1,
+        "survived": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,543 @@
+{
+  "initial": {
+    "map": "highland",
+    "mode": "pvp",
+    "seed": 1,
+    "blueprintA": {
+      "name": "Каменный дозор",
+      "units": [
+        {
+          "archetype": "shield",
+          "variant": "escort"
+        },
+        {
+          "archetype": "sword",
+          "variant": "duelist"
+        },
+        {
+          "archetype": "spear",
+          "variant": "pike"
+        },
+        {
+          "archetype": "archer",
+          "variant": "hunter"
+        },
+        {
+          "archetype": "scout",
+          "variant": "runner"
+        }
+      ]
+    },
+    "blueprintB": {
+      "name": "Sword and mobile flank",
+      "units": [
+        {
+          "archetype": "shield",
+          "variant": "escort"
+        },
+        {
+          "archetype": "spear",
+          "variant": "raider"
+        },
+        {
+          "archetype": "archer",
+          "variant": "hunter"
+        },
+        {
+          "archetype": "sword",
+          "variant": "duelist"
+        },
+        {
+          "archetype": "scout",
+          "variant": "runner"
+        }
+      ]
+    }
+  },
+  "controlTarget": 5,
+  "commands": [
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 3,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "blue-5",
+      "x": 2,
+      "y": 9
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-5",
+      "x": 4,
+      "y": 8
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 2,
+      "y": 5
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 1,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 2,
+      "y": 6
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 2,
+      "y": 10
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 14,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "red-2",
+      "x": 12,
+      "y": 8
+    },
+    {
+      "type": "move",
+      "unitId": "red-5",
+      "x": 12,
+      "y": 14
+    },
+    {
+      "type": "move",
+      "unitId": "red-4",
+      "x": 13,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 14,
+      "y": 6
+    },
+    {
+      "type": "ability",
+      "unitId": "red-5",
+      "x": 10,
+      "y": 12
+    },
+    {
+      "type": "ability",
+      "unitId": "red-1",
+      "x": 14,
+      "y": 6
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-5",
+      "x": 8,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 4,
+      "y": 10
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 5,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 5,
+      "y": 6
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 5,
+      "y": 6
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-5",
+      "x": 9,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "red-2",
+      "x": 10,
+      "y": 9
+    },
+    {
+      "type": "ability",
+      "unitId": "red-2",
+      "x": 8,
+      "y": 9
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 4,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 5,
+      "y": 10
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 4,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-5",
+      "x": 8,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 7,
+      "y": 7
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 9,
+      "y": 9
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "red-2",
+      "x": 8,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "red-2",
+      "x": 9,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 12,
+      "y": 7
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 8,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 6,
+      "y": 9
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 9,
+      "y": 9
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 10,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 5,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 5,
+      "y": 4
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 11,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "red-4",
+      "x": 11,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "red-1",
+      "x": 11,
+      "y": 9
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 11,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 7,
+      "y": 9
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 5,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 5,
+      "y": 2
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 10,
+      "y": 9
+    },
+    {
+      "type": "ability",
+      "unitId": "red-1",
+      "x": 10,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "red-4",
+      "x": 10,
+      "y": 7
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 10,
+      "y": 9
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 11,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 6,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 6,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 7,
+      "y": 8
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-4",
+      "x": 9,
+      "y": 9
+    },
+    {
+      "type": "attack",
+      "unitId": "red-4",
+      "x": 8,
+      "y": 9
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 7,
+      "y": 9
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 9,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 9,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 9,
+      "y": 4
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-4",
+      "x": 9,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 10,
+      "y": 9
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 9,
+      "y": 9
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 9,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 10,
+      "y": 6
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 8,
+      "y": 9
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "red-4",
+      "x": 8,
+      "y": 9
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 9,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 8,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 10,
+      "y": 8
+    },
+    {
+      "type": "attack",
+      "unitId": "blue-1",
+      "x": 10,
+      "y": 9
+    }
+  ],
+  "result": {
+    "id": "mobileSword-red-nn",
+    "candidateId": "mobileSword",
+    "candidateTeam": "red",
+    "difficultyBlue": "normal",
+    "difficultyRed": "normal",
+    "cost": 20,
+    "winner": "blue",
+    "candidateWon": false,
+    "turn": 9,
+    "commands": 85,
+    "scores": {
+      "blue": 0,
+      "red": 3
+    },
+    "survivors": {
+      "blue": 3,
+      "red": 1
+    },
+    "endedByLimit": false
+  }
+}

@@ -1,0 +1,40 @@
+import { chromium } from '@playwright/test';
+import { mkdirSync,readFileSync } from 'node:fs';
+import { homedir } from 'node:os';
+import { join } from 'node:path';
+
+mkdirSync('workbench/shots',{recursive:true});
+let browser;
+try { browser=await chromium.launch({headless:true}); }
+catch { browser=await chromium.launch({headless:true,executablePath:join(homedir(),'AppData/Local/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-win64/chrome-headless-shell.exe')}); }
+const page=await browser.newPage({viewport:{width:1440,height:900},deviceScaleFactor:1});
+const errors=[];
+page.on('pageerror',e=>errors.push(e.message));
+page.on('console',m=>{if(m.type()==='error')errors.push(m.text())});
+await page.goto('http://localhost:5173/',{waitUntil:'networkidle'});
+await page.screenshot({path:'workbench/shots/01-menu.png'});
+await page.getByText('Обучение · 5 минут').click();
+await page.waitForTimeout(700);
+console.log('tutorial-click',await page.locator('#board').count(),errors);
+await page.screenshot({path:'workbench/shots/02-tutorial.png'});
+await page.getByText('Ⅱ').click();
+await page.getByText('В меню').click();
+await page.getByText('Схватка с ИИ').click();
+await page.screenshot({path:'workbench/shots/03-roster.png'});
+await page.locator('#start-top').click();
+await page.waitForTimeout(700);
+await page.screenshot({path:'workbench/shots/04-highland.png'});
+await page.locator('[data-unit="blue-1"]').click();
+await page.screenshot({path:'workbench/shots/04a-selected.png'});
+await page.getByText('Завершить ход ↵').click();
+await page.waitForTimeout(2500);
+await page.screenshot({path:'workbench/shots/05-after-turn.png'});
+const replay=JSON.parse(readFileSync('workbench/round2-replays/default-nn.json','utf8'));
+await page.evaluate(data=>localStorage.setItem('ab-last-replay',JSON.stringify({initial:data.initial,history:data.commands})),replay);
+await page.reload({waitUntil:'networkidle'});
+await page.getByText('Последний повтор').click();
+await page.getByText('Далее →').click();
+await page.screenshot({path:'workbench/shots/06-replay.png'});
+console.log(JSON.stringify({errors,screen:await page.title(),images:7}));
+await browser.close();
+if(errors.length)process.exitCode=1;

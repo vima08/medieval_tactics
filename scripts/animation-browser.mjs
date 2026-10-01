@@ -1,0 +1,31 @@
+import {registerHooks} from 'node:module';
+import {mkdirSync} from 'node:fs';
+import {homedir} from 'node:os';
+import {join} from 'node:path';
+import {chromium} from '@playwright/test';
+registerHooks({resolve(specifier,context,nextResolve){if(specifier.startsWith('.')&&!/\.[cm]?[jt]s$/.test(specifier)){try{return nextResolve(`${specifier}.ts`,context)}catch{}try{return nextResolve(`${specifier}/index.ts`,context)}catch{}}return nextResolve(specifier,context)}});
+const {createGame,legalMoves}=await import('../src/engine/index.ts');
+const state=createGame({map:'tutorial',mode:'ai',seed:20260930});
+const unit=state.units.find(u=>u.id==='blue-1');
+const cell=legalMoves(state,unit.id).find(c=>c.x===unit.x+1&&c.y===unit.y)??legalMoves(state,unit.id)[0];
+if(!cell)throw new Error('No tutorial move');
+mkdirSync('workbench/frames',{recursive:true});
+let browser;
+try{browser=await chromium.launch({headless:true})}catch{browser=await chromium.launch({headless:true,executablePath:join(homedir(),'AppData/Local/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-win64/chrome-headless-shell.exe')})}
+const page=await browser.newPage({viewport:{width:1440,height:900},deviceScaleFactor:1});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://localhost:5173/',{waitUntil:'networkidle'});
+await page.getByText('Обучение · 5 минут').click();
+await page.locator('[data-unit="blue-1"]').click();
+const board=page.locator('#board'),box=await board.boundingBox();
+const size=Math.min(62,Math.max(39,box.width/(state.map.width*1.7)))*1.6;
+const tile=state.map.tiles.find(t=>t.x===cell.x&&t.y===cell.y);
+const x=box.x+box.width/2+(cell.x-cell.y)*size*.5;
+const y=box.y+box.height*.48+5+(cell.x+cell.y-state.map.width)*size*.24-tile.h*size*.21;
+await page.mouse.move(x,y);await page.screenshot({path:'workbench/frames/move-00-preview.png'});
+await page.mouse.click(x,y);
+for(const [name,delay] of [['01',0],['02',80],['03',160],['04',300]]){if(delay)await page.waitForTimeout(delay);await page.screenshot({path:`workbench/frames/move-${name}.png`})}
+const saved=JSON.parse(await page.evaluate(()=>localStorage.getItem('ab-save')));
+console.log(JSON.stringify({from:[unit.x,unit.y],to:[cell.x,cell.y],actual:[saved.units.find(u=>u.id==='blue-1').x,saved.units.find(u=>u.id==='blue-1').y],errors}));
+await browser.close();
+if(errors.length)process.exitCode=1;
