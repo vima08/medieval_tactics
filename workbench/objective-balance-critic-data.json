@@ -1,0 +1,498 @@
+[
+  {
+    "objective": "commander",
+    "blue": 0,
+    "red": 1,
+    "difficulty": "easy",
+    "seed": 1,
+    "winner": "red",
+    "turn": 12,
+    "commands": 153,
+    "actions": {
+      "move": 87,
+      "attack": 12,
+      "ability": 30,
+      "endTurn": 24
+    },
+    "firstDamageTurn": 3,
+    "damagingActions": 18,
+    "commanderKills": 0,
+    "zeroDamageRounds": 3,
+    "survivors": {
+      "blue": 1,
+      "red": 4
+    },
+    "commanders": {
+      "blue": true,
+      "red": true
+    },
+    "outcome": "round cap",
+    "endedByLimit": false,
+    "repeatedMoveTargets": 11
+  },
+  {
+    "objective": "commander",
+    "blue": 0,
+    "red": 1,
+    "difficulty": "normal",
+    "seed": 1,
+    "winner": "red",
+    "turn": 12,
+    "commands": 154,
+    "actions": {
+      "move": 81,
+      "attack": 2,
+      "ability": 47,
+      "endTurn": 24
+    },
+    "firstDamageTurn": 6,
+    "damagingActions": 10,
+    "commanderKills": 0,
+    "zeroDamageRounds": 8,
+    "survivors": {
+      "blue": 3,
+      "red": 3
+    },
+    "commanders": {
+      "blue": true,
+      "red": true
+    },
+    "outcome": "round cap",
+    "endedByLimit": false,
+    "repeatedMoveTargets": 5
+  },
+  {
+    "objective": "commander",
+    "blue": 1,
+    "red": 0,
+    "difficulty": "easy",
+    "seed": 1,
+    "winner": "blue",
+    "turn": 12,
+    "commands": 156,
+    "actions": {
+      "move": 85,
+      "attack": 4,
+      "ability": 43,
+      "endTurn": 24
+    },
+    "firstDamageTurn": 4,
+    "damagingActions": 12,
+    "commanderKills": 0,
+    "zeroDamageRounds": 6,
+    "survivors": {
+      "blue": 3,
+      "red": 2
+    },
+    "commanders": {
+      "blue": true,
+      "red": true
+    },
+    "outcome": "round cap",
+    "endedByLimit": false,
+    "repeatedMoveTargets": 14
+  },
+  {
+    "objective": "commander",
+    "blue": 1,
+    "red": 0,
+    "difficulty": "normal",
+    "seed": 1,
+    "winner": "blue",
+    "turn": 12,
+    "commands": 160,
+    "actions": {
+      "move": 88,
+      "attack": 9,
+      "ability": 39,
+      "endTurn": 24
+    },
+    "firstDamageTurn": 4,
+    "damagingActions": 14,
+    "commanderKills": 0,
+    "zeroDamageRounds": 4,
+    "survivors": {
+      "blue": 3,
+      "red": 3
+    },
+    "commanders": {
+      "blue": true,
+      "red": true
+    },
+    "outcome": "round cap",
+    "endedByLimit": false,
+    "repeatedMoveTargets": 10
+  },
+  {
+    "objective": "commander",
+    "blue": 0,
+    "red": 2,
+    "difficulty": "easy",
+    "seed": 1,
+    "winner": "blue",
+    "turn": 12,
+    "commands": 154,
+    "actions": {
+      "move": 91,
+      "attack": 3,
+      "ability": 36,
+      "endTurn": 24
+    },
+    "firstDamageTurn": 2,
+    "damagingActions": 13,
+    "commanderKills": 0,
+    "zeroDamageRounds": 6,
+    "survivors": {
+      "blue": 4,
+      "red": 2
+    },
+    "commanders": {
+      "blue": true,
+      "red": true
+    },
+    "outcome": "round cap",
+    "endedByLimit": false,
+    "repeatedMoveTargets": 14
+  },
+  {
+    "objective": "commander",
+    "blue": 0,
+    "red": 2,
+    "difficulty": "normal",
+    "seed": 1,
+    "winner": "red",
+    "turn": 12,
+    "commands": 140,
+    "actions": {
+      "move": 78,
+      "attack": 2,
+      "ability": 36,
+      "endTurn": 24
+    },
+    "firstDamageTurn": 4,
+    "damagingActions": 12,
+    "commanderKills": 0,
+    "zeroDamageRounds": 5,
+    "survivors": {
+      "blue": 1,
+      "red": 3
+    },
+    "commanders": {
+      "blue": true,
+      "red": true
+    },
+    "outcome": "round cap",
+    "endedByLimit": false,
+    "repeatedMoveTargets": 2
+  },
+  {
+    "objective": "commander",
+    "blue": 2,
+    "red": 0,
+    "difficulty": "easy",
+    "seed": 1,
+    "winner": "blue",
+    "turn": 12,
+    "commands": 151,
+    "actions": {
+      "move": 84,
+      "attack": 3,
+      "ability": 40,
+      "endTurn": 24
+    },
+    "firstDamageTurn": 4,
+    "damagingActions": 13,
+    "commanderKills": 0,
+    "zeroDamageRounds": 4,
+    "survivors": {
+      "blue": 2,
+      "red": 2
+    },
+    "commanders": {
+      "blue": true,
+      "red": true
+    },
+    "outcome": "round cap",
+    "endedByLimit": false,
+    "repeatedMoveTargets": 3
+  },
+  {
+    "objective": "commander",
+    "blue": 2,
+    "red": 0,
+    "difficulty": "normal",
+    "seed": 1,
+    "winner": "blue",
+    "turn": 12,
+    "commands": 140,
+    "actions": {
+      "move": 76,
+      "attack": 1,
+      "ability": 39,
+      "endTurn": 24
+    },
+    "firstDamageTurn": 4,
+    "damagingActions": 12,
+    "commanderKills": 0,
+    "zeroDamageRounds": 6,
+    "survivors": {
+      "blue": 3,
+      "red": 2
+    },
+    "commanders": {
+      "blue": true,
+      "red": true
+    },
+    "outcome": "round cap",
+    "endedByLimit": false,
+    "repeatedMoveTargets": 11
+  },
+  {
+    "objective": "elimination",
+    "blue": 0,
+    "red": 1,
+    "difficulty": "easy",
+    "seed": 1,
+    "winner": "draw",
+    "turn": 12,
+    "commands": 159,
+    "actions": {
+      "move": 91,
+      "attack": 4,
+      "ability": 40,
+      "endTurn": 24
+    },
+    "firstDamageTurn": 4,
+    "damagingActions": 10,
+    "commanderKills": 0,
+    "zeroDamageRounds": 8,
+    "survivors": {
+      "blue": 3,
+      "red": 3
+    },
+    "commanders": {
+      "blue": true,
+      "red": true
+    },
+    "outcome": "round cap",
+    "endedByLimit": false,
+    "repeatedMoveTargets": 16
+  },
+  {
+    "objective": "elimination",
+    "blue": 0,
+    "red": 1,
+    "difficulty": "normal",
+    "seed": 1,
+    "winner": "draw",
+    "turn": 12,
+    "commands": 93,
+    "actions": {
+      "move": 34,
+      "attack": 0,
+      "ability": 35,
+      "endTurn": 24
+    },
+    "firstDamageTurn": null,
+    "damagingActions": 0,
+    "commanderKills": 0,
+    "zeroDamageRounds": 12,
+    "survivors": {
+      "blue": 5,
+      "red": 5
+    },
+    "commanders": {
+      "blue": true,
+      "red": true
+    },
+    "outcome": "round cap",
+    "endedByLimit": false,
+    "repeatedMoveTargets": 2
+  },
+  {
+    "objective": "elimination",
+    "blue": 1,
+    "red": 0,
+    "difficulty": "easy",
+    "seed": 1,
+    "winner": "red",
+    "turn": 12,
+    "commands": 161,
+    "actions": {
+      "move": 86,
+      "attack": 5,
+      "ability": 46,
+      "endTurn": 24
+    },
+    "firstDamageTurn": 7,
+    "damagingActions": 16,
+    "commanderKills": 0,
+    "zeroDamageRounds": 6,
+    "survivors": {
+      "blue": 2,
+      "red": 4
+    },
+    "commanders": {
+      "blue": true,
+      "red": true
+    },
+    "outcome": "round cap",
+    "endedByLimit": false,
+    "repeatedMoveTargets": 8
+  },
+  {
+    "objective": "elimination",
+    "blue": 1,
+    "red": 0,
+    "difficulty": "normal",
+    "seed": 1,
+    "winner": "draw",
+    "turn": 12,
+    "commands": 98,
+    "actions": {
+      "move": 43,
+      "attack": 0,
+      "ability": 31,
+      "endTurn": 24
+    },
+    "firstDamageTurn": null,
+    "damagingActions": 0,
+    "commanderKills": 0,
+    "zeroDamageRounds": 12,
+    "survivors": {
+      "blue": 5,
+      "red": 5
+    },
+    "commanders": {
+      "blue": true,
+      "red": true
+    },
+    "outcome": "round cap",
+    "endedByLimit": false,
+    "repeatedMoveTargets": 5
+  },
+  {
+    "objective": "elimination",
+    "blue": 0,
+    "red": 2,
+    "difficulty": "easy",
+    "seed": 1,
+    "winner": "blue",
+    "turn": 12,
+    "commands": 124,
+    "actions": {
+      "move": 67,
+      "attack": 0,
+      "ability": 33,
+      "endTurn": 24
+    },
+    "firstDamageTurn": null,
+    "damagingActions": 0,
+    "commanderKills": 0,
+    "zeroDamageRounds": 12,
+    "survivors": {
+      "blue": 5,
+      "red": 5
+    },
+    "commanders": {
+      "blue": true,
+      "red": true
+    },
+    "outcome": "round cap",
+    "endedByLimit": false,
+    "repeatedMoveTargets": 18
+  },
+  {
+    "objective": "elimination",
+    "blue": 0,
+    "red": 2,
+    "difficulty": "normal",
+    "seed": 1,
+    "winner": "blue",
+    "turn": 12,
+    "commands": 125,
+    "actions": {
+      "move": 57,
+      "attack": 5,
+      "ability": 39,
+      "endTurn": 24
+    },
+    "firstDamageTurn": 4,
+    "damagingActions": 18,
+    "commanderKills": 1,
+    "zeroDamageRounds": 7,
+    "survivors": {
+      "blue": 3,
+      "red": 1
+    },
+    "commanders": {
+      "blue": true,
+      "red": false
+    },
+    "outcome": "round cap",
+    "endedByLimit": false,
+    "repeatedMoveTargets": 0
+  },
+  {
+    "objective": "elimination",
+    "blue": 2,
+    "red": 0,
+    "difficulty": "easy",
+    "seed": 1,
+    "winner": "red",
+    "turn": 12,
+    "commands": 154,
+    "actions": {
+      "move": 88,
+      "attack": 5,
+      "ability": 37,
+      "endTurn": 24
+    },
+    "firstDamageTurn": 3,
+    "damagingActions": 15,
+    "commanderKills": 1,
+    "zeroDamageRounds": 5,
+    "survivors": {
+      "blue": 2,
+      "red": 3
+    },
+    "commanders": {
+      "blue": false,
+      "red": true
+    },
+    "outcome": "round cap",
+    "endedByLimit": false,
+    "repeatedMoveTargets": 12
+  },
+  {
+    "objective": "elimination",
+    "blue": 2,
+    "red": 0,
+    "difficulty": "normal",
+    "seed": 1,
+    "winner": "red",
+    "turn": 12,
+    "commands": 103,
+    "actions": {
+      "move": 57,
+      "attack": 0,
+      "ability": 22,
+      "endTurn": 24
+    },
+    "firstDamageTurn": null,
+    "damagingActions": 0,
+    "commanderKills": 0,
+    "zeroDamageRounds": 12,
+    "survivors": {
+      "blue": 5,
+      "red": 5
+    },
+    "commanders": {
+      "blue": true,
+      "red": true
+    },
+    "outcome": "round cap",
+    "endedByLimit": false,
+    "repeatedMoveTargets": 14
+  }
+]

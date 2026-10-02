@@ -19,8 +19,9 @@ export function playHeadless(options: {
   blueprintB?: Blueprint;
   maxCommands?: number;
   controlTarget?: number;
+  objective?: GameState['objective']['kind'];
 } = {}): SelfPlayResult {
-  let state = createGame({ map: options.map ?? 'highland', mode: 'pvp', seed: options.seed ?? 1, blueprintA: options.blueprintA, blueprintB: options.blueprintB });
+  let state = createGame({ map: options.map ?? 'highland', mode: 'pvp', seed: options.seed ?? 1, objective: options.objective, blueprintA: options.blueprintA, blueprintB: options.blueprintB });
   if (state.objective.kind === 'control' && options.controlTarget !== undefined) {
     state = { ...state, objective: { ...state.objective, target: options.controlTarget } };
   }

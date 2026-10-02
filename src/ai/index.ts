@@ -14,7 +14,8 @@ function height(state: GameState, x: number, y: number): number {
 
 function positionalValue(state: GameState, unit: Unit, friends: Unit[], enemies: Unit[]): number {
   const tile = state.map.tiles.find(t => t.x === unit.x && t.y === unit.y);
-  const nearestEnemy = enemies.length ? Math.min(...enemies.map(e => distance(unit, e))) : 9;
+  const strategicTargets = state.objective.kind === 'commander' && !unit.commander ? enemies.filter(e => e.commander) : enemies;
+  const nearestEnemy = strategicTargets.length ? Math.min(...strategicTargets.map(e => distance(unit, e))) : 9;
   const elevated = height(state, unit.x, unit.y);
   let score = elevated * (unit.archetype === 'archer' ? 1.2 : 0.65);
   if (unit.archetype === 'archer') {
@@ -23,13 +24,16 @@ function positionalValue(state: GameState, unit: Unit, friends: Unit[], enemies:
   } else if (unit.archetype === 'engineer') {
     score -= Math.abs(nearestEnemy - 3) * 0.3;
   } else {
-    score -= nearestEnemy * (unit.archetype === 'scout' ? 0.38 : 0.28);
+    const pursuit = state.objective.kind === 'control' ? (unit.archetype === 'scout' ? 0.38 : 0.28) : state.objective.kind === 'elimination' ? 1.8 : 1.3;
+    score -= nearestEnemy * pursuit;
   }
+  if (state.objective.kind === 'elimination') score -= (Math.abs(unit.x - (state.map.width-1)/2) + Math.abs(unit.y - (state.map.height-1)/2)) * 1.6;
 
   if (tile?.object === 'trap') score -= 6;
   if (tile?.object === 'brazier') score -= 2;
   if (tile?.terrain === 'water') score -= 1.5;
   if (unit.guard && nearestEnemy <= 2) score += 1.8;
+  if (state.objective.kind === 'commander' && unit.commander && nearestEnemy <= 3) score -= (4 - nearestEnemy) * 2.5;
   if (unit.pinned) score -= 1.2;
   if (unit.archetype === 'archer' && friends.some(f => f.id !== unit.id && f.archetype === 'shield' && distance(f, unit) === 1)) score += 1;
 

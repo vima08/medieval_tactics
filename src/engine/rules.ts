@@ -1,8 +1,8 @@
 import { ARCHETYPES, ARTIFACTS, MODIFIERS, PRESETS, VARIANTS, validateBlueprint } from './catalog';
 import { makeMap } from './maps';
-import type { Archetype, Blueprint, Command, GameMap, GameState, Preview, ReachableCell, Team, Tile, Unit, UnitRules } from './types';
+import type { Archetype, Blueprint, Command, GameMap, GameState, ObjectiveKind, Preview, ReachableCell, Team, Tile, Unit, UnitRules } from './types';
 
-export type GameConfig = { map: 'tutorial' | 'highland'; mode: 'ai' | 'pvp'; seed?: number; blueprintA?: Blueprint; blueprintB?: Blueprint };
+export type GameConfig = { map: 'tutorial' | 'highland'; mode: 'ai' | 'pvp'; seed?: number; objective?: ObjectiveKind; blueprintA?: Blueprint; blueprintB?: Blueprint };
 const other = (t: Team): Team => t === 'blue' ? 'red' : 'blue';
 export const MAX_ROUNDS = 12;
 const key = (x: number, y: number) => `${x},${y}`;
@@ -45,7 +45,9 @@ export function createGame(config: GameConfig): GameState {
   const errors = [...validateBlueprint(blue), ...validateBlueprint(red)];
   if (errors.length) throw new Error(errors.join('; '));
   const map = makeMap(config.map);
-  return { map, units: [...deploy(map,'blue',blue),...deploy(map,'red',red)], team:'blue', turn:1, mode:config.mode, log:[{turn:1,team:'blue',message:'Битва начинается'}], history:[], seed:config.seed ?? 1, objective: config.map === 'tutorial' ? {kind:'commander',points:[{x:4,y:1}],scores:{blue:0,red:0},target:1} : {kind:'control',points:[{x:3,y:9},{x:8,y:9},{x:9,y:9},{x:14,y:9}],scores:{blue:0,red:0},target:5}, initial:{map:config.map,mode:config.mode,seed:config.seed ?? 1,blueprintA:blue,blueprintB:red} };
+  const objectiveKind = config.objective ?? (tutorial ? 'commander' : 'control');
+  const points = objectiveKind === 'control' ? (tutorial ? [{x:4,y:1}] : [{x:3,y:9},{x:8,y:9},{x:9,y:9},{x:14,y:9}]) : [];
+  return { map, units: [...deploy(map,'blue',blue),...deploy(map,'red',red)], team:'blue', turn:1, mode:config.mode, log:[{turn:1,team:'blue',message:'Битва начинается'}], history:[], seed:config.seed ?? 1, objective: {kind:objectiveKind,points,scores:{blue:0,red:0},target:tutorial?1:5}, initial:{map:config.map,mode:config.mode,seed:config.seed ?? 1,objective:objectiveKind,blueprintA:blue,blueprintB:red} };
 }
 function passable(tile?: Tile): boolean { return !!tile && tile.terrain !== 'water' && tile.object !== 'cover'; }
 function movementCost(from: Tile, to: Tile, unit: Unit): number {
@@ -221,8 +223,22 @@ export function previewAction(state:GameState,command:Command):Preview {
 function clone(state:GameState):GameState { return JSON.parse(JSON.stringify(state)) as GameState; }
 function record(s:GameState,message:string,command?:Command) { s.log.push({turn:s.turn,team:s.team,message,command}); if(s.log.length>120)s.log.shift(); }
 function checkVictory(s:GameState) {
-  for(const team of ['blue','red'] as Team[]) if(!s.units.some(u=>u.alive&&u.team===team&&u.commander)) s.winner=other(team);
-  if(s.winner) {record(s,`Победа: ${s.winner==='blue'?'Синий дозор':'Красная дружина'}`);return;}
+  const blueAlive=s.units.some(u=>u.alive&&u.team==='blue');
+  const redAlive=s.units.some(u=>u.alive&&u.team==='red');
+  if(!blueAlive||!redAlive) {
+    s.winner=blueAlive?'blue':redAlive?'red':'draw';
+    record(s,s.winner==='draw'?'Обе дружины погибли':`Победа: ${s.winner==='blue'?'Синий дозор':'Красная дружина'}`);
+    return;
+  }
+  if(s.objective.kind==='commander') {
+    const blueCommander=s.units.some(u=>u.alive&&u.team==='blue'&&u.commander);
+    const redCommander=s.units.some(u=>u.alive&&u.team==='red'&&u.commander);
+    if(!blueCommander||!redCommander) {
+      s.winner=blueCommander?'blue':redCommander?'red':'draw';
+      record(s,s.winner==='draw'?'Оба командира погибли':`Победа над командиром: ${s.winner}`);
+    }
+    return;
+  }
   if(s.objective.kind==='control') {
     const {blue,red}=s.objective.scores;
     if(blue>=s.objective.target||red>=s.objective.target) {
@@ -295,15 +311,24 @@ export function endTurn(state:GameState):GameState {
     for(const team of ['blue','red'] as Team[]) {
       let held=0;
       for(const p of s.objective.points) if(s.units.some(u=>u.alive&&u.team===team&&u.x===p.x&&u.y===p.y)) held++;
-      if(held>=2) {s.objective.scores[team]++;record(s,`${team==='blue'?'Синий дозор':'Красная дружина'} удерживает ${held} точки: ${s.objective.scores[team]}/${s.objective.target}`);}
+      if(held>=Math.min(2,s.objective.points.length)) {s.objective.scores[team]++;record(s,`${team==='blue'?'Синий дозор':'Красная дружина'} удерживает ${held} точки: ${s.objective.scores[team]}/${s.objective.target}`);}
       else s.objective.scores[team]=0;
     }
   }
   s.history.push({type:'endTurn'});checkVictory(s);
-  if(!s.winner&&current==='red'&&s.objective.kind==='control'&&s.turn>=MAX_ROUNDS) {
-    const {blue,red}=s.objective.scores;
-    s.winner=blue===red?'draw':blue>red?'blue':'red';
-    record(s,s.winner==='draw'?'Ничья по лимиту раундов':`Победа по очкам: ${s.winner}`);
+  if(!s.winner&&current==='red'&&s.turn>=MAX_ROUNDS) {
+    if(s.objective.kind==='control') {
+      const {blue,red}=s.objective.scores;
+      s.winner=blue===red?'draw':blue>red?'blue':'red';
+      record(s,s.winner==='draw'?'Ничья по лимиту раундов':`Победа по очкам: ${s.winner}`);
+    } else {
+      const blue=s.units.filter(u=>u.alive&&u.team==='blue');
+      const red=s.units.filter(u=>u.alive&&u.team==='red');
+      const blueHp=blue.reduce((total,u)=>total+u.hp,0);
+      const redHp=red.reduce((total,u)=>total+u.hp,0);
+      s.winner=blue.length!==red.length?(blue.length>red.length?'blue':'red'):blueHp===redHp?'draw':blueHp>redHp?'blue':'red';
+      record(s,s.winner==='draw'?'Ничья по лимиту раундов':`Победа по числу бойцов и здоровью: ${s.winner}`);
+    }
   }
   if(s.winner)return s;
   s.team=other(current);if(s.team==='blue')s.turn++;

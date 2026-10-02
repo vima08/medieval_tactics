@@ -1,0 +1,4413 @@
+[
+  {
+    "source": "workbench/round2-replays/default-hh-s2.json",
+    "originalWinner": "blue",
+    "originalTurn": 8,
+    "originalScore": {
+      "blue": 5,
+      "red": 0
+    },
+    "hypothetical": {
+      "round": 8,
+      "command": 90,
+      "winner": "blue",
+      "score": {
+        "blue": 5,
+        "red": 1
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 5,
+      "red": 1
+    },
+    "resetCount": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 1
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 2,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 1
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 5,
+          "red": 1
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/round2-replays/default-hh.json",
+    "originalWinner": "blue",
+    "originalTurn": 8,
+    "originalScore": {
+      "blue": 5,
+      "red": 0
+    },
+    "hypothetical": {
+      "round": 8,
+      "command": 90,
+      "winner": "blue",
+      "score": {
+        "blue": 5,
+        "red": 1
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 5,
+      "red": 1
+    },
+    "resetCount": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 1
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 2,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 1
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 5,
+          "red": 1
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/round2-replays/default-hn.json",
+    "originalWinner": "blue",
+    "originalTurn": 9,
+    "originalScore": {
+      "blue": 5,
+      "red": 0
+    },
+    "hypothetical": {
+      "round": 7,
+      "command": 90,
+      "winner": "blue",
+      "score": {
+        "blue": 5,
+        "red": 1
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 7,
+      "red": 1
+    },
+    "resetCount": 2,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 3,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 1
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 5,
+          "red": 1
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 6,
+          "red": 1
+        }
+      },
+      {
+        "round": 9,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 7,
+          "red": 1
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/round2-replays/default-nh.json",
+    "originalWinner": "blue",
+    "originalTurn": 9,
+    "originalScore": {
+      "blue": 5,
+      "red": 0
+    },
+    "hypothetical": {
+      "round": 7,
+      "command": 90,
+      "winner": "blue",
+      "score": {
+        "blue": 5,
+        "red": 1
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 7,
+      "red": 1
+    },
+    "resetCount": 2,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 1
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 2,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 5,
+          "red": 1
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 2,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 6,
+          "red": 1
+        }
+      },
+      {
+        "round": 9,
+        "held": {
+          "blue": 2,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 7,
+          "red": 1
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/round2-replays/default-nn-s2.json",
+    "originalWinner": "blue",
+    "originalTurn": 11,
+    "originalScore": {
+      "blue": 5,
+      "red": 0
+    },
+    "hypothetical": {
+      "round": 8,
+      "command": 96,
+      "winner": "blue",
+      "score": {
+        "blue": 5,
+        "red": 1
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 8,
+      "red": 1
+    },
+    "resetCount": 2,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 1
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 5,
+          "red": 1
+        }
+      },
+      {
+        "round": 9,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 6,
+          "red": 1
+        }
+      },
+      {
+        "round": 10,
+        "held": {
+          "blue": 3,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 7,
+          "red": 1
+        }
+      },
+      {
+        "round": 11,
+        "held": {
+          "blue": 3,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 8,
+          "red": 1
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/round2-replays/default-nn.json",
+    "originalWinner": "blue",
+    "originalTurn": 11,
+    "originalScore": {
+      "blue": 5,
+      "red": 0
+    },
+    "hypothetical": {
+      "round": 8,
+      "command": 96,
+      "winner": "blue",
+      "score": {
+        "blue": 5,
+        "red": 1
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 8,
+      "red": 1
+    },
+    "resetCount": 2,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 1
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 5,
+          "red": 1
+        }
+      },
+      {
+        "round": 9,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 6,
+          "red": 1
+        }
+      },
+      {
+        "round": 10,
+        "held": {
+          "blue": 3,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 7,
+          "red": 1
+        }
+      },
+      {
+        "round": 11,
+        "held": {
+          "blue": 3,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 8,
+          "red": 1
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/round2-replays/mirror0-hh.json",
+    "originalWinner": "red",
+    "originalTurn": 8,
+    "originalScore": {
+      "blue": 0,
+      "red": 2
+    },
+    "hypothetical": null,
+    "cumulativeAtOriginalEnd": {
+      "blue": 3,
+      "red": 2
+    },
+    "resetCount": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 0
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 0
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 2
+        }
+      }
+    ],
+    "commanderDeath": true
+  },
+  {
+    "source": "workbench/round2-replays/mirror0-nn.json",
+    "originalWinner": "blue",
+    "originalTurn": 6,
+    "originalScore": {
+      "blue": 4,
+      "red": 0
+    },
+    "hypothetical": null,
+    "cumulativeAtOriginalEnd": {
+      "blue": 4,
+      "red": 1
+    },
+    "resetCount": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 1
+        }
+      }
+    ],
+    "commanderDeath": true
+  },
+  {
+    "source": "workbench/round2-replays/mirror1-hh.json",
+    "originalWinner": "blue",
+    "originalTurn": 10,
+    "originalScore": {
+      "blue": 5,
+      "red": 0
+    },
+    "hypothetical": {
+      "round": 10,
+      "command": 110,
+      "winner": "blue",
+      "score": {
+        "blue": 5,
+        "red": 1
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 5,
+      "red": 1
+    },
+    "resetCount": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 1
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 1
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 1,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 1
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 2,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 2,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 9,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 1
+        }
+      },
+      {
+        "round": 10,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 5,
+          "red": 1
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/round2-replays/mirror1-nn.json",
+    "originalWinner": "blue",
+    "originalTurn": 12,
+    "originalScore": {
+      "blue": 2,
+      "red": 0
+    },
+    "hypothetical": null,
+    "cumulativeAtOriginalEnd": {
+      "blue": 4,
+      "red": 2
+    },
+    "resetCount": 4,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 2
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 2
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 2
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 2
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 2
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 2,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 2
+        }
+      },
+      {
+        "round": 9,
+        "held": {
+          "blue": 1,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 2
+        }
+      },
+      {
+        "round": 10,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 2
+        }
+      },
+      {
+        "round": 11,
+        "held": {
+          "blue": 2,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 2
+        }
+      },
+      {
+        "round": 12,
+        "held": {
+          "blue": 2,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 2
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/round2-replays/swap-hh.json",
+    "originalWinner": "red",
+    "originalTurn": 8,
+    "originalScore": {
+      "blue": 0,
+      "red": 5
+    },
+    "hypothetical": {
+      "round": 8,
+      "command": 79,
+      "winner": "red",
+      "score": {
+        "blue": 0,
+        "red": 5
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 0,
+      "red": 5
+    },
+    "resetCount": 0,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 1
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 2
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 3
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 4
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 0,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 5
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/round2-replays/swap-hn.json",
+    "originalWinner": "red",
+    "originalTurn": 8,
+    "originalScore": {
+      "blue": 0,
+      "red": 5
+    },
+    "hypothetical": {
+      "round": 7,
+      "command": 80,
+      "winner": "red",
+      "score": {
+        "blue": 1,
+        "red": 5
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 1,
+      "red": 6
+    },
+    "resetCount": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 2
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 0,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 3
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 0,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 4
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 0,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 5
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 0,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 6
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/round2-replays/swap-nh.json",
+    "originalWinner": "red",
+    "originalTurn": 6,
+    "originalScore": {
+      "blue": 0,
+      "red": 5
+    },
+    "hypothetical": {
+      "round": 6,
+      "command": 71,
+      "winner": "red",
+      "score": {
+        "blue": 1,
+        "red": 5
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 1,
+      "red": 5
+    },
+    "resetCount": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 2
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 3
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 4
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 0,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 5
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/round2-replays/swap-nn.json",
+    "originalWinner": "red",
+    "originalTurn": 6,
+    "originalScore": {
+      "blue": 0,
+      "red": 5
+    },
+    "hypothetical": {
+      "round": 6,
+      "command": 71,
+      "winner": "red",
+      "score": {
+        "blue": 1,
+        "red": 5
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 1,
+      "red": 5
+    },
+    "resetCount": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 2
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 3
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 4
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 5
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/roster-experiment-replays/incumbent-blue-hh.json",
+    "originalWinner": "red",
+    "originalTurn": 8,
+    "originalScore": {
+      "blue": 0,
+      "red": 5
+    },
+    "hypothetical": {
+      "round": 8,
+      "command": 79,
+      "winner": "red",
+      "score": {
+        "blue": 0,
+        "red": 5
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 0,
+      "red": 5
+    },
+    "resetCount": 0,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 1
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 2
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 3
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 4
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 0,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 5
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/roster-experiment-replays/incumbent-blue-hn.json",
+    "originalWinner": "red",
+    "originalTurn": 8,
+    "originalScore": {
+      "blue": 0,
+      "red": 5
+    },
+    "hypothetical": {
+      "round": 7,
+      "command": 80,
+      "winner": "red",
+      "score": {
+        "blue": 1,
+        "red": 5
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 1,
+      "red": 6
+    },
+    "resetCount": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 2
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 0,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 3
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 0,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 4
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 0,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 5
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 0,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 6
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/roster-experiment-replays/incumbent-blue-nh.json",
+    "originalWinner": "red",
+    "originalTurn": 6,
+    "originalScore": {
+      "blue": 0,
+      "red": 5
+    },
+    "hypothetical": {
+      "round": 6,
+      "command": 71,
+      "winner": "red",
+      "score": {
+        "blue": 1,
+        "red": 5
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 1,
+      "red": 5
+    },
+    "resetCount": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 2
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 3
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 4
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 0,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 5
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/roster-experiment-replays/incumbent-blue-nn.json",
+    "originalWinner": "red",
+    "originalTurn": 6,
+    "originalScore": {
+      "blue": 0,
+      "red": 5
+    },
+    "hypothetical": {
+      "round": 6,
+      "command": 71,
+      "winner": "red",
+      "score": {
+        "blue": 1,
+        "red": 5
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 1,
+      "red": 5
+    },
+    "resetCount": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 2
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 3
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 4
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 5
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/roster-experiment-replays/incumbent-red-hh.json",
+    "originalWinner": "blue",
+    "originalTurn": 8,
+    "originalScore": {
+      "blue": 5,
+      "red": 0
+    },
+    "hypothetical": {
+      "round": 8,
+      "command": 90,
+      "winner": "blue",
+      "score": {
+        "blue": 5,
+        "red": 1
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 5,
+      "red": 1
+    },
+    "resetCount": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 1
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 2,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 1
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 5,
+          "red": 1
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/roster-experiment-replays/incumbent-red-hn.json",
+    "originalWinner": "blue",
+    "originalTurn": 9,
+    "originalScore": {
+      "blue": 5,
+      "red": 0
+    },
+    "hypothetical": {
+      "round": 7,
+      "command": 90,
+      "winner": "blue",
+      "score": {
+        "blue": 5,
+        "red": 1
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 7,
+      "red": 1
+    },
+    "resetCount": 2,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 3,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 1
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 5,
+          "red": 1
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 6,
+          "red": 1
+        }
+      },
+      {
+        "round": 9,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 7,
+          "red": 1
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/roster-experiment-replays/incumbent-red-nh.json",
+    "originalWinner": "blue",
+    "originalTurn": 9,
+    "originalScore": {
+      "blue": 5,
+      "red": 0
+    },
+    "hypothetical": {
+      "round": 7,
+      "command": 90,
+      "winner": "blue",
+      "score": {
+        "blue": 5,
+        "red": 1
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 7,
+      "red": 1
+    },
+    "resetCount": 2,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 1
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 2,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 5,
+          "red": 1
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 2,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 6,
+          "red": 1
+        }
+      },
+      {
+        "round": 9,
+        "held": {
+          "blue": 2,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 7,
+          "red": 1
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/roster-experiment-replays/incumbent-red-nn.json",
+    "originalWinner": "blue",
+    "originalTurn": 11,
+    "originalScore": {
+      "blue": 5,
+      "red": 0
+    },
+    "hypothetical": {
+      "round": 8,
+      "command": 96,
+      "winner": "blue",
+      "score": {
+        "blue": 5,
+        "red": 1
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 8,
+      "red": 1
+    },
+    "resetCount": 2,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 1
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 5,
+          "red": 1
+        }
+      },
+      {
+        "round": 9,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 6,
+          "red": 1
+        }
+      },
+      {
+        "round": 10,
+        "held": {
+          "blue": 3,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 7,
+          "red": 1
+        }
+      },
+      {
+        "round": 11,
+        "held": {
+          "blue": 3,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 8,
+          "red": 1
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/roster-experiment-replays/mobileEngineer-blue-nn.json",
+    "originalWinner": "red",
+    "originalTurn": 8,
+    "originalScore": {
+      "blue": 1,
+      "red": 2
+    },
+    "hypothetical": null,
+    "cumulativeAtOriginalEnd": {
+      "blue": 4,
+      "red": 2
+    },
+    "resetCount": 2,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 0
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 0
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 2,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 0
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 0
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 2
+        }
+      }
+    ],
+    "commanderDeath": true
+  },
+  {
+    "source": "workbench/roster-experiment-replays/mobileEngineer-red-nn.json",
+    "originalWinner": "blue",
+    "originalTurn": 7,
+    "originalScore": {
+      "blue": 3,
+      "red": 1
+    },
+    "hypothetical": null,
+    "cumulativeAtOriginalEnd": {
+      "blue": 3,
+      "red": 3
+    },
+    "resetCount": 2,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 2
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 2
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 2
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 3
+        }
+      }
+    ],
+    "commanderDeath": true
+  },
+  {
+    "source": "workbench/roster-experiment-replays/mobileSword-blue-hh.json",
+    "originalWinner": "blue",
+    "originalTurn": 8,
+    "originalScore": {
+      "blue": 3,
+      "red": 3
+    },
+    "hypothetical": null,
+    "cumulativeAtOriginalEnd": {
+      "blue": 4,
+      "red": 3
+    },
+    "resetCount": 0,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 0
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 0
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 2
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 3
+        }
+      }
+    ],
+    "commanderDeath": true
+  },
+  {
+    "source": "workbench/roster-experiment-replays/mobileSword-blue-hn.json",
+    "originalWinner": "blue",
+    "originalTurn": 7,
+    "originalScore": {
+      "blue": 0,
+      "red": 2
+    },
+    "hypothetical": null,
+    "cumulativeAtOriginalEnd": {
+      "blue": 2,
+      "red": 2
+    },
+    "resetCount": 2,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 0
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 0
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 0
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 2
+        }
+      }
+    ],
+    "commanderDeath": true
+  },
+  {
+    "source": "workbench/roster-experiment-replays/mobileSword-blue-nh.json",
+    "originalWinner": "red",
+    "originalTurn": 8,
+    "originalScore": {
+      "blue": 0,
+      "red": 0
+    },
+    "hypothetical": null,
+    "cumulativeAtOriginalEnd": {
+      "blue": 4,
+      "red": 1
+    },
+    "resetCount": 3,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 2,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 1
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 1
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 1
+        }
+      }
+    ],
+    "commanderDeath": true
+  },
+  {
+    "source": "workbench/roster-experiment-replays/mobileSword-blue-nn.json",
+    "originalWinner": "red",
+    "originalTurn": 9,
+    "originalScore": {
+      "blue": 0,
+      "red": 5
+    },
+    "hypothetical": {
+      "round": 9,
+      "command": 95,
+      "winner": "red",
+      "score": {
+        "blue": 4,
+        "red": 5
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 4,
+      "red": 5
+    },
+    "resetCount": 3,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 0
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 0
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 0
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 2
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 3
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 4
+        }
+      },
+      {
+        "round": 9,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 5
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/roster-experiment-replays/mobileSword-red-hh.json",
+    "originalWinner": "red",
+    "originalTurn": 7,
+    "originalScore": {
+      "blue": 0,
+      "red": 5
+    },
+    "hypothetical": {
+      "round": 7,
+      "command": 75,
+      "winner": "red",
+      "score": {
+        "blue": 0,
+        "red": 5
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 0,
+      "red": 5
+    },
+    "resetCount": 0,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 1
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 2
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 1,
+          "red": 3
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 3
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 1,
+          "red": 3
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 4
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 5
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/roster-experiment-replays/mobileSword-red-hn.json",
+    "originalWinner": "blue",
+    "originalTurn": 7,
+    "originalScore": {
+      "blue": 0,
+      "red": 1
+    },
+    "hypothetical": null,
+    "cumulativeAtOriginalEnd": {
+      "blue": 1,
+      "red": 3
+    },
+    "resetCount": 2,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 2
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 2
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 3,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 2
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 3
+        }
+      }
+    ],
+    "commanderDeath": true
+  },
+  {
+    "source": "workbench/roster-experiment-replays/mobileSword-red-nh.json",
+    "originalWinner": "red",
+    "originalTurn": 6,
+    "originalScore": {
+      "blue": 0,
+      "red": 5
+    },
+    "hypothetical": {
+      "round": 6,
+      "command": 60,
+      "winner": "red",
+      "score": {
+        "blue": 0,
+        "red": 5
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 0,
+      "red": 5
+    },
+    "resetCount": 0,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 2
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 3
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 4
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 5
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/roster-experiment-replays/mobileSword-red-nn.json",
+    "originalWinner": "blue",
+    "originalTurn": 9,
+    "originalScore": {
+      "blue": 0,
+      "red": 3
+    },
+    "hypothetical": {
+      "round": 8,
+      "command": 81,
+      "winner": "red",
+      "score": {
+        "blue": 2,
+        "red": 5
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 2,
+      "red": 5
+    },
+    "resetCount": 4,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 2
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 2
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 2
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 3
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 4
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 5
+        }
+      }
+    ],
+    "commanderDeath": true
+  },
+  {
+    "source": "workbench/roster-experiment-replays/sword-blue-hh.json",
+    "originalWinner": "red",
+    "originalTurn": 8,
+    "originalScore": {
+      "blue": 0,
+      "red": 5
+    },
+    "hypothetical": {
+      "round": 8,
+      "command": 73,
+      "winner": "red",
+      "score": {
+        "blue": 0,
+        "red": 5
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 0,
+      "red": 5
+    },
+    "resetCount": 0,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 1
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 2
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 3
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 4
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 0,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 5
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/roster-experiment-replays/sword-blue-hn.json",
+    "originalWinner": "blue",
+    "originalTurn": 8,
+    "originalScore": {
+      "blue": 0,
+      "red": 4
+    },
+    "hypothetical": {
+      "round": 7,
+      "command": 74,
+      "winner": "red",
+      "score": {
+        "blue": 1,
+        "red": 5
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 1,
+      "red": 5
+    },
+    "resetCount": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 2
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 3
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 4
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 5
+        }
+      }
+    ],
+    "commanderDeath": true
+  },
+  {
+    "source": "workbench/roster-experiment-replays/sword-blue-nh.json",
+    "originalWinner": "red",
+    "originalTurn": 6,
+    "originalScore": {
+      "blue": 0,
+      "red": 5
+    },
+    "hypothetical": {
+      "round": 6,
+      "command": 64,
+      "winner": "red",
+      "score": {
+        "blue": 1,
+        "red": 5
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 1,
+      "red": 5
+    },
+    "resetCount": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 2
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 3
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 4
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 0,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 5
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/roster-experiment-replays/sword-blue-nn.json",
+    "originalWinner": "red",
+    "originalTurn": 6,
+    "originalScore": {
+      "blue": 0,
+      "red": 5
+    },
+    "hypothetical": {
+      "round": 6,
+      "command": 67,
+      "winner": "red",
+      "score": {
+        "blue": 2,
+        "red": 5
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 2,
+      "red": 5
+    },
+    "resetCount": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 2
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 3
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 4
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 5
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/roster-experiment-replays/sword-red-hh.json",
+    "originalWinner": "blue",
+    "originalTurn": 8,
+    "originalScore": {
+      "blue": 5,
+      "red": 0
+    },
+    "hypothetical": {
+      "round": 8,
+      "command": 84,
+      "winner": "blue",
+      "score": {
+        "blue": 5,
+        "red": 0
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 5,
+      "red": 0
+    },
+    "resetCount": 0,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 3,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 0
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 2,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 0
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 0
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 0
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 5,
+          "red": 0
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/roster-experiment-replays/sword-red-hn.json",
+    "originalWinner": "blue",
+    "originalTurn": 10,
+    "originalScore": {
+      "blue": 5,
+      "red": 0
+    },
+    "hypothetical": {
+      "round": 7,
+      "command": 85,
+      "winner": "blue",
+      "score": {
+        "blue": 5,
+        "red": 1
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 8,
+      "red": 1
+    },
+    "resetCount": 2,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 2,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 1
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 2,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 5,
+          "red": 1
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 6,
+          "red": 1
+        }
+      },
+      {
+        "round": 9,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 7,
+          "red": 1
+        }
+      },
+      {
+        "round": 10,
+        "held": {
+          "blue": 3,
+          "red": 0
+        },
+        "cumulative": {
+          "blue": 8,
+          "red": 1
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/roster-experiment-replays/sword-red-nh.json",
+    "originalWinner": "red",
+    "originalTurn": 6,
+    "originalScore": {
+      "blue": 0,
+      "red": 5
+    },
+    "hypothetical": {
+      "round": 6,
+      "command": 68,
+      "winner": "red",
+      "score": {
+        "blue": 1,
+        "red": 5
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 1,
+      "red": 5
+    },
+    "resetCount": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 2
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 1,
+          "red": 3
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 3
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 4
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 5
+        }
+      }
+    ],
+    "commanderDeath": false
+  },
+  {
+    "source": "workbench/roster-experiment-replays/sword-red-nn.json",
+    "originalWinner": "red",
+    "originalTurn": 11,
+    "originalScore": {
+      "blue": 3,
+      "red": 0
+    },
+    "hypothetical": {
+      "round": 8,
+      "command": 85,
+      "winner": "blue",
+      "score": {
+        "blue": 5,
+        "red": 4
+      }
+    },
+    "cumulativeAtOriginalEnd": {
+      "blue": 7,
+      "red": 4
+    },
+    "resetCount": 4,
+    "rounds": [
+      {
+        "round": 1,
+        "held": {
+          "blue": 1,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 0,
+          "red": 0
+        }
+      },
+      {
+        "round": 2,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 1,
+          "red": 1
+        }
+      },
+      {
+        "round": 3,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 2,
+          "red": 1
+        }
+      },
+      {
+        "round": 4,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 1
+        }
+      },
+      {
+        "round": 5,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 3,
+          "red": 2
+        }
+      },
+      {
+        "round": 6,
+        "held": {
+          "blue": 2,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 3
+        }
+      },
+      {
+        "round": 7,
+        "held": {
+          "blue": 1,
+          "red": 2
+        },
+        "cumulative": {
+          "blue": 4,
+          "red": 4
+        }
+      },
+      {
+        "round": 8,
+        "held": {
+          "blue": 2,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 5,
+          "red": 4
+        }
+      },
+      {
+        "round": 9,
+        "held": {
+          "blue": 3,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 6,
+          "red": 4
+        }
+      },
+      {
+        "round": 10,
+        "held": {
+          "blue": 3,
+          "red": 1
+        },
+        "cumulative": {
+          "blue": 7,
+          "red": 4
+        }
+      }
+    ],
+    "commanderDeath": true
+  }
+]
