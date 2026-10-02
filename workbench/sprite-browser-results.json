@@ -1,0 +1,41 @@
+{
+  "alpha": {
+    "width": 1024,
+    "height": 1536,
+    "corner": 0,
+    "opaque": 453966
+  },
+  "results": [
+    {
+      "archetype": "sword",
+      "attack": true,
+      "move": true
+    },
+    {
+      "archetype": "archer",
+      "attack": true,
+      "move": true
+    },
+    {
+      "archetype": "spear",
+      "attack": true,
+      "move": true
+    },
+    {
+      "archetype": "shield",
+      "attack": true,
+      "move": true
+    },
+    {
+      "archetype": "scout",
+      "attack": true,
+      "move": true
+    },
+    {
+      "archetype": "engineer",
+      "attack": true,
+      "move": true
+    }
+  ],
+  "errors": []
+}
