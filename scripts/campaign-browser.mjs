@@ -21,9 +21,11 @@ async function issue(command,game){
   const size=Math.min(62,Math.max(39,box.width/(w*1.7)))*zoom,tile=game.map.tiles[command.y*w+command.x];
   const target=game.units.find(u=>u.alive&&u.x===command.x&&u.y===command.y);
   const x=box.x+box.width/2+(command.x-command.y-(w-h)/2)*size*.5,y=box.y+box.height*.48+(w>=16?20:5)+(command.x+command.y-(w+h)/2)*size*.24-tile.h*size*.21;
-  const offsets=target?[[0,-.5],[0,-.6],[0,0]]:[[0,0],[-.38,0],[.38,0],[0,-.18],[0,.18]];
+  const offsets=target?[[0,-.5],[0,-.6],[0,0],[-.22,-.5],[.22,-.5],[0,-.68],[-.25,-.65],[.25,-.65],[-.25,.12],[.25,.12]]:[[0,0],[-.38,0],[.38,0],[0,-.18],[0,.18],[-.47,0],[.47,0],[-.2,.14],[.2,.14],[0,.24]];
   for(const [dx,dy]of offsets){await page.mouse.move(x+dx*size,y+dy*size);const coordinate=await page.locator('#help strong').first().textContent();if(coordinate===`${command.x+1}:${command.y+1}`){await page.mouse.click(x+dx*size,y+dy*size);return}}
-  throw new Error(`Cannot target visible cell ${command.x}:${command.y}`);
+  await page.keyboard.down('Alt');
+  try{for(const [dx,dy]of [[0,0],[-.38,0],[.38,0],[0,-.18],[0,.18]]){await page.mouse.move(x+dx*size,y+dy*size);const coordinate=await page.locator('#help strong').first().textContent();if(coordinate===`${command.x+1}:${command.y+1}`){await page.mouse.click(x+dx*size,y+dy*size);return}}}finally{await page.keyboard.up('Alt')}
+  await page.screenshot({path:'workbench/shots/campaign-picking-failure.png'});throw new Error(`Cannot target visible cell ${command.x}:${command.y} command=${JSON.stringify(command)} mission=${game.campaignMission} history=${game.history.length}`);
 }
 try{
   await page.goto('http://game.test/');await page.locator('#campaign').click();
@@ -34,8 +36,7 @@ try{
   await page.reload();await page.locator('#continue').click();
   const summaries=[];
   for(const [index,mission]of CAMPAIGN_MISSIONS.entries()){
-    const file=mission.id==='gate'?'gate-reserve-shield':mission.id;
-    const replay=JSON.parse(await readFile(`workbench/campaign-replays/${file}.json`,'utf8'));
+    const replay=JSON.parse(await readFile(`workbench/current-campaign-replays/${mission.id}.json`,'utf8'));
     let game=await saved();if(game.campaignMission!==mission.id)throw new Error('Wrong mission transition');
     for(let i=0;i<replay.commands.length;i++){
       const command=replay.commands[i];if(game.team!=='blue')throw new Error('Unexpected replay order');

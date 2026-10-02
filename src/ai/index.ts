@@ -108,8 +108,8 @@ export function aiCandidates(state: GameState): Command[] {
       }
     }
     // Guard and trap placement target empty or friendly cells.
-    if (unit.archetype === 'shield' || unit.archetype === 'engineer' || unit.archetype === 'scout') {
-      const cells = unit.archetype === 'shield' ? [{ x: unit.x, y: unit.y }] : unit.archetype === 'scout'
+    if (unit.archetype === 'shield' || unit.archetype === 'sword' || unit.archetype === 'engineer' || unit.archetype === 'scout') {
+      const cells = unit.archetype === 'shield' || unit.archetype === 'sword' ? [{ x: unit.x, y: unit.y }] : unit.archetype === 'scout'
         ? Array.from({ length: 25 }, (_, i) => ({ x: unit.x + Math.floor(i / 5) - 2, y: unit.y + i % 5 - 2 }))
             .filter(c => Math.max(Math.abs(c.x - unit.x), Math.abs(c.y - unit.y)) === 2)
         : [

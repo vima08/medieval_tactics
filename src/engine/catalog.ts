@@ -2,8 +2,8 @@ import type { Archetype, Blueprint, UnitChoice, UnitRules } from './types';
 
 export const ARCHETYPES: Record<Archetype, UnitRules> = {
   archer: { move: 3, range: 6, minRange: 2, damage: 2, hp: 4, cost: 4, description: 'Чистая линия обзора. С высоты +1 урон.', ability: 'Прицельный выстрел: +1 урон, затем стрелок не может двигаться.' },
-  sword: { move: 4, range: 1, minRange: 1, damage: 3, hp: 7, cost: 4, description: 'Сильный ближний бой, держит проход.', ability: 'Толчок: 2 урона и отбрасывание на клетку.' },
-  spear: { move: 3, range: 2, minRange: 1, damage: 2, hp: 6, cost: 4, description: 'Удар по прямой через союзника.', ability: 'Натиск: удар с отбрасыванием, останавливает цель.' },
+  sword: { move: 4, range: 1, minRange: 1, damage: 3, hp: 7, cost: 4, description: 'Сильный ближний бой, держит проход.', ability: 'Приём по врагу — толчок на клетку, 2 урона. Приём по себе — стража: −1 входящий урон, ответ 1 на соседний удар, если выжил. Вместо атаки, до начала следующего своего хода.' },
+  spear: { move: 3, range: 2, minRange: 1, damage: 2, hp: 6, cost: 4, description: 'Удар по прямой через союзника.', ability: 'Натиск: удар и толчок на клетку от копейщика. После успешного толчка цель не может двигаться или делать рывок до конца своего следующего хода, но может атаковать. Тяжёлая или заблокированная цель не останавливается.' },
   shield: { move: 2, range: 1, minRange: 1, damage: 2, hp: 9, cost: 4, description: 'Соседние союзники получают -1 урон.', ability: 'Стража: до следующего хода щитоносец получает на 1 урон меньше.' },
   scout: { move: 5, range: 1, minRange: 1, damage: 2, hp: 4, cost: 3, description: 'Быстрый обход. +1 урон по врагу рядом с союзником.', ability: 'Рывок вместо атаки: на свободную клетку в двух шагах, затем движение использовано.' },
   engineer: { move: 3, range: 3, minRange: 1, damage: 1, hp: 5, cost: 4, description: 'Ставит ловушки, ломает укрытия и мосты.', ability: 'Ловушка на соседней пустой клетке или подрыв соседнего хрупкого моста.' },
@@ -19,7 +19,7 @@ export const VARIANTS: Record<Archetype, { id: string; name: string; description
 export const MODIFIERS = {
   heavy: { name: 'Тяжёлый', description: 'Не отбрасывается, -1 движение', cost: 1 },
   swift: { name: 'Стремительный', description: '+1 движение, -1 здоровье', cost: 1 },
-  veteran: { name: 'Ветеран', description: '+1 здоровье, +1 стоимость', cost: 2 },
+  veteran: { name: 'Ветеран', description: '+1 здоровье, +2 стоимость', cost: 2 },
 } as const;
 export const ARTIFACTS = {
   hook: { name: 'Крюк ущелья', description: 'Толчок отбрасывает ещё на клетку, если она свободна', cost: 2 },

@@ -56,6 +56,8 @@ export function createGame(config: GameConfig): GameState {
   return { map, units: [...deploy(map,'blue',blue,mission?.spawns.blue),...deploy(map,'red',red,mission?.spawns.red)], team:'blue', turn:1, mode:gameMode, ...(mission?{campaignMission:mission.id}:{}), log:[{turn:1,team:'blue',message:mission?`Задание: ${mission.title}`:'Битва начинается'}], history:[], seed:config.seed ?? 1, objective: {kind:objectiveKind,points,scores:{blue:0,red:0},target:mission?.target??(tutorial?1:5)}, initial:{map:map.id,mode:gameMode,seed:config.seed ?? 1,...(mission?{mission:mission.id}:{}),objective:objectiveKind,blueprintA:blue,blueprintB:red} };
 }
 function passable(tile?: Tile): boolean { return !!tile && tile.terrain !== 'water' && tile.object !== 'cover'; }
+export function tileHazardDamage(tile: Tile): number { return tile.object==='trap'?(tile.trapDamage??2):tile.object==='brazier'?1:0; }
+function consumeTrap(tile: Tile): void { if(tile.object==='trap'){tile.object=undefined;tile.trapDamage=undefined;} }
 function movementCost(from: Tile, to: Tile, unit: Unit): number {
   const rise = to.h - from.h;
   if (rise > (to.terrain === 'stairs' ? 2 : 1) || rise < -2) return Infinity;
@@ -179,11 +181,22 @@ function pushPreview(state:GameState,u:Unit,t:Unit): Pick<Preview,'push'|'fallDa
   if(!passable(to)||unitAt(state,x,y)) return {hazardDamage:1};
   if(u.artifact==='hook') { const next=tileAt(state.map,x+dx,y+dy); if(passable(next)&&!unitAt(state,x+dx,y+dy)) {x+=dx;y+=dy;} }
   const end=tileAt(state.map,x,y)!;
-  return {push:{x,y},fallDamage:Math.max(0,from.h-end.h-1)*2,hazardDamage:end.object==='trap'?2:end.object==='brazier'?1:0};
+  return {push:{x,y},fallDamage:Math.max(0,from.h-end.h-1)*2,hazardDamage:tileHazardDamage(end)};
+}
+function undoPreview(state:GameState,unitId:string):Preview {
+  const u=state.units.find(v=>v.id===unitId);
+  const base:Preview={valid:false,type:'undo',unitId,from:u?{x:u.x,y:u.y}:undefined,to:u?.undo?{x:u.undo.x,y:u.undo.y}:undefined};
+  if(state.winner)return {...base,reason:'Матч завершён'};
+  if(!u||!u.alive)return {...base,reason:'Боец недоступен'};
+  if(u.team!==state.team)return {...base,reason:'Ход другой стороны'};
+  if(!u.undo||u.acted)return {...base,reason:'Перемещение уже нельзя отменить'};
+  if(unitAt(state,u.undo.x,u.undo.y))return {...base,reason:'Исходная клетка занята'};
+  if(!passable(tileAt(state.map,u.undo.x,u.undo.y)))return {...base,reason:'Исходная клетка больше недоступна'};
+  return {...base,valid:true};
 }
 export function previewAction(state:GameState,command:Command):Preview {
   if(command.type==='endTurn') return {valid:!state.winner,type:'endTurn',reason:state.winner?'Матч завершён':undefined};
-  if(command.type==='undo') {const u=state.units.find(v=>v.id===command.unitId);return {valid:!!u?.undo&&!u.acted,type:'undo',unitId:command.unitId,reason:u?.undo&&!u.acted?undefined:'Перемещение уже нельзя отменить'};}
+  if(command.type==='undo') return undoPreview(state,command.unitId);
   const u=state.units.find(v=>v.id===command.unitId);
   const base:Preview={valid:false,type:command.type,unitId:command.unitId,from:u?{x:u.x,y:u.y}:undefined,to:{x:command.x,y:command.y}};
   if(state.winner) return {...base,reason:'Матч завершён'};
@@ -192,28 +205,42 @@ export function previewAction(state:GameState,command:Command):Preview {
   const tile=tileAt(state.map,command.x,command.y);
   if(!tile) return {...base,reason:'Вне поля'};
   if(command.type==='move') {
-    if(u.moved) return {...base,reason:'Движение уже потрачено'};
+    if(u.pinned)return {...base,reason:'Боец остановлен натиском: шаг недоступен до конца хода'};
+    if(u.moved) {
+      const turnOrders=state.history.slice(state.history.map(c=>c.type).lastIndexOf('endTurn')+1);
+      const aimed=u.archetype==='archer'&&turnOrders.some(c=>c.type==='ability'&&c.unitId===u.id);
+      return {...base,reason:aimed?'После прицельного выстрела движение недоступно':'Движение уже потрачено'};
+    }
     const move=legalMoves(state,u.id).find(c=>c.x===command.x&&c.y===command.y);
     if(!move) return {...base,reason:'Клетка недоступна: дальность, высота или препятствие'};
-    return {...base,valid:true,path:move.path,cost:move.cost,hazardDamage:tile.object==='trap'?2:tile.object==='brazier'?1:0,explanation:`Маршрут: ${move.cost} очк. движения`};
+    return {...base,valid:true,path:move.path,cost:move.cost,hazardDamage:tileHazardDamage(tile),explanation:`Маршрут: ${move.cost} очк. движения`};
   }
   if(u.acted) return {...base,reason:'Действие уже потрачено'};
+  if(command.type==='ability'&&u.archetype==='sword'&&command.x===u.x&&command.y===u.y)
+    return {...base,valid:true,explanation:'Стража мечника: −1 входящий урон и ответ 1 на соседний удар, если мечник выживет. До начала следующего своего хода; расходует атаку.'};
   if(command.type==='ability' && u.archetype==='shield') {
     if(command.x!==u.x||command.y!==u.y) return {...base,reason:'Стража применяется к себе'};
     return {...base,valid:true,explanation:'Стража: -1 входящий урон щитоносцу до следующего хода; прикрытие соседей сохраняется'};
   }
   if(command.type==='ability' && u.archetype==='engineer') {
+    if(u.variant==='mason'&&(tile.object==='cover'||tile.object==='fragile')) {
+      if(dist(u,command)!==1)return {...base,reason:'Укрепление только на соседней клетке'};
+      if((tile.hp??2)>=4)return {...base,reason:'Объект уже укреплён до предела: 4 прочности'};
+      const hp=Math.min(4,(tile.hp??2)+2);
+      return {...base,valid:true,objectDamage:0,tileChange:{x:tile.x,y:tile.y,h:tile.h,terrain:tile.terrain,object:tile.object,hp},explanation:`Объект укреплён: ${hp} прочности (максимум 4)`};
+    }
     if(tile.object==='fragile') {
       if(dist(u,command)!==1) return {...base,reason:'Подрыв моста только с соседней клетки'};
       return objectAttackPreview(state,u,tile,true);
     }
     if(dist(u,command)!==1||!passable(tile)||unitAt(state,command.x,command.y)||tile.object) return {...base,reason:'Ловушка ставится на свободную соседнюю клетку'};
-    return {...base,valid:true,explanation:'Ловушка: 2 урона вступившему бойцу'};
+    return {...base,valid:true,explanation:`Ловушка: ${u.variant==='sapper'?3:2} урона вступившему бойцу`};
   }
   if(command.type==='ability' && u.archetype==='scout') {
+    if(u.pinned)return {...base,reason:'Боец остановлен натиском: рывок недоступен'};
     if(cheb(u,command)!==2||!passable(tile)||unitAt(state,command.x,command.y)) return {...base,reason:'Рывок на свободную клетку в двух шагах'};
     if(Math.abs(tile.h-tileAt(state.map,u.x,u.y)!.h)>1) return {...base,reason:'Перепад высот слишком велик'};
-    return {...base,valid:true,hazardDamage:tile.object==='trap'?2:tile.object==='brazier'?1:0,explanation:'Рывок через занятую клетку'};
+    return {...base,valid:true,hazardDamage:tileHazardDamage(tile),explanation:'Рывок через занятую клетку'};
   }
   const target=unitAt(state,command.x,command.y);
   if(command.type==='attack'&&!target&&(tile.object==='cover'||tile.object==='fragile')) return objectAttackPreview(state,u,tile,false);
@@ -224,7 +251,7 @@ export function previewAction(state:GameState,command:Command):Preview {
   const push=(damage<target.hp&&command.type==='ability'&&['sword','spear'].includes(u.archetype))?pushPreview(state,u,target):{};
   const total=damage+(push.fallDamage??0)+(push.hazardDamage??0);
   const counterDamage=(dist(u,target)===1&&target.archetype==='sword'&&target.guard&&target.hp>total)?1:0;
-  return {...base,valid:true,targetId:target.id,damage,counterDamage,killed:total>=target.hp,...push,explanation:`${damage} урона${push.push?' · отбрасывание':''}${push.fallDamage?` · падение ${push.fallDamage}`:''}${push.hazardDamage?` · опасность ${push.hazardDamage}`:''}${counterDamage?' · контратака 1':''}`};
+  return {...base,valid:true,targetId:target.id,damage,counterDamage,killed:total>=target.hp,...push,explanation:`${damage} урона${push.push?' · отбрасывание':''}${push.push&&u.archetype==='spear'&&total<target.hp?' · остановка движения до конца следующего хода цели':''}${push.fallDamage?` · падение ${push.fallDamage}`:''}${push.hazardDamage?` · опасность ${push.hazardDamage}`:''}${counterDamage?' · контратака 1':''}`};
 }
 function clone(state:GameState):GameState { return JSON.parse(JSON.stringify(state)) as GameState; }
 function record(s:GameState,message:string,command?:Command) { s.log.push({turn:s.turn,team:s.team,message,command}); if(s.log.length>120)s.log.shift(); }
@@ -265,30 +292,32 @@ export function applyAction(state:GameState,command:Command):GameState {
     u.hp-=p.hazardDamage??0;
     if(u.hp<=0){u.hp=0;u.alive=false;}
     const tile=tileAt(s.map,u.x,u.y)!;
-    if(tile.object==='trap') tile.object=undefined;
+    consumeTrap(tile);
     record(s,`${u.id} переместился (${p.cost} очк.)${p.hazardDamage?` и получил ${p.hazardDamage} урона (${tileAt(state.map,u.x,u.y)?.object==='trap'?'ловушка':'костёр'})`:''}`,command);
-  } else if(command.type==='ability'&&u.archetype==='shield') {
+  } else if(command.type==='ability'&&(u.archetype==='shield'||u.archetype==='sword'&&!p.targetId)) {
     u.guard=true;u.acted=true;u.undo=undefined;record(s,`${u.id} встал в стражу`,command);
   } else if(command.type==='ability'&&u.archetype==='engineer'&&!p.tileChange) {
-    tileAt(s.map,command.x,command.y)!.object='trap';u.acted=true;u.undo=undefined;record(s,`${u.id} поставил ловушку`,command);
+    const trap=tileAt(s.map,command.x,command.y)!;trap.object='trap';trap.trapDamage=u.variant==='sapper'?3:2;
+    u.acted=true;u.undo=undefined;record(s,`${u.id} поставил ловушку`,command);
   } else if(command.type==='ability'&&u.archetype==='scout') {
     u.x=command.x;u.y=command.y;u.acted=true;u.moved=true;u.undo=undefined;u.hp-=p.hazardDamage??0;
     if(u.hp<=0){u.hp=0;u.alive=false;}
     record(s,`${u.id} совершил рывок${p.hazardDamage?` и получил ${p.hazardDamage} урона (${tileAt(state.map,u.x,u.y)?.object==='trap'?'ловушка':'костёр'})`:''}`,command);
+    consumeTrap(tileAt(s.map,u.x,u.y)!);
   } else if(p.tileChange) {
     const changed=tileAt(s.map,p.tileChange.x,p.tileChange.y)!;
     changed.h=p.tileChange.h;changed.terrain=p.tileChange.terrain;
     changed.object=p.tileChange.object;changed.hp=p.tileChange.hp;
-    if(p.targetId) {const victim=s.units.find(v=>v.id===p.targetId)!;victim.hp=0;victim.alive=false;}
+    if(p.targetId&&p.killed) {const victim=s.units.find(v=>v.id===p.targetId)!;victim.hp=0;victim.alive=false;}
     u.acted=true;u.undo=undefined;
-    record(s,`${u.id} повредил объект на ${p.objectDamage}; ${p.explanation}`,command);
+    record(s,p.objectDamage===0?`${u.id} укрепил объект; ${p.explanation}`:`${u.id} повредил объект на ${p.objectDamage}; ${p.explanation}`,command);
   } else {
     const t=s.units.find(v=>v.id===p.targetId)!;
     t.hp-=p.damage??0;
     if(t.hp>0) {
-      if(p.push) {t.x=p.push.x;t.y=p.push.y;t.pinned=u.archetype==='spear';}
+      if(p.push) {t.x=p.push.x;t.y=p.push.y;if(u.archetype==='spear')t.pinned=true;}
       t.hp-=(p.fallDamage??0)+(p.hazardDamage??0);
-      if(p.push&&p.hazardDamage&&tileAt(s.map,t.x,t.y)?.object==='trap')tileAt(s.map,t.x,t.y)!.object=undefined;
+      if(p.push)consumeTrap(tileAt(s.map,t.x,t.y)!);
     }
     if(t.hp<=0){t.hp=0;t.alive=false;}
     if(p.counterDamage&&u.alive){u.hp-=p.counterDamage;if(u.hp<=0){u.hp=0;u.alive=false;}}
@@ -299,10 +328,9 @@ export function applyAction(state:GameState,command:Command):GameState {
   s.history.push(command);checkVictory(s);return s;
 }
 export function undoMove(state:GameState,unitId:string):GameState {
-  const u=state.units.find(v=>v.id===unitId);
-  if(!u||u.team!==state.team||!u.undo||u.acted||!u.alive) throw new Error('Перемещение уже нельзя отменить');
+  const p=undoPreview(state,unitId);
+  if(!p.valid)throw new Error(p.reason??'Перемещение уже нельзя отменить');
   const s=clone(state),v=s.units.find(w=>w.id===unitId)!;
-  if(unitAt(s,v.undo!.x,v.undo!.y)) throw new Error('Исходная клетка занята');
   const old=v.undo!;v.x=old.x;v.y=old.y;v.moved=old.moved;v.undo=undefined;
   // Undo is also a command in the replay stream, so it reproduces the same state.
   s.history.push({type:'undo',unitId,x:old.x,y:old.y});
@@ -339,8 +367,9 @@ export function endTurn(state:GameState):GameState {
     }
   }
   if(s.winner)return s;
+  for(const u of s.units)if(u.team===current)u.pinned=false;
   s.team=other(current);if(s.team==='blue')s.turn++;
-  for(const u of s.units) if(u.team===s.team){u.moved=false;u.acted=false;u.guard=false;u.pinned=false;u.undo=undefined;}
+  for(const u of s.units) if(u.team===s.team){u.moved=false;u.acted=false;u.guard=false;u.undo=undefined;}
   record(s,`Ход ${s.turn}: ${s.team==='blue'?'Синий дозор':'Красная дружина'}`);
   return s;
 }
