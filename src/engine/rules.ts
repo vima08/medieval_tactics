@@ -1,8 +1,9 @@
 import { ARCHETYPES, ARTIFACTS, MODIFIERS, PRESETS, VARIANTS, validateBlueprint } from './catalog';
 import { makeMap } from './maps';
-import type { Archetype, Blueprint, Command, GameMap, GameState, ObjectiveKind, Preview, ReachableCell, Team, Tile, Unit, UnitRules } from './types';
+import { getCampaignMission } from './campaign';
+import type { Archetype, Blueprint, Command, GameMap, GameState, MapId, ObjectiveKind, Preview, ReachableCell, Team, Tile, Unit, UnitRules } from './types';
 
-export type GameConfig = { map: 'tutorial' | 'highland'; mode: 'ai' | 'pvp'; seed?: number; objective?: ObjectiveKind; blueprintA?: Blueprint; blueprintB?: Blueprint };
+export type GameConfig = { map: MapId; mode: 'ai' | 'pvp'; seed?: number; mission?: string; objective?: ObjectiveKind; blueprintA?: Blueprint; blueprintB?: Blueprint };
 const other = (t: Team): Team => t === 'blue' ? 'red' : 'blue';
 export const MAX_ROUNDS = 12;
 const key = (x: number, y: number) => `${x},${y}`;
@@ -29,25 +30,30 @@ export function getUnitRules(unit: Unit): UnitRules {
   return r;
 }
 function initialHp(archetype: Archetype, variant: string, modifier?: string): number { return getUnitRules({ archetype, variant, modifier } as Unit).hp; }
-function deploy(map: GameMap, team: Team, blueprint: Blueprint): Unit[] {
+function deploy(map: GameMap, team: Team, blueprint: Blueprint, positions?: {x:number;y:number}[]): Unit[] {
   const ys = map.id === 'tutorial' ? [2,4,6,1,5] : [5,8,11,3,14];
   const x = team === 'blue' ? 1 : map.width - 2;
   return blueprint.units.map((c, i) => {
     const variant = c.variant ?? VARIANTS[c.archetype][0].id;
     const hp = initialHp(c.archetype, variant, c.modifier);
-    return { id: `${team}-${i+1}`, team, archetype: c.archetype, variant, modifier: c.modifier, artifact: c.artifact, x, y: ys[i], hp, maxHp: hp, moved: false, acted: false, guard: false, pinned: false, alive: true, commander: i === 0 };
+    const position = positions?.[i] ?? {x,y:ys[i]};
+    return { id: `${team}-${i+1}`, team, archetype: c.archetype, variant, modifier: c.modifier, artifact: c.artifact, ...position, hp, maxHp: hp, moved: false, acted: false, guard: false, pinned: false, alive: true, commander: i === 0 };
   });
 }
 export function createGame(config: GameConfig): GameState {
+  const mission = config.mission ? getCampaignMission(config.mission) : undefined;
+  if(config.mission && !mission) throw new Error('Неизвестная миссия кампании');
   const tutorial = config.map === 'tutorial';
-  const blue = config.blueprintA ?? (tutorial ? {name:'Учебный дозор',units:[{archetype:'sword' as const},{archetype:'archer' as const},{archetype:'spear' as const}]} : PRESETS[0]);
-  const red = config.blueprintB ?? (tutorial ? {name:'Учебный враг',units:[{archetype:'sword' as const},{archetype:'spear' as const},{archetype:'archer' as const}]} : PRESETS[1]);
-  const errors = [...validateBlueprint(blue), ...validateBlueprint(red)];
+  const blue = mission?.blue ?? config.blueprintA ?? (tutorial ? {name:'Учебный дозор',units:[{archetype:'sword' as const},{archetype:'archer' as const},{archetype:'spear' as const}]} : PRESETS[0]);
+  const red = mission?.red ?? config.blueprintB ?? (tutorial ? {name:'Учебный враг',units:[{archetype:'sword' as const},{archetype:'spear' as const},{archetype:'archer' as const}]} : PRESETS[1]);
+  const options = mission ? {minUnits:1} : {};
+  const errors = [...validateBlueprint(blue,options), ...validateBlueprint(red,options)];
   if (errors.length) throw new Error(errors.join('; '));
-  const map = makeMap(config.map);
-  const objectiveKind = config.objective ?? (tutorial ? 'commander' : 'control');
-  const points = objectiveKind === 'control' ? (tutorial ? [{x:4,y:1}] : [{x:3,y:9},{x:8,y:9},{x:9,y:9},{x:14,y:9}]) : [];
-  return { map, units: [...deploy(map,'blue',blue),...deploy(map,'red',red)], team:'blue', turn:1, mode:config.mode, log:[{turn:1,team:'blue',message:'Битва начинается'}], history:[], seed:config.seed ?? 1, objective: {kind:objectiveKind,points,scores:{blue:0,red:0},target:tutorial?1:5}, initial:{map:config.map,mode:config.mode,seed:config.seed ?? 1,objective:objectiveKind,blueprintA:blue,blueprintB:red} };
+  const map = makeMap(mission?.map ?? config.map);
+  const objectiveKind = mission?.objective ?? config.objective ?? (tutorial ? 'commander' : 'control');
+  const points = objectiveKind === 'control' ? (mission ? map.tiles.filter(t=>t.object==='objective').map(t=>({x:t.x,y:t.y})) : tutorial ? [{x:4,y:1}] : [{x:3,y:9},{x:8,y:9},{x:9,y:9},{x:14,y:9}]) : [];
+  const gameMode = mission ? 'ai' : config.mode;
+  return { map, units: [...deploy(map,'blue',blue,mission?.spawns.blue),...deploy(map,'red',red,mission?.spawns.red)], team:'blue', turn:1, mode:gameMode, ...(mission?{campaignMission:mission.id}:{}), log:[{turn:1,team:'blue',message:mission?`Задание: ${mission.title}`:'Битва начинается'}], history:[], seed:config.seed ?? 1, objective: {kind:objectiveKind,points,scores:{blue:0,red:0},target:mission?.target??(tutorial?1:5)}, initial:{map:map.id,mode:gameMode,seed:config.seed ?? 1,...(mission?{mission:mission.id}:{}),objective:objectiveKind,blueprintA:blue,blueprintB:red} };
 }
 function passable(tile?: Tile): boolean { return !!tile && tile.terrain !== 'water' && tile.object !== 'cover'; }
 function movementCost(from: Tile, to: Tile, unit: Unit): number {
@@ -194,7 +200,7 @@ export function previewAction(state:GameState,command:Command):Preview {
   if(u.acted) return {...base,reason:'Действие уже потрачено'};
   if(command.type==='ability' && u.archetype==='shield') {
     if(command.x!==u.x||command.y!==u.y) return {...base,reason:'Стража применяется к себе'};
-    return {...base,valid:true,explanation:'Стража: -1 урон себе и соседним союзникам до следующего хода'};
+    return {...base,valid:true,explanation:'Стража: -1 входящий урон щитоносцу до следующего хода; прикрытие соседей сохраняется'};
   }
   if(command.type==='ability' && u.archetype==='engineer') {
     if(tile.object==='fragile') {
@@ -225,7 +231,7 @@ function record(s:GameState,message:string,command?:Command) { s.log.push({turn:
 function checkVictory(s:GameState) {
   const blueAlive=s.units.some(u=>u.alive&&u.team==='blue');
   const redAlive=s.units.some(u=>u.alive&&u.team==='red');
-  if(!blueAlive||!redAlive) {
+  if(!blueAlive||(!redAlive&&!(s.campaignMission&&s.objective.kind==='control'))) {
     s.winner=blueAlive?'blue':redAlive?'red':'draw';
     record(s,s.winner==='draw'?'Обе дружины погибли':`Победа: ${s.winner==='blue'?'Синий дозор':'Красная дружина'}`);
     return;
@@ -260,7 +266,7 @@ export function applyAction(state:GameState,command:Command):GameState {
     if(u.hp<=0){u.hp=0;u.alive=false;}
     const tile=tileAt(s.map,u.x,u.y)!;
     if(tile.object==='trap') tile.object=undefined;
-    record(s,`${u.id} переместился (${p.cost} очк.)${p.hazardDamage?` и получил ${p.hazardDamage} урона`:''}`,command);
+    record(s,`${u.id} переместился (${p.cost} очк.)${p.hazardDamage?` и получил ${p.hazardDamage} урона (${tileAt(state.map,u.x,u.y)?.object==='trap'?'ловушка':'костёр'})`:''}`,command);
   } else if(command.type==='ability'&&u.archetype==='shield') {
     u.guard=true;u.acted=true;u.undo=undefined;record(s,`${u.id} встал в стражу`,command);
   } else if(command.type==='ability'&&u.archetype==='engineer'&&!p.tileChange) {
@@ -268,7 +274,7 @@ export function applyAction(state:GameState,command:Command):GameState {
   } else if(command.type==='ability'&&u.archetype==='scout') {
     u.x=command.x;u.y=command.y;u.acted=true;u.moved=true;u.undo=undefined;u.hp-=p.hazardDamage??0;
     if(u.hp<=0){u.hp=0;u.alive=false;}
-    record(s,`${u.id} совершил рывок`,command);
+    record(s,`${u.id} совершил рывок${p.hazardDamage?` и получил ${p.hazardDamage} урона (${tileAt(state.map,u.x,u.y)?.object==='trap'?'ловушка':'костёр'})`:''}`,command);
   } else if(p.tileChange) {
     const changed=tileAt(s.map,p.tileChange.x,p.tileChange.y)!;
     changed.h=p.tileChange.h;changed.terrain=p.tileChange.terrain;
@@ -317,7 +323,9 @@ export function endTurn(state:GameState):GameState {
   }
   s.history.push({type:'endTurn'});checkVictory(s);
   if(!s.winner&&current==='red'&&s.turn>=MAX_ROUNDS) {
-    if(s.objective.kind==='control') {
+    if(s.campaignMission) {
+      s.winner='red';record(s,'Задание провалено: цель не выполнена за 12 раундов');
+    } else if(s.objective.kind==='control') {
       const {blue,red}=s.objective.scores;
       s.winner=blue===red?'draw':blue>red?'blue':'red';
       record(s,s.winner==='draw'?'Ничья по лимиту раундов':`Победа по очкам: ${s.winner}`);

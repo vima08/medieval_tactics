@@ -4,9 +4,9 @@ export const ARCHETYPES: Record<Archetype, UnitRules> = {
   archer: { move: 3, range: 6, minRange: 2, damage: 2, hp: 4, cost: 4, description: 'Чистая линия обзора. С высоты +1 урон.', ability: 'Прицельный выстрел: +1 урон, затем стрелок не может двигаться.' },
   sword: { move: 4, range: 1, minRange: 1, damage: 3, hp: 7, cost: 4, description: 'Сильный ближний бой, держит проход.', ability: 'Толчок: 2 урона и отбрасывание на клетку.' },
   spear: { move: 3, range: 2, minRange: 1, damage: 2, hp: 6, cost: 4, description: 'Удар по прямой через союзника.', ability: 'Натиск: удар с отбрасыванием, останавливает цель.' },
-  shield: { move: 2, range: 1, minRange: 1, damage: 2, hp: 9, cost: 4, description: 'Соседние союзники получают -1 урон.', ability: 'Стража: до следующего хода снижает урон себе и соседям.' },
-  scout: { move: 5, range: 1, minRange: 1, damage: 2, hp: 4, cost: 3, description: 'Быстрый обход. +1 урон во фланг.', ability: 'Рывок: перемещение на свободную соседнюю клетку после удара.' },
-  engineer: { move: 3, range: 3, minRange: 1, damage: 1, hp: 5, cost: 4, description: 'Меняет проходы, тушит ловушки, ломает укрытия.', ability: 'Ловушка на соседней пустой клетке или подрыв соседнего хрупкого моста.' },
+  shield: { move: 2, range: 1, minRange: 1, damage: 2, hp: 9, cost: 4, description: 'Соседние союзники получают -1 урон.', ability: 'Стража: до следующего хода щитоносец получает на 1 урон меньше.' },
+  scout: { move: 5, range: 1, minRange: 1, damage: 2, hp: 4, cost: 3, description: 'Быстрый обход. +1 урон по врагу рядом с союзником.', ability: 'Рывок вместо атаки: на свободную клетку в двух шагах, затем движение использовано.' },
+  engineer: { move: 3, range: 3, minRange: 1, damage: 1, hp: 5, cost: 4, description: 'Ставит ловушки, ломает укрытия и мосты.', ability: 'Ловушка на соседней пустой клетке или подрыв соседнего хрупкого моста.' },
 };
 export const VARIANTS: Record<Archetype, { id: string; name: string; description: string; cost: number }[]> = {
   archer: [{ id: 'longbow', name: 'Дальнострел', description: '+1 дальность, -1 движение', cost: 1 }, { id: 'hunter', name: 'Охотник', description: '+1 движение, дальность -1', cost: 0 }],
@@ -35,9 +35,10 @@ export const PRESETS: Blueprint[] = [
 ];
 export function choiceCost(c: UnitChoice): number { return ARCHETYPES[c.archetype].cost + (VARIANTS[c.archetype].find(v => v.id === c.variant)?.cost ?? 0) + (c.modifier ? MODIFIERS[c.modifier as keyof typeof MODIFIERS]?.cost ?? 0 : 0) + (c.artifact ? ARTIFACTS[c.artifact as keyof typeof ARTIFACTS]?.cost ?? 0 : 0); }
 export function rosterCost(b: Blueprint): number { return b.units.reduce((n, c) => n + choiceCost(c), 0); }
-export function validateBlueprint(b: Blueprint): string[] {
+export function validateBlueprint(b: Blueprint, options: {minUnits?:number} = {}): string[] {
   const errors: string[] = [];
-  if (b.units.length < 3 || b.units.length > 5) errors.push('Отряд: от 3 до 5 бойцов');
+  const minimum = options.minUnits ?? 3;
+  if (b.units.length < minimum || b.units.length > 5) errors.push(`Отряд: от ${minimum} до 5 бойцов`);
   if (rosterCost(b) > BUDGET) errors.push(`Бюджет ${BUDGET} превышен`);
   if (b.units.filter(u => !!u.artifact).length > 2) errors.push('В отряде не более двух артефактов');
   for (const c of b.units) {

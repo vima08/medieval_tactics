@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-02",
+  "build": "index-B0cWeCgm.js",
+  "tests": { "passed": 54, "failed": 0, "files": 9 },
+  "browser": {
+    "summaries": [
+      {"mission":"ford","rounds":3,"commands":15,"winner":"blue"},
+      {"mission":"watch","rounds":3,"commands":15,"winner":"blue"},
+      {"mission":"steps","rounds":2,"commands":14,"winner":"blue"},
+      {"mission":"gate","rounds":6,"commands":48,"winner":"blue"},
+      {"mission":"marsh","rounds":2,"commands":21,"winner":"blue"},
+      {"mission":"kiln","rounds":5,"commands":54,"winner":"blue"}
+    ],
+    "completed": ["ford","watch","steps","gate","marsh","kiln"],
+    "trapDamage": 2,
+    "errors": []
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "trapTraversal": {
+    "preview": {
+      "valid": true,
+      "type": "move",
+      "unitId": "blue-5",
+      "from": {
+        "x": 3,
+        "y": 6
+      },
+      "to": {
+        "x": 7,
+        "y": 5
+      },
+      "path": [
+        {
+          "x": 4,
+          "y": 6
+        },
+        {
+          "x": 5,
+          "y": 6
+        },
+        {
+          "x": 6,
+          "y": 6
+        },
+        {
+          "x": 7,
+          "y": 6
+        },
+        {
+          "x": 7,
+          "y": 5
+        }
+      ],
+      "cost": 5,
+      "hazardDamage": 0,
+      "explanation": "Маршрут: 5 очк. движения"
+    },
+    "hpBefore": 4,
+    "hpAfter": 4,
+    "trapStillArmed": "trap"
+  },
+  "shieldGuardAlly": {
+    "withoutGuard": {
+      "valid": true,
+      "type": "attack",
+      "unitId": "red-1",
+      "from": {
+        "x": 4,
+        "y": 5
+      },
+      "to": {
+        "x": 3,
+        "y": 5
+      },
+      "targetId": "blue-2",
+      "damage": 2,
+      "counterDamage": 0,
+      "killed": false,
+      "explanation": "2 урона"
+    },
+    "withGuard": {
+      "valid": true,
+      "type": "attack",
+      "unitId": "red-1",
+      "from": {
+        "x": 4,
+        "y": 5
+      },
+      "to": {
+        "x": 3,
+        "y": 5
+      },
+      "targetId": "blue-2",
+      "damage": 2,
+      "counterDamage": 0,
+      "killed": false,
+      "explanation": "2 урона"
+    }
+  },
+  "openingMarshPath": {
+    "x": 7,
+    "y": 5,
+    "cost": 5,
+    "path": [
+      {
+        "x": 4,
+        "y": 6
+      },
+      {
+        "x": 5,
+        "y": 6
+      },
+      {
+        "x": 6,
+        "y": 6
+      },
+      {
+        "x": 7,
+        "y": 6
+      },
+      {
+        "x": 7,
+        "y": 5
+      }
+    ],
+    "threatened": true
+  }
+}

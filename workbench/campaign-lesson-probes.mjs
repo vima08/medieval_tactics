@@ -1,0 +1,17 @@
+import {registerHooks} from 'node:module';
+import {writeFileSync} from 'node:fs';
+registerHooks({resolve(s,c,n){if(s.startsWith('.')&&!/\.[cm]?[jt]s$/.test(s)){try{return n(`${s}.ts`,c)}catch{}try{return n(`${s}/index.ts`,c)}catch{}}return n(s,c)}});
+const {createGame,previewAction,applyAction,legalMoves}=await import('../src/engine/index.ts');
+let marsh=createGame({map:'marsh',mode:'ai',mission:'marsh'});
+const move={type:'move',unitId:'blue-5',x:7,y:5};
+const p=previewAction(marsh,move),after=applyAction(marsh,move);
+let gate=createGame({map:'gate',mode:'ai',mission:'gate'});
+gate.units.find(u=>u.id==='blue-1').y=4;
+gate.units.find(u=>u.id==='red-1').x=4;gate.units.find(u=>u.id==='red-1').y=5;
+gate.team='red';
+const attack={type:'attack',unitId:'red-1',x:3,y:5};
+const withoutGuard=previewAction(gate,attack);
+gate.units.find(u=>u.id==='blue-1').guard=true;
+const withGuard=previewAction(gate,attack);
+const data={trapTraversal:{preview:p,hpBefore:4,hpAfter:after.units.find(u=>u.id==='blue-5').hp,trapStillArmed:after.map.tiles.find(t=>t.x===4&&t.y===6).object},shieldGuardAlly:{withoutGuard,withGuard},openingMarshPath:legalMoves(marsh,'blue-5').find(c=>c.x===7&&c.y===5)};
+writeFileSync('workbench/campaign-replays/lesson-probes.json',JSON.stringify(data,null,2));console.log(JSON.stringify(data));

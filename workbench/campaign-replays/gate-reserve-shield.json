@@ -1,0 +1,317 @@
+{
+  "initial": {
+    "map": "gate",
+    "mode": "ai",
+    "seed": 1,
+    "mission": "gate",
+    "objective": "control",
+    "blueprintA": {
+      "name": "Стражи ворот",
+      "units": [
+        {
+          "archetype": "shield",
+          "variant": ""
+        },
+        {
+          "archetype": "sword",
+          "variant": ""
+        },
+        {
+          "archetype": "archer",
+          "variant": ""
+        },
+        {
+          "archetype": "spear",
+          "variant": ""
+        }
+      ]
+    },
+    "blueprintB": {
+      "name": "Вражеский дозор",
+      "units": [
+        {
+          "archetype": "sword",
+          "variant": ""
+        },
+        {
+          "archetype": "archer",
+          "variant": ""
+        },
+        {
+          "archetype": "spear",
+          "variant": ""
+        }
+      ]
+    }
+  },
+  "commands": [
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 4,
+      "y": 2
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 7,
+      "y": 3
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-2",
+      "x": 7,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "red-2",
+      "x": 3,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 8,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 8,
+      "y": 3
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 3,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 8,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 4,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 4,
+      "y": 2
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "red-2",
+      "x": 3,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 6,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 7,
+      "y": 3
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 5,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 6,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 6,
+      "y": 3
+    },
+    {
+      "type": "attack",
+      "unitId": "blue-2",
+      "x": 7,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 7,
+      "y": 4
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "red-2",
+      "x": 5,
+      "y": 4
+    },
+    {
+      "type": "attack",
+      "unitId": "red-3",
+      "x": 6,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 8,
+      "y": 3
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 6,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 8,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 6,
+      "y": 3
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-2",
+      "x": 7,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 8,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 3,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 3,
+      "y": 4
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 7,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 3,
+      "y": 3
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 3,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 6,
+      "y": 2
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 3,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 2,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 7,
+      "y": 2
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "endTurn"
+    }
+  ],
+  "result": {
+    "strategy": "reserve-shield",
+    "winner": "blue",
+    "turn": 6,
+    "commands": 48,
+    "scores": {
+      "blue": 2,
+      "red": 0
+    },
+    "alive": [
+      "blue-1:1@3,4",
+      "blue-2:5@7,4",
+      "blue-3:4@2,4",
+      "blue-4:2@7,2"
+    ]
+  }
+}
