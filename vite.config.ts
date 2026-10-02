@@ -1,2 +1,6 @@
 import { defineConfig } from 'vite';
-export default defineConfig({ server: { port: 5173 }, test: { environment: 'node' } });
+export default defineConfig({
+  base: '/medieval_tactics/',
+  server: { port: 5173 },
+  test: { environment: 'node' },
+});
