@@ -12,6 +12,47 @@ function height(state: GameState, x: number, y: number): number {
   return tile?.x === x && tile?.y === y ? tile.h : state.map.tiles.find(t => t.x === x && t.y === y)?.h ?? 0;
 }
 
+function routeDistance(state:GameState,from:{x:number;y:number},targets:{x:number;y:number}[]):number {
+  if(!targets.length)return 0;
+  const queue=[{...from,d:0}],seen=new Set([`${from.x},${from.y}`]);
+  for(let i=0;i<queue.length;i++) {
+    const c=queue[i];if(targets.some(t=>t.x===c.x&&t.y===c.y))return c.d;
+    for(const [dx,dy]of [[1,0],[-1,0],[0,1],[0,-1]]) {
+      const x=c.x+dx,y=c.y+dy,k=`${x},${y}`,tile=state.map.tiles[y*state.map.width+x];
+      if(x<0||y<0||x>=state.map.width||y>=state.map.height||seen.has(k)||!tile||tile.terrain==='water'||tile.object==='cover')continue;
+      seen.add(k);queue.push({x,y,d:c.d+1});
+    }
+  }
+  return state.map.width+state.map.height;
+}
+function scenarioValue(state:GameState):number {
+  const o=state.objective;if(!['escort','evacuate','defend'].includes(o.kind))return 0;
+  const protectedUnits=state.units.filter(u=>o.protectedIds?.includes(u.id));
+  let value=(o.evacuatedIds?.length??0)*180+(o.defendedRounds??0)*22;
+  if(o.kind==='defend')for(const p of o.defendPoints??[]) {
+    if(state.units.some(u=>u.alive&&u.team==='blue'&&u.x===p.x&&u.y===p.y))value+=100;
+    else value-=35;
+  }
+  for(const u of protectedUnits) {
+    if(u.evacuated)continue;
+    value+=u.alive?u.hp*12: -200;
+    if(u.alive&&o.kind!=='defend')value-=routeDistance(state,u,o.exits??[])*12;
+    if(u.alive&&o.kind==='defend')value-=routeDistance(state,u,o.defendPoints??[])*20;
+    if(u.alive)for(const enemy of state.units.filter(e=>e.alive&&e.team==='red')) {
+      const range=ARCHETYPES[enemy.archetype].range;
+      const move=ARCHETYPES[enemy.archetype].move;
+      const gap=distance(u,enemy);
+      if(gap<=range+move)value-=(range+move+1-gap)*10;
+    }
+  }
+  for(const u of state.units.filter(u=>u.alive&&u.team==='red')) {
+    const targets=o.kind==='defend'?[...(o.defendPoints??[]),...protectedUnits.filter(p=>p.alive)]:protectedUnits.filter(p=>p.alive);
+    value+=routeDistance(state,u,targets)*1.8;
+    if(o.exits?.some(p=>p.x===u.x&&p.y===u.y))value-=14;
+    if(o.defendPoints?.some(p=>p.x===u.x&&p.y===u.y))value-=60;
+  }
+  return value;
+}
 function positionalValue(state: GameState, unit: Unit, friends: Unit[], enemies: Unit[]): number {
   const tile = state.map.tiles.find(t => t.x === unit.x && t.y === unit.y);
   const strategicTargets = state.objective.kind === 'commander' && !unit.commander ? enemies.filter(e => e.commander) : enemies;
@@ -88,6 +129,7 @@ export function evaluatePosition(state: GameState, side: Team): number {
     if (unit.commander) score -= unit.hp * 3;
   }
   score += controlValue(state, side, friends, enemies) - controlValue(state, side === 'blue' ? 'red' : 'blue', enemies, friends);
+  score += scenarioValue(state)*(side==='blue'?1:-1);
   return score;
 }
 

@@ -1,4 +1,4 @@
-import type { Archetype, Blueprint, GameMap, ObjectiveKind } from './types';
+import type { Archetype, Blueprint, GameMap, ObjectiveKind, ObjectiveConfig } from './types';
 
 export type CampaignMission = {
   id: string;
@@ -10,6 +10,8 @@ export type CampaignMission = {
   introduced: Archetype;
   objective: ObjectiveKind;
   target: number;
+  objectiveConfig?: ObjectiveConfig;
+  unitNames?: Record<string,string>;
   blue: Blueprint;
   red: Blueprint;
   spawns: { blue: {x:number;y:number}[]; red: {x:number;y:number}[] };
@@ -67,6 +69,37 @@ export const CAMPAIGN_MISSIONS: CampaignMission[] = [
     blue:squad('Дозор печи','sword','archer','spear','scout','engineer'),red:squad('Защитники печи','shield','sword','archer','engineer'),
     spawns:{blue:[{x:4,y:3},{x:3,y:2},{x:3,y:3},{x:3,y:8},{x:4,y:4}],red:[{x:7,y:3},{x:7,y:7},{x:9,y:6},{x:8,y:7}]},
     lessonSteps:[{text:'Подведите инженера к хрупкому мосту.',type:'move',archetype:'engineer'},{text:'Ударьте по врагу или разрушаемому укрытию.',type:'attack',archetype:'engineer'},{text:'Поставьте ловушку или подорвите соседний мост.',type:'ability',archetype:'engineer'}],
+  },
+  {
+    id:'caravan', map:'caravan', title:'VII · Живые на дороге', subtitle:'Сопровождение · вывести проводника', introduced:'scout', objective:'escort', target:1,
+    briefing:'Доведите разведчика Мирона до восточного выхода за 12 раундов. Его гибель означает поражение. Спасая беженцев, дозор теряет часть семенного запаса.',
+    lesson:'Мирон — разведчик под вашим управлением. Прикройте его щитом или расчистите южный брод. Уничтожение врагов не заменяет выход.',
+    objectiveConfig:{protectedIds:['blue-5'],exits:[{x:11,y:3},{x:11,y:7}],required:1,roundLimit:12},unitNames:{"blue-5":"Мирон, проводник"},
+    blue:squad('Охрана каравана','shield','sword','archer','spear','scout'),red:squad('Засада ущелья','sword','archer','spear'),
+    spawns:{blue:[{x:2,y:3},{x:3,y:4},{x:2,y:2},{x:2,y:4},{x:1,y:3}],red:[{x:8,y:3},{x:10,y:5},{x:8,y:7}]},lessonSteps:[],
+  },
+  {
+    id:'granary', map:'granary', title:'VII · Цена весны', subtitle:'Оборона · четыре полных раунда',introduced:'shield',objective:'defend',target:4,
+    briefing:'Сохраните инженера Савву и ворота амбара четыре полных раунда. Гибель Саввы или враг на воротах в конце красного хода означают поражение. Двое возниц остаются в тылу.',
+    lesson:'Савва — обычный инженер. Перекройте два подхода щитом и копьём. Даже после гибели всех налётчиков нужно дождаться конца четвёртого раунда.',
+    objectiveConfig:{protectedIds:['blue-5'],defendPoints:[{x:2,y:4}],rounds:4,roundLimit:12},unitNames:{"blue-5":"Савва, хранитель амбара"},
+    blue:squad('Стража амбара','shield','sword','archer','spear','engineer'),red:squad('Ночные налётчики','sword','spear','archer','scout'),
+    spawns:{blue:[{x:4,y:3},{x:4,y:5},{x:2,y:2},{x:3,y:3},{x:2,y:4}],red:[{x:8,y:3},{x:8,y:5},{x:9,y:4},{x:8,y:7}]},lessonSteps:[],
+  },
+  {
+    id:'evacuation',map:'evacuation',title:'VIII · Последний переход',subtitle:'Эвакуация · вывести двух свидетелей',introduced:'scout',objective:'evacuate',target:2,
+    briefing:'Выведите мечника Олега и разведчика Мирона к восточным выходам за 12 раундов. Оба должны выжить. Остальные трое прикрывают переход.',
+    lesson:'На выходе боец покидает поле и больше не атакует. Используйте два маршрута. Победа над преследователями не заменяет спасение обоих свидетелей.',
+    objectiveConfig:{protectedIds:['blue-4','blue-5'],exits:[{x:10,y:2},{x:10,y:6}],required:2,roundLimit:12},unitNames:{"blue-4":"Олег, свидетель","blue-5":"Мирон, свидетель"},
+    blue:squad('Отходящий дозор','shield','archer','spear','sword','scout'),red:squad('Преследователи','sword','archer','scout'),
+    spawns:{blue:[{x:3,y:4},{x:2,y:3},{x:3,y:3},{x:1,y:5},{x:1,y:2}],red:[{x:7,y:3},{x:8,y:5},{x:8,y:7}]},lessonSteps:[],
+  },
+  {
+    id:'summit',map:'summit',title:'IX · Право на огонь',subtitle:'Финал · командир на высоте',introduced:'engineer',objective:'commander',target:1,
+    briefing:'Победите командира наместника до конца 12 раунда. Ваш командир должен выжить, чтобы дозор добрался до народного совета.',
+    lesson:'Высота усиливает стрелка, щит защищает строй, копьё достаёт через союзника. Инженер открывает проход, разведчик обходит защитников.',
+    blue:squad('Дозор Серой Короны','shield','archer','spear','scout','engineer'),red:squad('Стража наместника','shield','archer','sword','spear'),
+    spawns:{blue:[{x:3,y:4},{x:2,y:2},{x:2,y:4},{x:3,y:7},{x:3,y:5}],red:[{x:9,y:4},{x:9,y:2},{x:7,y:4},{x:8,y:6}]},lessonSteps:[],
   },
 ];
 

@@ -11,7 +11,8 @@ export type SelfPlayResult = {
 };
 
 export function playHeadless(options: {
-  map?: 'tutorial' | 'highland';
+  map?: GameState['map']['id'];
+  mission?: string;
   seed?: number;
   difficultyBlue?: Difficulty;
   difficultyRed?: Difficulty;
@@ -21,7 +22,7 @@ export function playHeadless(options: {
   controlTarget?: number;
   objective?: GameState['objective']['kind'];
 } = {}): SelfPlayResult {
-  let state = createGame({ map: options.map ?? 'highland', mode: 'pvp', seed: options.seed ?? 1, objective: options.objective, blueprintA: options.blueprintA, blueprintB: options.blueprintB });
+  let state = createGame({ map: options.map ?? 'highland', mission:options.mission, mode: 'pvp', seed: options.seed ?? 1, objective: options.objective, blueprintA: options.blueprintA, blueprintB: options.blueprintB });
   if (state.objective.kind === 'control' && options.controlTarget !== undefined) {
     state = { ...state, objective: { ...state.objective, target: options.controlTarget } };
   }
@@ -40,7 +41,7 @@ export function playHeadless(options: {
   for (const unit of initialUnits) {
     const stat = byClass[unit.archetype] ?? { deployed: 0, survived: 0 };
     stat.deployed++;
-    if (state.units.find(u => u.id === unit.id)?.alive) stat.survived++;
+    if (state.units.find(u => u.id === unit.id)?.alive || state.units.find(u => u.id === unit.id)?.evacuated) stat.survived++;
     byClass[unit.archetype] = stat;
   }
   return { final: state, commands, winner: state.winner, byClass, endedByLimit: !state.winner };

@@ -1,0 +1,5441 @@
+{
+  "initial": {
+    "map": "kiln",
+    "mode": "ai",
+    "seed": 1,
+    "mission": "kiln",
+    "objective": "elimination",
+    "blueprintA": {
+      "name": "Дозор печи",
+      "units": [
+        {
+          "archetype": "sword",
+          "variant": ""
+        },
+        {
+          "archetype": "archer",
+          "variant": ""
+        },
+        {
+          "archetype": "spear",
+          "variant": ""
+        },
+        {
+          "archetype": "scout",
+          "variant": ""
+        },
+        {
+          "archetype": "engineer",
+          "variant": ""
+        }
+      ]
+    },
+    "blueprintB": {
+      "name": "Защитники печи",
+      "units": [
+        {
+          "archetype": "shield",
+          "variant": ""
+        },
+        {
+          "archetype": "sword",
+          "variant": ""
+        },
+        {
+          "archetype": "archer",
+          "variant": ""
+        },
+        {
+          "archetype": "engineer",
+          "variant": ""
+        }
+      ]
+    }
+  },
+  "commands": [
+    {
+      "type": "ability",
+      "unitId": "blue-2",
+      "x": 7,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 3,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 6,
+      "y": 3
+    },
+    {
+      "type": "attack",
+      "unitId": "blue-1",
+      "x": 7,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 5,
+      "y": 3
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "red-3",
+      "x": 6,
+      "y": 3
+    },
+    {
+      "type": "attack",
+      "unitId": "red-1",
+      "x": 6,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 8,
+      "y": 2
+    },
+    {
+      "type": "move",
+      "unitId": "red-4",
+      "x": 8,
+      "y": 4
+    },
+    {
+      "type": "attack",
+      "unitId": "red-4",
+      "x": 6,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "red-2",
+      "x": 5,
+      "y": 7
+    },
+    {
+      "type": "ability",
+      "unitId": "red-2",
+      "x": 5,
+      "y": 7
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 7,
+      "y": 4
+    },
+    {
+      "type": "attack",
+      "unitId": "blue-1",
+      "x": 8,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 3,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-2",
+      "x": 5,
+      "y": 7
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 6,
+      "y": 3
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-5",
+      "x": 4,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-5",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-4",
+      "x": 9,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "red-2",
+      "x": 3,
+      "y": 5
+    },
+    {
+      "type": "attack",
+      "unitId": "red-2",
+      "x": 3,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 8,
+      "y": 5
+    },
+    {
+      "type": "attack",
+      "unitId": "red-3",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 7,
+      "y": 3
+    },
+    {
+      "type": "ability",
+      "unitId": "red-4",
+      "x": 9,
+      "y": 6
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 4,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-2",
+      "x": 3,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 7,
+      "y": 5
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 8,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 8,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 7,
+      "y": 4
+    },
+    {
+      "type": "attack",
+      "unitId": "blue-4",
+      "x": 9,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-5",
+      "x": 3,
+      "y": 4
+    },
+    {
+      "type": "attack",
+      "unitId": "blue-5",
+      "x": 3,
+      "y": 5
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 8,
+      "y": 8
+    },
+    {
+      "type": "attack",
+      "unitId": "red-3",
+      "x": 8,
+      "y": 4
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 8,
+      "y": 7
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 8,
+      "y": 8
+    }
+  ],
+  "result": {
+    "mission": "kiln",
+    "strategy": "hard",
+    "seed": 1,
+    "bluePlan": "hard",
+    "redDifficulty": "easy",
+    "winner": "blue",
+    "turn": 4,
+    "commands": 46,
+    "scores": {
+      "blue": 0,
+      "red": 0
+    },
+    "repairs": 0,
+    "survivors": [
+      {
+        "id": "blue-1",
+        "hp": 1,
+        "x": 8,
+        "y": 7
+      },
+      {
+        "id": "blue-2",
+        "hp": 1,
+        "x": 4,
+        "y": 4
+      },
+      {
+        "id": "blue-3",
+        "hp": 6,
+        "x": 7,
+        "y": 4
+      },
+      {
+        "id": "blue-4",
+        "hp": 1,
+        "x": 8,
+        "y": 4
+      },
+      {
+        "id": "blue-5",
+        "hp": 3,
+        "x": 3,
+        "y": 4
+      }
+    ]
+  },
+  "trace": [
+    {
+      "round": 1,
+      "team": "blue",
+      "command": {
+        "type": "ability",
+        "unitId": "blue-2",
+        "x": 7,
+        "y": 3
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 7,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 3,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 3,
+          "y": 8,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 5,
+          "x": 7,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 7,
+          "x": 7,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 5,
+          "x": 8,
+          "y": 7,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "team": "blue",
+      "command": {
+        "type": "move",
+        "unitId": "blue-4",
+        "x": 3,
+        "y": 5
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 7,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 3,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 3,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 5,
+          "x": 7,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 7,
+          "x": 7,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 5,
+          "x": 8,
+          "y": 7,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "team": "blue",
+      "command": {
+        "type": "move",
+        "unitId": "blue-1",
+        "x": 6,
+        "y": 3
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 7,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 3,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 3,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 5,
+          "x": 7,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 7,
+          "x": 7,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 5,
+          "x": 8,
+          "y": 7,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "team": "blue",
+      "command": {
+        "type": "attack",
+        "unitId": "blue-1",
+        "x": 7,
+        "y": 3
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 7,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 3,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 3,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 7,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 7,
+          "x": 7,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 5,
+          "x": 8,
+          "y": 7,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "team": "blue",
+      "command": {
+        "type": "move",
+        "unitId": "blue-3",
+        "x": 5,
+        "y": 3
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 7,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 3,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 7,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 7,
+          "x": 7,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 5,
+          "x": 8,
+          "y": 7,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "team": "blue",
+      "command": {
+        "type": "ability",
+        "unitId": "blue-4",
+        "x": 4,
+        "y": 3
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 7,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 7,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 7,
+          "x": 7,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 5,
+          "x": 8,
+          "y": 7,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "team": "blue",
+      "command": {
+        "type": "endTurn"
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 7,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 7,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 7,
+          "x": 7,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 5,
+          "x": 8,
+          "y": 7,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "team": "red",
+      "command": {
+        "type": "ability",
+        "unitId": "red-3",
+        "x": 6,
+        "y": 3
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 4,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 7,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 7,
+          "x": 7,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 5,
+          "x": 8,
+          "y": 7,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "team": "red",
+      "command": {
+        "type": "attack",
+        "unitId": "red-1",
+        "x": 6,
+        "y": 3
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 2,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 7,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 7,
+          "x": 7,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 5,
+          "x": 8,
+          "y": 7,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "team": "red",
+      "command": {
+        "type": "move",
+        "unitId": "red-1",
+        "x": 8,
+        "y": 2
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 2,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 8,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 7,
+          "x": 7,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 5,
+          "x": 8,
+          "y": 7,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "team": "red",
+      "command": {
+        "type": "move",
+        "unitId": "red-4",
+        "x": 8,
+        "y": 4
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 2,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 8,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 7,
+          "x": 7,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 5,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "team": "red",
+      "command": {
+        "type": "attack",
+        "unitId": "red-4",
+        "x": 6,
+        "y": 3
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 8,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 7,
+          "x": 7,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 5,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "team": "red",
+      "command": {
+        "type": "move",
+        "unitId": "red-2",
+        "x": 5,
+        "y": 7
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 8,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 7,
+          "x": 5,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 5,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "team": "red",
+      "command": {
+        "type": "ability",
+        "unitId": "red-2",
+        "x": 5,
+        "y": 7
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 8,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 7,
+          "x": 5,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 5,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "team": "red",
+      "command": {
+        "type": "endTurn"
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 8,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 7,
+          "x": 5,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 5,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "blue",
+      "command": {
+        "type": "move",
+        "unitId": "blue-1",
+        "x": 7,
+        "y": 4
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 8,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 7,
+          "x": 5,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 5,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "blue",
+      "command": {
+        "type": "attack",
+        "unitId": "blue-1",
+        "x": 8,
+        "y": 4
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 8,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 7,
+          "x": 5,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "blue",
+      "command": {
+        "type": "move",
+        "unitId": "blue-2",
+        "x": 3,
+        "y": 4
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 8,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 7,
+          "x": 5,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "blue",
+      "command": {
+        "type": "ability",
+        "unitId": "blue-2",
+        "x": 5,
+        "y": 7
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 8,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 5,
+          "x": 5,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "blue",
+      "command": {
+        "type": "ability",
+        "unitId": "blue-4",
+        "x": 6,
+        "y": 3
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 8,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 5,
+          "x": 5,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "blue",
+      "command": {
+        "type": "ability",
+        "unitId": "blue-5",
+        "x": 4,
+        "y": 5
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 8,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 5,
+          "x": 5,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "blue",
+      "command": {
+        "type": "move",
+        "unitId": "blue-5",
+        "x": 4,
+        "y": 3
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 8,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 5,
+          "x": 5,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "blue",
+      "command": {
+        "type": "endTurn"
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 8,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 5,
+          "x": 5,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "red",
+      "command": {
+        "type": "move",
+        "unitId": "red-4",
+        "x": 9,
+        "y": 5
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 8,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 5,
+          "x": 5,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 9,
+          "y": 5,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "red",
+      "command": {
+        "type": "move",
+        "unitId": "red-2",
+        "x": 3,
+        "y": 5
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 4,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 8,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 5,
+          "x": 3,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 9,
+          "y": 5,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "red",
+      "command": {
+        "type": "attack",
+        "unitId": "red-2",
+        "x": 3,
+        "y": 4
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 8,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 5,
+          "x": 3,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 9,
+          "y": 6,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 9,
+          "y": 5,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "red",
+      "command": {
+        "type": "move",
+        "unitId": "red-3",
+        "x": 8,
+        "y": 5
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 5,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 8,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 5,
+          "x": 3,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 8,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 9,
+          "y": 5,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "red",
+      "command": {
+        "type": "attack",
+        "unitId": "red-3",
+        "x": 4,
+        "y": 3
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 3,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-1",
+          "hp": 1,
+          "x": 8,
+          "y": 2,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 5,
+          "x": 3,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 8,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 9,
+          "y": 5,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "red",
+      "command": {
+        "type": "move",
+        "unitId": "red-1",
+        "x": 7,
+        "y": 3
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 3,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 5,
+          "x": 3,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 8,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 9,
+          "y": 5,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "red",
+      "command": {
+        "type": "ability",
+        "unitId": "red-4",
+        "x": 9,
+        "y": 6
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 3,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 5,
+          "x": 3,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 8,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 9,
+          "y": 5,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "team": "red",
+      "command": {
+        "type": "endTurn"
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 3,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 5,
+          "x": 3,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 8,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 9,
+          "y": 5,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "team": "blue",
+      "command": {
+        "type": "move",
+        "unitId": "blue-2",
+        "x": 4,
+        "y": 4
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 3,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 5,
+          "x": 3,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 8,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 9,
+          "y": 5,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "team": "blue",
+      "command": {
+        "type": "ability",
+        "unitId": "blue-2",
+        "x": 3,
+        "y": 5
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 3,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 1,
+          "x": 3,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 8,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 9,
+          "y": 5,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "team": "blue",
+      "command": {
+        "type": "move",
+        "unitId": "blue-1",
+        "x": 7,
+        "y": 5
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 3,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 1,
+          "x": 3,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 4,
+          "x": 8,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 9,
+          "y": 5,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "team": "blue",
+      "command": {
+        "type": "ability",
+        "unitId": "blue-1",
+        "x": 8,
+        "y": 5
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 6,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 3,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 1,
+          "x": 3,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 1,
+          "x": 8,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 9,
+          "y": 5,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "team": "blue",
+      "command": {
+        "type": "move",
+        "unitId": "blue-4",
+        "x": 8,
+        "y": 4
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 5,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 3,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 1,
+          "x": 3,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 1,
+          "x": 8,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 9,
+          "y": 5,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "team": "blue",
+      "command": {
+        "type": "move",
+        "unitId": "blue-3",
+        "x": 7,
+        "y": 4
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 3,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 1,
+          "x": 3,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 1,
+          "x": 8,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-4",
+          "hp": 2,
+          "x": 9,
+          "y": 5,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "team": "blue",
+      "command": {
+        "type": "attack",
+        "unitId": "blue-4",
+        "x": 9,
+        "y": 5
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 3,
+          "x": 4,
+          "y": 3,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 1,
+          "x": 3,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 1,
+          "x": 8,
+          "y": 5,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "team": "blue",
+      "command": {
+        "type": "move",
+        "unitId": "blue-5",
+        "x": 3,
+        "y": 4
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 3,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-2",
+          "hp": 1,
+          "x": 3,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 1,
+          "x": 8,
+          "y": 5,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "team": "blue",
+      "command": {
+        "type": "attack",
+        "unitId": "blue-5",
+        "x": 3,
+        "y": 5
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 3,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 1,
+          "x": 8,
+          "y": 5,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "team": "blue",
+      "command": {
+        "type": "endTurn"
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 3,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 1,
+          "x": 8,
+          "y": 5,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "team": "red",
+      "command": {
+        "type": "move",
+        "unitId": "red-3",
+        "x": 8,
+        "y": 8
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 4,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 3,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 1,
+          "x": 8,
+          "y": 8,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "team": "red",
+      "command": {
+        "type": "attack",
+        "unitId": "red-3",
+        "x": 8,
+        "y": 4
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 1,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 3,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 1,
+          "x": 8,
+          "y": 8,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "team": "red",
+      "command": {
+        "type": "endTurn"
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 7,
+          "y": 5,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 1,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 3,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 1,
+          "x": 8,
+          "y": 8,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "team": "blue",
+      "command": {
+        "type": "move",
+        "unitId": "blue-1",
+        "x": 8,
+        "y": 7
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 8,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 1,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 3,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "red-3",
+          "hp": 1,
+          "x": 8,
+          "y": 8,
+          "pinned": false
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "team": "blue",
+      "command": {
+        "type": "ability",
+        "unitId": "blue-1",
+        "x": 8,
+        "y": 8
+      },
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "alive": [
+        {
+          "id": "blue-1",
+          "hp": 1,
+          "x": 8,
+          "y": 7,
+          "pinned": false
+        },
+        {
+          "id": "blue-2",
+          "hp": 1,
+          "x": 4,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-3",
+          "hp": 6,
+          "x": 7,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-4",
+          "hp": 1,
+          "x": 8,
+          "y": 4,
+          "pinned": false
+        },
+        {
+          "id": "blue-5",
+          "hp": 3,
+          "x": 3,
+          "y": 4,
+          "pinned": false
+        }
+      ]
+    }
+  ],
+  "repairs": [],
+  "final": {
+    "map": {
+      "id": "kiln",
+      "name": "Последняя печь",
+      "width": 12,
+      "height": 10,
+      "tiles": [
+        {
+          "x": 0,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 5,
+          "y": 0,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 6,
+          "y": 0,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 7,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 8,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 9,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 10,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 11,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 6,
+          "y": 1,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 7,
+          "y": 1,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 8,
+          "y": 1,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 9,
+          "y": 1,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 10,
+          "y": 1,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 11,
+          "y": 1,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 6,
+          "y": 2,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 7,
+          "y": 2,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 8,
+          "y": 2,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 9,
+          "y": 2,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 10,
+          "y": 2,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 11,
+          "y": 2,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 4,
+          "y": 3,
+          "h": 1,
+          "terrain": "stairs",
+          "object": "objective"
+        },
+        {
+          "x": 5,
+          "y": 3,
+          "h": 1,
+          "terrain": "bridge",
+          "object": "fragile",
+          "hp": 2
+        },
+        {
+          "x": 6,
+          "y": 3,
+          "h": 1,
+          "terrain": "bridge",
+          "object": "fragile",
+          "hp": 2
+        },
+        {
+          "x": 7,
+          "y": 3,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 8,
+          "y": 3,
+          "h": 0,
+          "terrain": "grass",
+          "object": "cover",
+          "hp": 2
+        },
+        {
+          "x": 9,
+          "y": 3,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 10,
+          "y": 3,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 11,
+          "y": 3,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 0,
+          "y": 4,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "h": 1,
+          "terrain": "stairs"
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 5,
+          "y": 4,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 6,
+          "y": 4,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 7,
+          "y": 4,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 8,
+          "y": 4,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 9,
+          "y": 4,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 10,
+          "y": 4,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 11,
+          "y": 4,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 2,
+          "y": 5,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 3,
+          "y": 5,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "h": 0,
+          "terrain": "grass",
+          "object": "trap",
+          "trapDamage": 2
+        },
+        {
+          "x": 5,
+          "y": 5,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 6,
+          "y": 5,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 7,
+          "y": 5,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 8,
+          "y": 5,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 9,
+          "y": 5,
+          "h": 1,
+          "terrain": "stairs"
+        },
+        {
+          "x": 10,
+          "y": 5,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 11,
+          "y": 5,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 0,
+          "y": 6,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 1,
+          "y": 6,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 2,
+          "y": 6,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 3,
+          "y": 6,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 4,
+          "y": 6,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 5,
+          "y": 6,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 6,
+          "y": 6,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 7,
+          "y": 6,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 8,
+          "y": 6,
+          "h": 1,
+          "terrain": "stone",
+          "object": "brazier"
+        },
+        {
+          "x": 9,
+          "y": 6,
+          "h": 1,
+          "terrain": "stone",
+          "object": "trap",
+          "trapDamage": 2
+        },
+        {
+          "x": 10,
+          "y": 6,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 11,
+          "y": 6,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 0,
+          "y": 7,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 1,
+          "y": 7,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 2,
+          "y": 7,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 3,
+          "y": 7,
+          "h": 0,
+          "terrain": "grass",
+          "object": "cover",
+          "hp": 2
+        },
+        {
+          "x": 4,
+          "y": 7,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 5,
+          "y": 7,
+          "h": 1,
+          "terrain": "bridge",
+          "object": "fragile",
+          "hp": 2
+        },
+        {
+          "x": 6,
+          "y": 7,
+          "h": 1,
+          "terrain": "bridge",
+          "object": "fragile",
+          "hp": 2
+        },
+        {
+          "x": 7,
+          "y": 7,
+          "h": 1,
+          "terrain": "stairs",
+          "object": "objective"
+        },
+        {
+          "x": 8,
+          "y": 7,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 9,
+          "y": 7,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 10,
+          "y": 7,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 11,
+          "y": 7,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 0,
+          "y": 8,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 2,
+          "y": 8,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 3,
+          "y": 8,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 4,
+          "y": 8,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 5,
+          "y": 8,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 6,
+          "y": 8,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 7,
+          "y": 8,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 8,
+          "y": 8,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 9,
+          "y": 8,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 10,
+          "y": 8,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 11,
+          "y": 8,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 0,
+          "y": 9,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 1,
+          "y": 9,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 2,
+          "y": 9,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 3,
+          "y": 9,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 4,
+          "y": 9,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 5,
+          "y": 9,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 6,
+          "y": 9,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 7,
+          "y": 9,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 8,
+          "y": 9,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 9,
+          "y": 9,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 10,
+          "y": 9,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 11,
+          "y": 9,
+          "h": 0,
+          "terrain": "grass"
+        }
+      ]
+    },
+    "units": [
+      {
+        "id": "blue-1",
+        "team": "blue",
+        "archetype": "sword",
+        "variant": "",
+        "x": 8,
+        "y": 7,
+        "hp": 1,
+        "maxHp": 7,
+        "moved": true,
+        "acted": true,
+        "guard": false,
+        "pinned": false,
+        "alive": true,
+        "commander": true
+      },
+      {
+        "id": "blue-2",
+        "team": "blue",
+        "archetype": "archer",
+        "variant": "",
+        "x": 4,
+        "y": 4,
+        "hp": 1,
+        "maxHp": 4,
+        "moved": false,
+        "acted": false,
+        "guard": false,
+        "pinned": false,
+        "alive": true,
+        "commander": false
+      },
+      {
+        "id": "blue-3",
+        "team": "blue",
+        "archetype": "spear",
+        "variant": "",
+        "x": 7,
+        "y": 4,
+        "hp": 6,
+        "maxHp": 6,
+        "moved": false,
+        "acted": false,
+        "guard": false,
+        "pinned": false,
+        "alive": true,
+        "commander": false
+      },
+      {
+        "id": "blue-4",
+        "team": "blue",
+        "archetype": "scout",
+        "variant": "",
+        "x": 8,
+        "y": 4,
+        "hp": 1,
+        "maxHp": 4,
+        "moved": false,
+        "acted": false,
+        "guard": false,
+        "pinned": false,
+        "alive": true,
+        "commander": false
+      },
+      {
+        "id": "blue-5",
+        "team": "blue",
+        "archetype": "engineer",
+        "variant": "",
+        "x": 3,
+        "y": 4,
+        "hp": 3,
+        "maxHp": 5,
+        "moved": false,
+        "acted": false,
+        "guard": false,
+        "pinned": false,
+        "alive": true,
+        "commander": false
+      },
+      {
+        "id": "red-1",
+        "team": "red",
+        "archetype": "shield",
+        "variant": "",
+        "x": 7,
+        "y": 3,
+        "hp": 0,
+        "maxHp": 9,
+        "moved": false,
+        "acted": false,
+        "guard": false,
+        "pinned": false,
+        "alive": false,
+        "commander": true
+      },
+      {
+        "id": "red-2",
+        "team": "red",
+        "archetype": "sword",
+        "variant": "",
+        "x": 3,
+        "y": 5,
+        "hp": 0,
+        "maxHp": 7,
+        "moved": false,
+        "acted": false,
+        "guard": false,
+        "pinned": false,
+        "alive": false,
+        "commander": false
+      },
+      {
+        "id": "red-3",
+        "team": "red",
+        "archetype": "archer",
+        "variant": "",
+        "x": 8,
+        "y": 8,
+        "hp": 0,
+        "maxHp": 4,
+        "moved": true,
+        "acted": true,
+        "guard": false,
+        "pinned": false,
+        "alive": false,
+        "commander": false
+      },
+      {
+        "id": "red-4",
+        "team": "red",
+        "archetype": "engineer",
+        "variant": "",
+        "x": 9,
+        "y": 5,
+        "hp": 0,
+        "maxHp": 5,
+        "moved": false,
+        "acted": false,
+        "guard": false,
+        "pinned": false,
+        "alive": false,
+        "commander": false
+      }
+    ],
+    "team": "blue",
+    "turn": 4,
+    "mode": "ai",
+    "campaignMission": "kiln",
+    "log": [
+      {
+        "turn": 1,
+        "team": "blue",
+        "message": "Задание: VI · Последняя печь"
+      },
+      {
+        "turn": 1,
+        "team": "blue",
+        "message": "blue-2 ударил red-1: 4 урона",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-2",
+          "x": 7,
+          "y": 3
+        }
+      },
+      {
+        "turn": 1,
+        "team": "blue",
+        "message": "blue-4 переместился (5 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-4",
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "turn": 1,
+        "team": "blue",
+        "message": "blue-1 переместился (2 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-1",
+          "x": 6,
+          "y": 3
+        }
+      },
+      {
+        "turn": 1,
+        "team": "blue",
+        "message": "blue-1 ударил red-1: 4 урона",
+        "command": {
+          "type": "attack",
+          "unitId": "blue-1",
+          "x": 7,
+          "y": 3
+        }
+      },
+      {
+        "turn": 1,
+        "team": "blue",
+        "message": "blue-3 переместился (2 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-3",
+          "x": 5,
+          "y": 3
+        }
+      },
+      {
+        "turn": 1,
+        "team": "blue",
+        "message": "blue-4 совершил рывок",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-4",
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "turn": 1,
+        "team": "red",
+        "message": "Ход 1: Красная дружина"
+      },
+      {
+        "turn": 1,
+        "team": "red",
+        "message": "red-3 ударил blue-1: 3 урона",
+        "command": {
+          "type": "ability",
+          "unitId": "red-3",
+          "x": 6,
+          "y": 3
+        }
+      },
+      {
+        "turn": 1,
+        "team": "red",
+        "message": "red-1 ударил blue-1: 2 урона",
+        "command": {
+          "type": "attack",
+          "unitId": "red-1",
+          "x": 6,
+          "y": 3
+        }
+      },
+      {
+        "turn": 1,
+        "team": "red",
+        "message": "red-1 переместился (2 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "red-1",
+          "x": 8,
+          "y": 2
+        }
+      },
+      {
+        "turn": 1,
+        "team": "red",
+        "message": "red-4 переместился (3 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "red-4",
+          "x": 8,
+          "y": 4
+        }
+      },
+      {
+        "turn": 1,
+        "team": "red",
+        "message": "red-4 ударил blue-1: 1 урона",
+        "command": {
+          "type": "attack",
+          "unitId": "red-4",
+          "x": 6,
+          "y": 3
+        }
+      },
+      {
+        "turn": 1,
+        "team": "red",
+        "message": "red-2 переместился (2 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "red-2",
+          "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "turn": 1,
+        "team": "red",
+        "message": "red-2 встал в стражу",
+        "command": {
+          "type": "ability",
+          "unitId": "red-2",
+          "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "turn": 2,
+        "team": "blue",
+        "message": "Ход 2: Синий дозор"
+      },
+      {
+        "turn": 2,
+        "team": "blue",
+        "message": "blue-1 переместился (2 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-1",
+          "x": 7,
+          "y": 4
+        }
+      },
+      {
+        "turn": 2,
+        "team": "blue",
+        "message": "blue-1 ударил red-4: 3 урона",
+        "command": {
+          "type": "attack",
+          "unitId": "blue-1",
+          "x": 8,
+          "y": 4
+        }
+      },
+      {
+        "turn": 2,
+        "team": "blue",
+        "message": "blue-2 переместился (2 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-2",
+          "x": 3,
+          "y": 4
+        }
+      },
+      {
+        "turn": 2,
+        "team": "blue",
+        "message": "blue-2 ударил red-2: 2 урона",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-2",
+          "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "turn": 2,
+        "team": "blue",
+        "message": "blue-4 совершил рывок",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-4",
+          "x": 6,
+          "y": 3
+        }
+      },
+      {
+        "turn": 2,
+        "team": "blue",
+        "message": "blue-5 поставил ловушку",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-5",
+          "x": 4,
+          "y": 5
+        }
+      },
+      {
+        "turn": 2,
+        "team": "blue",
+        "message": "blue-5 переместился (1 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-5",
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "turn": 2,
+        "team": "red",
+        "message": "Ход 2: Красная дружина"
+      },
+      {
+        "turn": 2,
+        "team": "red",
+        "message": "red-4 переместился (3 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "red-4",
+          "x": 9,
+          "y": 5
+        }
+      },
+      {
+        "turn": 2,
+        "team": "red",
+        "message": "red-2 переместился (4 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "red-2",
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "turn": 2,
+        "team": "red",
+        "message": "red-2 ударил blue-2: 3 урона",
+        "command": {
+          "type": "attack",
+          "unitId": "red-2",
+          "x": 3,
+          "y": 4
+        }
+      },
+      {
+        "turn": 2,
+        "team": "red",
+        "message": "red-3 переместился (2 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "red-3",
+          "x": 8,
+          "y": 5
+        }
+      },
+      {
+        "turn": 2,
+        "team": "red",
+        "message": "red-3 ударил blue-5: 2 урона",
+        "command": {
+          "type": "attack",
+          "unitId": "red-3",
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "turn": 2,
+        "team": "red",
+        "message": "red-1 переместился (2 очк.) и получил 2 урона (ловушка)",
+        "command": {
+          "type": "move",
+          "unitId": "red-1",
+          "x": 7,
+          "y": 3
+        }
+      },
+      {
+        "turn": 2,
+        "team": "red",
+        "message": "red-4 поставил ловушку",
+        "command": {
+          "type": "ability",
+          "unitId": "red-4",
+          "x": 9,
+          "y": 6
+        }
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "Ход 3: Синий дозор"
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "blue-2 переместился (1 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-2",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "blue-2 ударил red-2: 4 урона",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-2",
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "blue-1 переместился (2 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-1",
+          "x": 7,
+          "y": 5
+        }
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "blue-1 ударил red-3: 2 урона",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-1",
+          "x": 8,
+          "y": 5
+        }
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "blue-4 переместился (3 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-4",
+          "x": 8,
+          "y": 4
+        }
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "blue-3 переместился (3 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-3",
+          "x": 7,
+          "y": 4
+        }
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "blue-4 ударил red-4: 2 урона, цель погибла",
+        "command": {
+          "type": "attack",
+          "unitId": "blue-4",
+          "x": 9,
+          "y": 5
+        }
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "blue-5 переместился (2 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-5",
+          "x": 3,
+          "y": 4
+        }
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "blue-5 ударил red-2: 2 урона, цель погибла",
+        "command": {
+          "type": "attack",
+          "unitId": "blue-5",
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "turn": 3,
+        "team": "red",
+        "message": "Ход 3: Красная дружина"
+      },
+      {
+        "turn": 3,
+        "team": "red",
+        "message": "red-3 переместился (3 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "red-3",
+          "x": 8,
+          "y": 8
+        }
+      },
+      {
+        "turn": 3,
+        "team": "red",
+        "message": "red-3 ударил blue-4: 3 урона",
+        "command": {
+          "type": "attack",
+          "unitId": "red-3",
+          "x": 8,
+          "y": 4
+        }
+      },
+      {
+        "turn": 4,
+        "team": "blue",
+        "message": "Ход 4: Синий дозор"
+      },
+      {
+        "turn": 4,
+        "team": "blue",
+        "message": "blue-1 переместился (3 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-1",
+          "x": 8,
+          "y": 7
+        }
+      },
+      {
+        "turn": 4,
+        "team": "blue",
+        "message": "blue-1 ударил red-3: 2 урона, цель погибла",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-1",
+          "x": 8,
+          "y": 8
+        }
+      },
+      {
+        "turn": 4,
+        "team": "blue",
+        "message": "Победа: Синий дозор"
+      }
+    ],
+    "history": [
+      {
+        "type": "ability",
+        "unitId": "blue-2",
+        "x": 7,
+        "y": 3
+      },
+      {
+        "type": "move",
+        "unitId": "blue-4",
+        "x": 3,
+        "y": 5
+      },
+      {
+        "type": "move",
+        "unitId": "blue-1",
+        "x": 6,
+        "y": 3
+      },
+      {
+        "type": "attack",
+        "unitId": "blue-1",
+        "x": 7,
+        "y": 3
+      },
+      {
+        "type": "move",
+        "unitId": "blue-3",
+        "x": 5,
+        "y": 3
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-4",
+        "x": 4,
+        "y": 3
+      },
+      {
+        "type": "endTurn"
+      },
+      {
+        "type": "ability",
+        "unitId": "red-3",
+        "x": 6,
+        "y": 3
+      },
+      {
+        "type": "attack",
+        "unitId": "red-1",
+        "x": 6,
+        "y": 3
+      },
+      {
+        "type": "move",
+        "unitId": "red-1",
+        "x": 8,
+        "y": 2
+      },
+      {
+        "type": "move",
+        "unitId": "red-4",
+        "x": 8,
+        "y": 4
+      },
+      {
+        "type": "attack",
+        "unitId": "red-4",
+        "x": 6,
+        "y": 3
+      },
+      {
+        "type": "move",
+        "unitId": "red-2",
+        "x": 5,
+        "y": 7
+      },
+      {
+        "type": "ability",
+        "unitId": "red-2",
+        "x": 5,
+        "y": 7
+      },
+      {
+        "type": "endTurn"
+      },
+      {
+        "type": "move",
+        "unitId": "blue-1",
+        "x": 7,
+        "y": 4
+      },
+      {
+        "type": "attack",
+        "unitId": "blue-1",
+        "x": 8,
+        "y": 4
+      },
+      {
+        "type": "move",
+        "unitId": "blue-2",
+        "x": 3,
+        "y": 4
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-2",
+        "x": 5,
+        "y": 7
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-4",
+        "x": 6,
+        "y": 3
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-5",
+        "x": 4,
+        "y": 5
+      },
+      {
+        "type": "move",
+        "unitId": "blue-5",
+        "x": 4,
+        "y": 3
+      },
+      {
+        "type": "endTurn"
+      },
+      {
+        "type": "move",
+        "unitId": "red-4",
+        "x": 9,
+        "y": 5
+      },
+      {
+        "type": "move",
+        "unitId": "red-2",
+        "x": 3,
+        "y": 5
+      },
+      {
+        "type": "attack",
+        "unitId": "red-2",
+        "x": 3,
+        "y": 4
+      },
+      {
+        "type": "move",
+        "unitId": "red-3",
+        "x": 8,
+        "y": 5
+      },
+      {
+        "type": "attack",
+        "unitId": "red-3",
+        "x": 4,
+        "y": 3
+      },
+      {
+        "type": "move",
+        "unitId": "red-1",
+        "x": 7,
+        "y": 3
+      },
+      {
+        "type": "ability",
+        "unitId": "red-4",
+        "x": 9,
+        "y": 6
+      },
+      {
+        "type": "endTurn"
+      },
+      {
+        "type": "move",
+        "unitId": "blue-2",
+        "x": 4,
+        "y": 4
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-2",
+        "x": 3,
+        "y": 5
+      },
+      {
+        "type": "move",
+        "unitId": "blue-1",
+        "x": 7,
+        "y": 5
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-1",
+        "x": 8,
+        "y": 5
+      },
+      {
+        "type": "move",
+        "unitId": "blue-4",
+        "x": 8,
+        "y": 4
+      },
+      {
+        "type": "move",
+        "unitId": "blue-3",
+        "x": 7,
+        "y": 4
+      },
+      {
+        "type": "attack",
+        "unitId": "blue-4",
+        "x": 9,
+        "y": 5
+      },
+      {
+        "type": "move",
+        "unitId": "blue-5",
+        "x": 3,
+        "y": 4
+      },
+      {
+        "type": "attack",
+        "unitId": "blue-5",
+        "x": 3,
+        "y": 5
+      },
+      {
+        "type": "endTurn"
+      },
+      {
+        "type": "move",
+        "unitId": "red-3",
+        "x": 8,
+        "y": 8
+      },
+      {
+        "type": "attack",
+        "unitId": "red-3",
+        "x": 8,
+        "y": 4
+      },
+      {
+        "type": "endTurn"
+      },
+      {
+        "type": "move",
+        "unitId": "blue-1",
+        "x": 8,
+        "y": 7
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-1",
+        "x": 8,
+        "y": 8
+      }
+    ],
+    "seed": 1,
+    "objective": {
+      "kind": "elimination",
+      "points": [],
+      "scores": {
+        "blue": 0,
+        "red": 0
+      },
+      "target": 1
+    },
+    "initial": {
+      "map": "kiln",
+      "mode": "ai",
+      "seed": 1,
+      "mission": "kiln",
+      "objective": "elimination",
+      "blueprintA": {
+        "name": "Дозор печи",
+        "units": [
+          {
+            "archetype": "sword",
+            "variant": ""
+          },
+          {
+            "archetype": "archer",
+            "variant": ""
+          },
+          {
+            "archetype": "spear",
+            "variant": ""
+          },
+          {
+            "archetype": "scout",
+            "variant": ""
+          },
+          {
+            "archetype": "engineer",
+            "variant": ""
+          }
+        ]
+      },
+      "blueprintB": {
+        "name": "Защитники печи",
+        "units": [
+          {
+            "archetype": "shield",
+            "variant": ""
+          },
+          {
+            "archetype": "sword",
+            "variant": ""
+          },
+          {
+            "archetype": "archer",
+            "variant": ""
+          },
+          {
+            "archetype": "engineer",
+            "variant": ""
+          }
+        ]
+      }
+    },
+    "winner": "blue"
+  }
+}

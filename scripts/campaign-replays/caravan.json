@@ -1,0 +1,2175 @@
+{
+  "initial": {
+    "map": "caravan",
+    "mode": "ai",
+    "seed": 1,
+    "mission": "caravan",
+    "objective": "escort",
+    "blueprintA": {
+      "name": "Охрана каравана",
+      "units": [
+        {
+          "archetype": "shield",
+          "variant": ""
+        },
+        {
+          "archetype": "sword",
+          "variant": ""
+        },
+        {
+          "archetype": "archer",
+          "variant": ""
+        },
+        {
+          "archetype": "spear",
+          "variant": ""
+        },
+        {
+          "archetype": "scout",
+          "variant": ""
+        }
+      ]
+    },
+    "blueprintB": {
+      "name": "Засада ущелья",
+      "units": [
+        {
+          "archetype": "sword",
+          "variant": ""
+        },
+        {
+          "archetype": "archer",
+          "variant": ""
+        },
+        {
+          "archetype": "spear",
+          "variant": ""
+        }
+      ]
+    }
+  },
+  "commands": [
+    {
+      "type": "ability",
+      "unitId": "blue-5",
+      "x": 3,
+      "y": 2
+    },
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 4,
+      "y": 1
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 1,
+      "y": 3
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 2,
+      "y": 3
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-2",
+      "x": 4,
+      "y": 1
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-2",
+      "x": 9,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 5,
+      "y": 7
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-5",
+      "x": 1,
+      "y": 0
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 2,
+      "y": 3
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-2",
+      "x": 4,
+      "y": 1
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 3,
+      "y": 2
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 2,
+      "y": 3
+    },
+    {
+      "type": "attack",
+      "unitId": "blue-4",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 4,
+      "y": 2
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 1,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "red-2",
+      "x": 6,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 3,
+      "y": 6
+    },
+    {
+      "type": "attack",
+      "unitId": "red-2",
+      "x": 2,
+      "y": 3
+    },
+    {
+      "type": "ability",
+      "unitId": "red-1",
+      "x": 1,
+      "y": 4
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-5",
+      "x": 4,
+      "y": 0
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-5",
+      "x": 6,
+      "y": 2
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 2,
+      "y": 1
+    },
+    {
+      "type": "attack",
+      "unitId": "blue-3",
+      "x": 1,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 1,
+      "y": 3
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-2",
+      "x": 1,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 2,
+      "y": 4
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 3,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 3,
+      "y": 4
+    },
+    {
+      "type": "attack",
+      "unitId": "red-1",
+      "x": 2,
+      "y": 4
+    },
+    {
+      "type": "attack",
+      "unitId": "red-3",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "type": "ability",
+      "unitId": "red-2",
+      "x": 2,
+      "y": 1
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-5",
+      "x": 10,
+      "y": 2
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 6,
+      "y": 3
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-5",
+      "x": 11,
+      "y": 4
+    },
+    {
+      "type": "attack",
+      "unitId": "blue-1",
+      "x": 3,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 4,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 3,
+      "y": 5
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-2",
+      "x": 3,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 3,
+      "y": 2
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 3,
+      "y": 3
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "red-1",
+      "x": 4,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 2,
+      "y": 2
+    },
+    {
+      "type": "ability",
+      "unitId": "red-3",
+      "x": 3,
+      "y": 2
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 6,
+      "y": 3
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-5",
+      "x": 11,
+      "y": 3
+    }
+  ],
+  "final": {
+    "map": {
+      "id": "caravan",
+      "name": "Караванное ущелье",
+      "width": 12,
+      "height": 9,
+      "tiles": [
+        {
+          "x": 0,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 5,
+          "y": 0,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 6,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 7,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 8,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 9,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 10,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 11,
+          "y": 0,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 6,
+          "y": 1,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 7,
+          "y": 1,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 8,
+          "y": 1,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 9,
+          "y": 1,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 10,
+          "y": 1,
+          "h": 1,
+          "terrain": "stone"
+        },
+        {
+          "x": 11,
+          "y": 1,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 6,
+          "y": 2,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 7,
+          "y": 2,
+          "h": 1,
+          "terrain": "stairs"
+        },
+        {
+          "x": 8,
+          "y": 2,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 9,
+          "y": 2,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 10,
+          "y": 2,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 11,
+          "y": 2,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 4,
+          "y": 3,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 5,
+          "y": 3,
+          "h": 0,
+          "terrain": "bridge",
+          "object": "fragile",
+          "hp": 2
+        },
+        {
+          "x": 6,
+          "y": 3,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 7,
+          "y": 3,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 8,
+          "y": 3,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 9,
+          "y": 3,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 10,
+          "y": 3,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 11,
+          "y": 3,
+          "h": 0,
+          "terrain": "grass",
+          "object": "objective"
+        },
+        {
+          "x": 0,
+          "y": 4,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 5,
+          "y": 4,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 6,
+          "y": 4,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 7,
+          "y": 4,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 8,
+          "y": 4,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 9,
+          "y": 4,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 10,
+          "y": 4,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 11,
+          "y": 4,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 2,
+          "y": 5,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 3,
+          "y": 5,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 5,
+          "y": 5,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 6,
+          "y": 5,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 7,
+          "y": 5,
+          "h": 0,
+          "terrain": "grass",
+          "object": "cover",
+          "hp": 2
+        },
+        {
+          "x": 8,
+          "y": 5,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 9,
+          "y": 5,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 10,
+          "y": 5,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 11,
+          "y": 5,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 0,
+          "y": 6,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 1,
+          "y": 6,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 2,
+          "y": 6,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 3,
+          "y": 6,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 4,
+          "y": 6,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 5,
+          "y": 6,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 6,
+          "y": 6,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 7,
+          "y": 6,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 8,
+          "y": 6,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 9,
+          "y": 6,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 10,
+          "y": 6,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 11,
+          "y": 6,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 0,
+          "y": 7,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 1,
+          "y": 7,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 2,
+          "y": 7,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 3,
+          "y": 7,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 4,
+          "y": 7,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 5,
+          "y": 7,
+          "h": 0,
+          "terrain": "stone"
+        },
+        {
+          "x": 6,
+          "y": 7,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 7,
+          "y": 7,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 8,
+          "y": 7,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 9,
+          "y": 7,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 10,
+          "y": 7,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 11,
+          "y": 7,
+          "h": 0,
+          "terrain": "grass",
+          "object": "objective"
+        },
+        {
+          "x": 0,
+          "y": 8,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 2,
+          "y": 8,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 3,
+          "y": 8,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 4,
+          "y": 8,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 5,
+          "y": 8,
+          "h": 0,
+          "terrain": "water"
+        },
+        {
+          "x": 6,
+          "y": 8,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 7,
+          "y": 8,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 8,
+          "y": 8,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 9,
+          "y": 8,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 10,
+          "y": 8,
+          "h": 0,
+          "terrain": "grass"
+        },
+        {
+          "x": 11,
+          "y": 8,
+          "h": 0,
+          "terrain": "grass"
+        }
+      ]
+    },
+    "units": [
+      {
+        "id": "blue-1",
+        "team": "blue",
+        "archetype": "shield",
+        "variant": "",
+        "x": 4,
+        "y": 4,
+        "hp": 5,
+        "maxHp": 9,
+        "moved": false,
+        "acted": false,
+        "guard": false,
+        "pinned": false,
+        "alive": true,
+        "commander": true
+      },
+      {
+        "id": "blue-2",
+        "team": "blue",
+        "archetype": "sword",
+        "variant": "",
+        "x": 3,
+        "y": 5,
+        "hp": 7,
+        "maxHp": 7,
+        "moved": false,
+        "acted": false,
+        "guard": false,
+        "pinned": false,
+        "alive": true,
+        "commander": false
+      },
+      {
+        "id": "blue-3",
+        "team": "blue",
+        "archetype": "archer",
+        "variant": "",
+        "x": 2,
+        "y": 1,
+        "hp": 1,
+        "maxHp": 4,
+        "moved": false,
+        "acted": false,
+        "guard": false,
+        "pinned": false,
+        "alive": true,
+        "commander": false
+      },
+      {
+        "id": "blue-4",
+        "team": "blue",
+        "archetype": "spear",
+        "variant": "",
+        "x": 3,
+        "y": 2,
+        "hp": 0,
+        "maxHp": 6,
+        "moved": false,
+        "acted": false,
+        "guard": false,
+        "pinned": false,
+        "alive": false,
+        "commander": false
+      },
+      {
+        "id": "blue-5",
+        "team": "blue",
+        "archetype": "scout",
+        "variant": "",
+        "x": 11,
+        "y": 3,
+        "hp": 4,
+        "maxHp": 4,
+        "moved": true,
+        "acted": true,
+        "guard": false,
+        "pinned": false,
+        "alive": false,
+        "commander": false,
+        "name": "Мира, проводник",
+        "evacuated": true
+      },
+      {
+        "id": "red-1",
+        "team": "red",
+        "archetype": "sword",
+        "variant": "",
+        "x": 2,
+        "y": 2,
+        "hp": 1,
+        "maxHp": 7,
+        "moved": true,
+        "acted": true,
+        "guard": false,
+        "pinned": false,
+        "alive": true,
+        "commander": true,
+        "undo": {
+          "x": 3,
+          "y": 4,
+          "moved": false
+        }
+      },
+      {
+        "id": "red-2",
+        "team": "red",
+        "archetype": "archer",
+        "variant": "",
+        "x": 6,
+        "y": 3,
+        "hp": 0,
+        "maxHp": 4,
+        "moved": false,
+        "acted": false,
+        "guard": false,
+        "pinned": false,
+        "alive": false,
+        "commander": false
+      },
+      {
+        "id": "red-3",
+        "team": "red",
+        "archetype": "spear",
+        "variant": "",
+        "x": 6,
+        "y": 3,
+        "hp": 1,
+        "maxHp": 6,
+        "moved": true,
+        "acted": true,
+        "guard": false,
+        "pinned": false,
+        "alive": true,
+        "commander": false,
+        "undo": {
+          "x": 3,
+          "y": 3,
+          "moved": false
+        }
+      }
+    ],
+    "team": "blue",
+    "turn": 5,
+    "mode": "ai",
+    "campaignMission": "caravan",
+    "log": [
+      {
+        "turn": 1,
+        "team": "blue",
+        "message": "Задание: VII · Живые на дороге"
+      },
+      {
+        "turn": 1,
+        "team": "blue",
+        "message": "blue-5 совершил рывок",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-5",
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "turn": 1,
+        "team": "blue",
+        "message": "blue-2 переместился (4 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-2",
+          "x": 4,
+          "y": 1
+        }
+      },
+      {
+        "turn": 1,
+        "team": "blue",
+        "message": "blue-4 переместился (2 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-4",
+          "x": 1,
+          "y": 3
+        }
+      },
+      {
+        "turn": 1,
+        "team": "blue",
+        "message": "blue-1 встал в стражу",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-1",
+          "x": 2,
+          "y": 3
+        }
+      },
+      {
+        "turn": 1,
+        "team": "blue",
+        "message": "blue-2 встал в стражу",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-2",
+          "x": 4,
+          "y": 1
+        }
+      },
+      {
+        "turn": 1,
+        "team": "red",
+        "message": "Ход 1: Красная дружина"
+      },
+      {
+        "turn": 1,
+        "team": "red",
+        "message": "red-2 переместился (3 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "red-2",
+          "x": 9,
+          "y": 3
+        }
+      },
+      {
+        "turn": 1,
+        "team": "red",
+        "message": "red-1 переместился (4 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "red-1",
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "turn": 1,
+        "team": "red",
+        "message": "red-3 переместился (3 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "red-3",
+          "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "turn": 2,
+        "team": "blue",
+        "message": "Ход 2: Синий дозор"
+      },
+      {
+        "turn": 2,
+        "team": "blue",
+        "message": "blue-5 совершил рывок",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-5",
+          "x": 1,
+          "y": 0
+        }
+      },
+      {
+        "turn": 2,
+        "team": "blue",
+        "message": "blue-3 ударил red-1: 3 урона",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-3",
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "turn": 2,
+        "team": "blue",
+        "message": "blue-1 встал в стражу",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-1",
+          "x": 2,
+          "y": 3
+        }
+      },
+      {
+        "turn": 2,
+        "team": "blue",
+        "message": "blue-2 встал в стражу",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-2",
+          "x": 4,
+          "y": 1
+        }
+      },
+      {
+        "turn": 2,
+        "team": "blue",
+        "message": "blue-1 переместился (2 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-1",
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "turn": 2,
+        "team": "blue",
+        "message": "blue-4 переместился (1 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-4",
+          "x": 2,
+          "y": 3
+        }
+      },
+      {
+        "turn": 2,
+        "team": "blue",
+        "message": "blue-4 ударил red-1: 2 урона",
+        "command": {
+          "type": "attack",
+          "unitId": "blue-4",
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "turn": 2,
+        "team": "blue",
+        "message": "blue-2 переместился (1 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-2",
+          "x": 4,
+          "y": 2
+        }
+      },
+      {
+        "turn": 2,
+        "team": "red",
+        "message": "Ход 2: Красная дружина"
+      },
+      {
+        "turn": 2,
+        "team": "red",
+        "message": "red-1 переместился (4 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "red-1",
+          "x": 1,
+          "y": 4
+        }
+      },
+      {
+        "turn": 2,
+        "team": "red",
+        "message": "red-2 переместился (3 очк.) и получил 2 урона (ловушка)",
+        "command": {
+          "type": "move",
+          "unitId": "red-2",
+          "x": 6,
+          "y": 3
+        }
+      },
+      {
+        "turn": 2,
+        "team": "red",
+        "message": "red-3 переместился (3 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "red-3",
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "turn": 2,
+        "team": "red",
+        "message": "red-2 ударил blue-4: 2 урона",
+        "command": {
+          "type": "attack",
+          "unitId": "red-2",
+          "x": 2,
+          "y": 3
+        }
+      },
+      {
+        "turn": 2,
+        "team": "red",
+        "message": "red-1 встал в стражу",
+        "command": {
+          "type": "ability",
+          "unitId": "red-1",
+          "x": 1,
+          "y": 4
+        }
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "Ход 3: Синий дозор"
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "blue-5 переместился (3 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-5",
+          "x": 4,
+          "y": 0
+        }
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "blue-5 совершил рывок",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-5",
+          "x": 6,
+          "y": 2
+        }
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "blue-1 переместился (2 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-1",
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "blue-1 встал в стражу",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-1",
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "blue-3 переместился (1 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-3",
+          "x": 2,
+          "y": 1
+        }
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "blue-3 ударил red-1: 1 урона",
+        "command": {
+          "type": "attack",
+          "unitId": "blue-3",
+          "x": 1,
+          "y": 4
+        }
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "blue-2 переместился (4 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-2",
+          "x": 1,
+          "y": 3
+        }
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "blue-2 встал в стражу",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-2",
+          "x": 1,
+          "y": 3
+        }
+      },
+      {
+        "turn": 3,
+        "team": "blue",
+        "message": "blue-4 переместился (1 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-4",
+          "x": 2,
+          "y": 4
+        }
+      },
+      {
+        "turn": 3,
+        "team": "red",
+        "message": "Ход 3: Красная дружина"
+      },
+      {
+        "turn": 3,
+        "team": "red",
+        "message": "red-3 переместился (3 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "red-3",
+          "x": 3,
+          "y": 3
+        }
+      },
+      {
+        "turn": 3,
+        "team": "red",
+        "message": "red-1 переместился (4 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "red-1",
+          "x": 3,
+          "y": 4
+        }
+      },
+      {
+        "turn": 3,
+        "team": "red",
+        "message": "red-1 ударил blue-4: 3 урона",
+        "command": {
+          "type": "attack",
+          "unitId": "red-1",
+          "x": 2,
+          "y": 4
+        }
+      },
+      {
+        "turn": 3,
+        "team": "red",
+        "message": "red-3 ударил blue-1: 1 урона",
+        "command": {
+          "type": "attack",
+          "unitId": "red-3",
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "turn": 3,
+        "team": "red",
+        "message": "red-2 ударил blue-3: 3 урона",
+        "command": {
+          "type": "ability",
+          "unitId": "red-2",
+          "x": 2,
+          "y": 1
+        }
+      },
+      {
+        "turn": 4,
+        "team": "blue",
+        "message": "Ход 4: Синий дозор"
+      },
+      {
+        "turn": 4,
+        "team": "blue",
+        "message": "blue-5 переместился (5 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-5",
+          "x": 10,
+          "y": 2
+        }
+      },
+      {
+        "turn": 4,
+        "team": "blue",
+        "message": "blue-3 ударил red-2: 3 урона, цель погибла",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-3",
+          "x": 6,
+          "y": 3
+        }
+      },
+      {
+        "turn": 4,
+        "team": "blue",
+        "message": "blue-5 совершил рывок",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-5",
+          "x": 11,
+          "y": 4
+        }
+      },
+      {
+        "turn": 4,
+        "team": "blue",
+        "message": "blue-1 ударил red-3: 2 урона",
+        "command": {
+          "type": "attack",
+          "unitId": "blue-1",
+          "x": 3,
+          "y": 3
+        }
+      },
+      {
+        "turn": 4,
+        "team": "blue",
+        "message": "blue-1 переместился (1 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-1",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "turn": 4,
+        "team": "blue",
+        "message": "blue-2 переместился (4 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-2",
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "turn": 4,
+        "team": "blue",
+        "message": "blue-2 встал в стражу",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-2",
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "turn": 4,
+        "team": "blue",
+        "message": "blue-4 переместился (3 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-4",
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "turn": 4,
+        "team": "blue",
+        "message": "blue-4 ударил red-3: 2 урона",
+        "command": {
+          "type": "ability",
+          "unitId": "blue-4",
+          "x": 3,
+          "y": 3
+        }
+      },
+      {
+        "turn": 4,
+        "team": "red",
+        "message": "Ход 4: Красная дружина"
+      },
+      {
+        "turn": 4,
+        "team": "red",
+        "message": "red-1 ударил blue-1: 2 урона",
+        "command": {
+          "type": "ability",
+          "unitId": "red-1",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "turn": 4,
+        "team": "red",
+        "message": "red-1 переместился (3 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "red-1",
+          "x": 2,
+          "y": 2
+        }
+      },
+      {
+        "turn": 4,
+        "team": "red",
+        "message": "red-3 ударил blue-4: 2 урона, цель погибла",
+        "command": {
+          "type": "ability",
+          "unitId": "red-3",
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "turn": 4,
+        "team": "red",
+        "message": "red-3 переместился (3 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "red-3",
+          "x": 6,
+          "y": 3
+        }
+      },
+      {
+        "turn": 5,
+        "team": "blue",
+        "message": "Ход 5: Синий дозор"
+      },
+      {
+        "turn": 5,
+        "team": "blue",
+        "message": "blue-5 переместился (1 очк.)",
+        "command": {
+          "type": "move",
+          "unitId": "blue-5",
+          "x": 11,
+          "y": 3
+        }
+      },
+      {
+        "turn": 5,
+        "team": "blue",
+        "message": "Мира, проводник вышел к безопасному выходу"
+      },
+      {
+        "turn": 5,
+        "team": "blue",
+        "message": "Результат задания: blue"
+      }
+    ],
+    "history": [
+      {
+        "type": "ability",
+        "unitId": "blue-5",
+        "x": 3,
+        "y": 2
+      },
+      {
+        "type": "move",
+        "unitId": "blue-2",
+        "x": 4,
+        "y": 1
+      },
+      {
+        "type": "move",
+        "unitId": "blue-4",
+        "x": 1,
+        "y": 3
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-1",
+        "x": 2,
+        "y": 3
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-2",
+        "x": 4,
+        "y": 1
+      },
+      {
+        "type": "endTurn"
+      },
+      {
+        "type": "move",
+        "unitId": "red-2",
+        "x": 9,
+        "y": 3
+      },
+      {
+        "type": "move",
+        "unitId": "red-1",
+        "x": 4,
+        "y": 3
+      },
+      {
+        "type": "move",
+        "unitId": "red-3",
+        "x": 5,
+        "y": 7
+      },
+      {
+        "type": "endTurn"
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-5",
+        "x": 1,
+        "y": 0
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-3",
+        "x": 4,
+        "y": 3
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-1",
+        "x": 2,
+        "y": 3
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-2",
+        "x": 4,
+        "y": 1
+      },
+      {
+        "type": "move",
+        "unitId": "blue-1",
+        "x": 3,
+        "y": 2
+      },
+      {
+        "type": "move",
+        "unitId": "blue-4",
+        "x": 2,
+        "y": 3
+      },
+      {
+        "type": "attack",
+        "unitId": "blue-4",
+        "x": 4,
+        "y": 3
+      },
+      {
+        "type": "move",
+        "unitId": "blue-2",
+        "x": 4,
+        "y": 2
+      },
+      {
+        "type": "endTurn"
+      },
+      {
+        "type": "move",
+        "unitId": "red-1",
+        "x": 1,
+        "y": 4
+      },
+      {
+        "type": "move",
+        "unitId": "red-2",
+        "x": 6,
+        "y": 3
+      },
+      {
+        "type": "move",
+        "unitId": "red-3",
+        "x": 3,
+        "y": 6
+      },
+      {
+        "type": "attack",
+        "unitId": "red-2",
+        "x": 2,
+        "y": 3
+      },
+      {
+        "type": "ability",
+        "unitId": "red-1",
+        "x": 1,
+        "y": 4
+      },
+      {
+        "type": "endTurn"
+      },
+      {
+        "type": "move",
+        "unitId": "blue-5",
+        "x": 4,
+        "y": 0
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-5",
+        "x": 6,
+        "y": 2
+      },
+      {
+        "type": "move",
+        "unitId": "blue-1",
+        "x": 4,
+        "y": 3
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-1",
+        "x": 4,
+        "y": 3
+      },
+      {
+        "type": "move",
+        "unitId": "blue-3",
+        "x": 2,
+        "y": 1
+      },
+      {
+        "type": "attack",
+        "unitId": "blue-3",
+        "x": 1,
+        "y": 4
+      },
+      {
+        "type": "move",
+        "unitId": "blue-2",
+        "x": 1,
+        "y": 3
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-2",
+        "x": 1,
+        "y": 3
+      },
+      {
+        "type": "move",
+        "unitId": "blue-4",
+        "x": 2,
+        "y": 4
+      },
+      {
+        "type": "endTurn"
+      },
+      {
+        "type": "move",
+        "unitId": "red-3",
+        "x": 3,
+        "y": 3
+      },
+      {
+        "type": "move",
+        "unitId": "red-1",
+        "x": 3,
+        "y": 4
+      },
+      {
+        "type": "attack",
+        "unitId": "red-1",
+        "x": 2,
+        "y": 4
+      },
+      {
+        "type": "attack",
+        "unitId": "red-3",
+        "x": 4,
+        "y": 3
+      },
+      {
+        "type": "ability",
+        "unitId": "red-2",
+        "x": 2,
+        "y": 1
+      },
+      {
+        "type": "endTurn"
+      },
+      {
+        "type": "move",
+        "unitId": "blue-5",
+        "x": 10,
+        "y": 2
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-3",
+        "x": 6,
+        "y": 3
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-5",
+        "x": 11,
+        "y": 4
+      },
+      {
+        "type": "attack",
+        "unitId": "blue-1",
+        "x": 3,
+        "y": 3
+      },
+      {
+        "type": "move",
+        "unitId": "blue-1",
+        "x": 4,
+        "y": 4
+      },
+      {
+        "type": "move",
+        "unitId": "blue-2",
+        "x": 3,
+        "y": 5
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-2",
+        "x": 3,
+        "y": 5
+      },
+      {
+        "type": "move",
+        "unitId": "blue-4",
+        "x": 3,
+        "y": 2
+      },
+      {
+        "type": "ability",
+        "unitId": "blue-4",
+        "x": 3,
+        "y": 3
+      },
+      {
+        "type": "endTurn"
+      },
+      {
+        "type": "ability",
+        "unitId": "red-1",
+        "x": 4,
+        "y": 4
+      },
+      {
+        "type": "move",
+        "unitId": "red-1",
+        "x": 2,
+        "y": 2
+      },
+      {
+        "type": "ability",
+        "unitId": "red-3",
+        "x": 3,
+        "y": 2
+      },
+      {
+        "type": "move",
+        "unitId": "red-3",
+        "x": 6,
+        "y": 3
+      },
+      {
+        "type": "endTurn"
+      },
+      {
+        "type": "move",
+        "unitId": "blue-5",
+        "x": 11,
+        "y": 3
+      }
+    ],
+    "seed": 1,
+    "objective": {
+      "kind": "escort",
+      "points": [],
+      "scores": {
+        "blue": 1,
+        "red": 0
+      },
+      "target": 1,
+      "protectedIds": [
+        "blue-5"
+      ],
+      "exits": [
+        {
+          "x": 11,
+          "y": 3
+        },
+        {
+          "x": 11,
+          "y": 7
+        }
+      ],
+      "required": 1,
+      "roundLimit": 12,
+      "evacuatedIds": [
+        "blue-5"
+      ]
+    },
+    "initial": {
+      "map": "caravan",
+      "mode": "ai",
+      "seed": 1,
+      "mission": "caravan",
+      "objective": "escort",
+      "blueprintA": {
+        "name": "Охрана каравана",
+        "units": [
+          {
+            "archetype": "shield",
+            "variant": ""
+          },
+          {
+            "archetype": "sword",
+            "variant": ""
+          },
+          {
+            "archetype": "archer",
+            "variant": ""
+          },
+          {
+            "archetype": "spear",
+            "variant": ""
+          },
+          {
+            "archetype": "scout",
+            "variant": ""
+          }
+        ]
+      },
+      "blueprintB": {
+        "name": "Засада ущелья",
+        "units": [
+          {
+            "archetype": "sword",
+            "variant": ""
+          },
+          {
+            "archetype": "archer",
+            "variant": ""
+          },
+          {
+            "archetype": "spear",
+            "variant": ""
+          }
+        ]
+      }
+    },
+    "winner": "blue"
+  }
+}

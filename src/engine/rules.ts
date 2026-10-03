@@ -53,7 +53,7 @@ export function createGame(config: GameConfig): GameState {
   const objectiveKind = mission?.objective ?? config.objective ?? (tutorial ? 'commander' : 'control');
   const points = objectiveKind === 'control' ? (mission ? map.tiles.filter(t=>t.object==='objective').map(t=>({x:t.x,y:t.y})) : tutorial ? [{x:4,y:1}] : [{x:3,y:9},{x:8,y:9},{x:9,y:9},{x:14,y:9}]) : [];
   const gameMode = mission ? 'ai' : config.mode;
-  return { map, units: [...deploy(map,'blue',blue,mission?.spawns.blue),...deploy(map,'red',red,mission?.spawns.red)], team:'blue', turn:1, mode:gameMode, ...(mission?{campaignMission:mission.id}:{}), log:[{turn:1,team:'blue',message:mission?`Задание: ${mission.title}`:'Битва начинается'}], history:[], seed:config.seed ?? 1, objective: {kind:objectiveKind,points,scores:{blue:0,red:0},target:mission?.target??(tutorial?1:5)}, initial:{map:map.id,mode:gameMode,seed:config.seed ?? 1,...(mission?{mission:mission.id}:{}),objective:objectiveKind,blueprintA:blue,blueprintB:red} };
+  return { map, units: [...deploy(map,'blue',blue,mission?.spawns.blue),...deploy(map,'red',red,mission?.spawns.red)].map(u=>mission?.unitNames?.[u.id]?{...u,name:mission.unitNames[u.id]}:u), team:'blue', turn:1, mode:gameMode, ...(mission?{campaignMission:mission.id}:{}), log:[{turn:1,team:'blue',message:mission?`Задание: ${mission.title}`:'Битва начинается'}], history:[], seed:config.seed ?? 1, objective: {kind:objectiveKind,points,scores:{blue:0,red:0},target:mission?.target??(tutorial?1:5),...mission?.objectiveConfig,...(['escort','evacuate'].includes(objectiveKind)?{evacuatedIds:[]}:{}),...(objectiveKind==='defend'?{defendedRounds:0}:{})}, initial:{map:map.id,mode:gameMode,seed:config.seed ?? 1,...(mission?{mission:mission.id}:{}),objective:objectiveKind,blueprintA:blue,blueprintB:red} };
 }
 function passable(tile?: Tile): boolean { return !!tile && tile.terrain !== 'water' && tile.object !== 'cover'; }
 export function tileHazardDamage(tile: Tile): number { return tile.object==='trap'?(tile.trapDamage??2):tile.object==='brazier'?1:0; }
@@ -213,7 +213,7 @@ export function previewAction(state:GameState,command:Command):Preview {
     }
     const move=legalMoves(state,u.id).find(c=>c.x===command.x&&c.y===command.y);
     if(!move) return {...base,reason:'Клетка недоступна: дальность, высота или препятствие'};
-    return {...base,valid:true,path:move.path,cost:move.cost,hazardDamage:tileHazardDamage(tile),explanation:`Маршрут: ${move.cost} очк. движения`};
+    return {...base,valid:true,path:move.path,cost:move.cost,objectiveProgress:extractionPreview(state,u,tile),hazardDamage:tileHazardDamage(tile),explanation:`Маршрут: ${move.cost} очк. движения`};
   }
   if(u.acted) return {...base,reason:'Действие уже потрачено'};
   if(command.type==='ability'&&u.archetype==='sword'&&command.x===u.x&&command.y===u.y)
@@ -240,7 +240,7 @@ export function previewAction(state:GameState,command:Command):Preview {
     if(u.pinned)return {...base,reason:'Боец остановлен натиском: рывок недоступен'};
     if(cheb(u,command)!==2||!passable(tile)||unitAt(state,command.x,command.y)) return {...base,reason:'Рывок на свободную клетку в двух шагах'};
     if(Math.abs(tile.h-tileAt(state.map,u.x,u.y)!.h)>1) return {...base,reason:'Перепад высот слишком велик'};
-    return {...base,valid:true,hazardDamage:tileHazardDamage(tile),explanation:'Рывок через занятую клетку'};
+    return {...base,valid:true,objectiveProgress:extractionPreview(state,u,tile),hazardDamage:tileHazardDamage(tile),explanation:'Рывок через занятую клетку'};
   }
   const target=unitAt(state,command.x,command.y);
   if(command.type==='attack'&&!target&&(tile.object==='cover'||tile.object==='fragile')) return objectAttackPreview(state,u,tile,false);
@@ -251,11 +251,38 @@ export function previewAction(state:GameState,command:Command):Preview {
   const push=(damage<target.hp&&command.type==='ability'&&['sword','spear'].includes(u.archetype))?pushPreview(state,u,target):{};
   const total=damage+(push.fallDamage??0)+(push.hazardDamage??0);
   const counterDamage=(dist(u,target)===1&&target.archetype==='sword'&&target.guard&&target.hp>total)?1:0;
-  return {...base,valid:true,targetId:target.id,damage,counterDamage,killed:total>=target.hp,...push,explanation:`${damage} урона${push.push?' · отбрасывание':''}${push.push&&u.archetype==='spear'&&total<target.hp?' · остановка движения до конца следующего хода цели':''}${push.fallDamage?` · падение ${push.fallDamage}`:''}${push.hazardDamage?` · опасность ${push.hazardDamage}`:''}${counterDamage?' · контратака 1':''}`};
+  const objectiveProgress=push.push&&total<target.hp?extractionPreview(state,{...target,hp:target.hp-damage-(push.fallDamage??0)},tileAt(state.map,push.push.x,push.push.y)!):undefined;
+  return {...base,valid:true,targetId:target.id,damage,counterDamage,killed:total>=target.hp,...push,objectiveProgress,explanation:`${damage} урона${push.push?' · отбрасывание':''}${push.push&&u.archetype==='spear'&&total<target.hp?' · остановка движения до конца следующего хода цели':''}${push.fallDamage?` · падение ${push.fallDamage}`:''}${push.hazardDamage?` · опасность ${push.hazardDamage}`:''}${counterDamage?' · контратака 1':''}`};
 }
 function clone(state:GameState):GameState { return JSON.parse(JSON.stringify(state)) as GameState; }
 function record(s:GameState,message:string,command?:Command) { s.log.push({turn:s.turn,team:s.team,message,command}); if(s.log.length>120)s.log.shift(); }
+function extractionPreview(state:GameState,u:Unit,tile:Tile):Preview['objectiveProgress'] {
+  const o=state.objective;
+  if(!['escort','evacuate'].includes(o.kind)||!o.protectedIds?.includes(u.id)||!o.exits?.some(p=>p.x===tile.x&&p.y===tile.y)||u.hp<=tileHazardDamage(tile))return undefined;
+  return {evacuates:u.id,wins:(o.evacuatedIds?.length??0)+1>=(o.required??o.protectedIds.length)};
+}
 function checkVictory(s:GameState) {
+  const o=s.objective;
+  if(['escort','defend','evacuate'].includes(o.kind)) {
+    const ids=o.protectedIds??[];
+    if(o.kind!=='defend') {
+      o.evacuatedIds??=[];
+      for(const u of s.units) if(u.alive&&ids.includes(u.id)&&o.exits?.some(p=>p.x===u.x&&p.y===u.y)) {
+        u.evacuated=true;u.alive=false;u.undo=undefined;u.moved=true;u.acted=true;o.evacuatedIds.push(u.id);
+        record(s,`${u.name??u.id} вышел к безопасному выходу`);
+      }
+      const required=o.required??ids.length;
+      o.scores.blue=o.evacuatedIds.length;
+      if(ids.filter(id=>s.units.some(u=>u.id===id&&(u.alive||u.evacuated))).length<required)s.winner='red';
+      else if(o.evacuatedIds.length>=required)s.winner='blue';
+    } else {
+      if(ids.some(id=>!s.units.some(u=>u.id===id&&u.alive)))s.winner='red';
+      else if((o.defendedRounds??0)>=(o.rounds??o.target))s.winner='blue';
+    }
+    if(!s.winner&&!s.units.some(u=>u.alive&&u.team==='blue'))s.winner='red';
+    if(s.winner)record(s,`Результат задания: ${s.winner}`);
+    return;
+  }
   const blueAlive=s.units.some(u=>u.alive&&u.team==='blue');
   const redAlive=s.units.some(u=>u.alive&&u.team==='red');
   if(!blueAlive||(!redAlive&&!(s.campaignMission&&s.objective.kind==='control'))) {
@@ -349,8 +376,13 @@ export function endTurn(state:GameState):GameState {
       else s.objective.scores[team]=0;
     }
   }
-  s.history.push({type:'endTurn'});checkVictory(s);
-  if(!s.winner&&current==='red'&&s.turn>=MAX_ROUNDS) {
+  if(s.objective.kind==='defend'&&current==='red') {
+    const breached=s.objective.defendPoints?.some(p=>s.units.some(u=>u.alive&&u.team==='red'&&u.x===p.x&&u.y===p.y));
+    if(breached){s.winner='red';record(s,'Враг удержал ворота амбара');}
+    else {s.objective.defendedRounds=(s.objective.defendedRounds??0)+1;s.objective.scores.blue=s.objective.defendedRounds;}
+  }
+  s.history.push({type:'endTurn'});if(!s.winner)checkVictory(s);
+  if(!s.winner&&current==='red'&&s.turn>=(s.objective.roundLimit??MAX_ROUNDS)) {
     if(s.campaignMission) {
       s.winner='red';record(s,'Задание провалено: цель не выполнена за 12 раундов');
     } else if(s.objective.kind==='control') {

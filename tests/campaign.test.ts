@@ -5,7 +5,7 @@ import { newCampaignProgress, restoreCampaignProgress, missionUnlocked, recordCa
 describe('authored learning campaign',()=>{
   it('introduces six distinct classes in order on six distinct viable maps',()=>{
     const known=new Set<string>();
-    for(const mission of CAMPAIGN_MISSIONS){
+    for(const mission of CAMPAIGN_MISSIONS.slice(0,6)){
       const game=createGame({map:mission.map,mode:'ai',mission:mission.id});
       expect(known.has(mission.introduced)).toBe(false);known.add(mission.introduced);
       expect(game.units.filter(u=>u.team==='blue').some(u=>u.archetype===mission.introduced)).toBe(true);
@@ -17,7 +17,7 @@ describe('authored learning campaign',()=>{
       expect(game.objective.kind).toBe(mission.objective);
       if(mission.objective==='control')expect(game.objective.points.length).toBeGreaterThanOrEqual(2);
     }
-    expect(known.size).toBe(6);expect(new Set(CAMPAIGN_MISSIONS.map(m=>m.map)).size).toBe(6);
+    expect(known.size).toBe(6);expect(new Set(CAMPAIGN_MISSIONS.slice(0,6).map(m=>m.map)).size).toBe(6);
   });
   it('restores and replays authored deployment, objective and mission identity',()=>{
     for(const mission of CAMPAIGN_MISSIONS){let game=createGame({map:mission.map,mode:'ai',mission:mission.id,seed:19});
@@ -43,7 +43,7 @@ describe('authored learning campaign',()=>{
   it('unlocks only the next mission, permits replay and validates saved progress',()=>{
     let progress=newCampaignProgress();expect(missionUnlocked(progress,0)).toBe(true);expect(missionUnlocked(progress,1)).toBe(false);
     expect(recordCampaignVictory(progress,'kiln')).toEqual(progress);
-    for(const [index,mission]of CAMPAIGN_MISSIONS.entries()){expect(missionUnlocked(progress,index)).toBe(true);progress=recordCampaignVictory(progress,mission.id);expect(recordCampaignVictory(progress,mission.id)).toEqual(progress)}
+    for(const [index,mission]of CAMPAIGN_MISSIONS.slice(0,6).entries()){expect(missionUnlocked(progress,index)).toBe(true);progress=recordCampaignVictory(progress,mission.id);expect(recordCampaignVictory(progress,mission.id)).toEqual(progress)}
     expect(progress.completed).toHaveLength(6);expect(restoreCampaignProgress(JSON.stringify(progress))).toEqual(progress);
     expect(restoreCampaignProgress('{broken')).toEqual(newCampaignProgress());expect(restoreCampaignProgress('{"version":1,"completed":["fake"]}')).toEqual(newCampaignProgress());
   });

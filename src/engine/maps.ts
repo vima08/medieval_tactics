@@ -48,6 +48,10 @@ function campaignMap(id: GameMap['id']): GameMap {
     gate: { name: 'Ворота дозора', width: 10, height: 9 },
     marsh: { name: 'Тропа в тростниках', width: 11, height: 9 },
     kiln: { name: 'Последняя печь', width: 12, height: 10 },
+    caravan: { name: 'Караванное ущелье', width: 12, height: 9 },
+    granary: { name: 'Ночной амбар', width: 11, height: 9 },
+    evacuation: { name: 'Последние лодки', width: 11, height: 9 },
+    summit: { name: 'Вершина Серой Короны', width: 12, height: 10 },
   };
   const spec = specs[id];
   if (!spec) throw new Error(`Неизвестная карта: ${id}`);
@@ -90,6 +94,28 @@ function campaignMap(id: GameMap['id']): GameMap {
     put(4,3,{object:'objective'}); put(7,7,{object:'objective'});
     put(8,3,{object:'cover',hp:2}); put(3,7,{object:'cover',hp:2});
     put(7,3,{object:'trap'}); put(8,6,{object:'brazier'});
+  } else if(id==='caravan') {
+    for(let y=0;y<height;y++) if(y!==3&&y!==7) put(5,y,{terrain:'water'});
+    put(5,3,{terrain:'bridge',object:'fragile',hp:2});put(5,7,{terrain:'stone'});
+    for(let x=7;x<=10;x++) put(x,1,{h:1,terrain:'stone'});
+    put(7,2,{terrain:'stairs',h:1});put(7,5,{object:'cover',hp:2});put(6,3,{object:'trap'});
+    put(11,3,{object:'objective'});put(11,7,{object:'objective'});
+  } else if(id==='granary') {
+    for(let y=0;y<height;y++) if(y!==3&&y!==5&&y!==7) put(5,y,{terrain:'stone',object:'cover',hp:2});
+    for(let x=1;x<=3;x++) put(x,1,{h:1,terrain:'stone'});
+    put(2,2,{h:1,terrain:'stairs'});put(2,4,{object:'objective'});put(6,6,{object:'brazier'});put(5,7,{terrain:'rubble'});
+  } else if(id==='evacuation') {
+    for(let y=0;y<height;y++) if(y!==2&&y!==6) put(5,y,{terrain:'water'});
+    put(5,2,{terrain:'bridge',object:'fragile',hp:2});put(5,6,{terrain:'stone'});
+    put(6,2,{object:'trap'});put(7,4,{object:'cover',hp:2});put(8,3,{object:'brazier'});
+    for(let y=0;y<height;y++) if(y!==2&&y!==6) put(10,y,{terrain:'water'});
+    put(10,2,{terrain:'bridge',object:'objective'});put(10,6,{terrain:'bridge',object:'objective'});
+  } else if(id==='summit') {
+    for(let x=7;x<=10;x++) for(let y=1;y<=7;y++) put(x,y,{h:2,terrain:'stone'});
+    for(let y=2;y<=7;y++) put(6,y,{h:1,terrain:'stairs'});
+    put(7,4,{terrain:'stairs'});put(7,7,{terrain:'stairs'});put(8,5,{object:'cover',hp:2});
+    for(let x=4;x<=8;x++) put(x,8,{terrain:'water'});
+    put(6,8,{terrain:'bridge',h:1,object:'fragile',hp:2});put(5,5,{object:'brazier'});put(4,6,{object:'trap'});
   }
   return { id, name, width, height, tiles };
 }
