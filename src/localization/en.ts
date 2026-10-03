@@ -1,5 +1,25 @@
 /** Russian source text → English presentation. Longest phrases are matched first. */
 export const ENGLISH: Record<string, string> = Object.fromEntries(`
+Журнал|Journal
+Касание: выбор и прогноз · один палец: панорама · два пальца: масштаб · приказ: кнопка подтверждения|Tap: select and preview · one finger: pan · two fingers: zoom · order: Confirm button
+Сюжетная сцена|Story scene
+Касание кнопок · Enter / пробел: далее · ←: назад · Esc: меню|Tap the buttons · Enter / Space: next · ←: back · Esc: menu
+К сражению →|To battle →
+К карте кампании →|To the campaign map →
+Закрыть|Close
+Выбор цели|Choose a target
+Коснитесь доступной клетки или цели.|Tap an available tile or target.
+Это решение прозвучит в итоговом разговоре.|This decision will be remembered in the final conversation.
+Журнал реплик|Dialogue journal
+Прочитанные реплики|Read dialogue
+Звук|Audio
+Пограничная долина|Border valley
+До сражения|Before the battle
+После сражения|After the battle
+Отступление|Retreat
+Пропустить сцену|Skip scene
+Хроника|Chronicle
+Решение Верена|Veren's decision
 Тактическая хроника приграничья|A tactical chronicle of the borderlands
 Займите перевалы, удержите сигнальные огни и разбейте вражеский строй. Каждый приказ виден до удара. Каждый уступ меняет бой.|Take the passes, hold the signal fires, and break the enemy formation. Preview every order before striking. Every ledge changes the battle.
 Пепел и знамя|Ash and Banner

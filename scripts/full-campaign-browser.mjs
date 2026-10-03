@@ -6,12 +6,13 @@ import {registerHooks} from 'node:module';
 registerHooks({resolve(specifier,context,nextResolve){if(specifier.startsWith('.')&&!/\.[cm]?[jt]s$/.test(specifier)){try{return nextResolve(`${specifier}.ts`,context)}catch{}try{return nextResolve(`${specifier}/index.ts`,context)}catch{}}return nextResolve(specifier,context)}});
 const {createGame,applyAction,CAMPAIGN_MISSIONS}=await import('../src/engine/index.ts');
 const routeName=process.argv[2]??'caravan';if(!['caravan','granary'].includes(routeName))throw Error('Invalid route');
+const language=process.argv[3]??'ru';if(!['ru','en'].includes(language))throw Error('Invalid language');
 const missions=CAMPAIGN_MISSIONS.filter(m=>!['caravan','granary'].includes(m.id)||m.id===routeName);
 let browser;try{browser=await chromium.launch({headless:true})}catch{browser=await chromium.launch({headless:true,executablePath:join(homedir(),'AppData/Local/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-win64/chrome-headless-shell.exe')})}
 const page=await browser.newPage({viewport:{width:1440,height:900}}),errors=[];
 page.on('pageerror',error=>errors.push(error.message));
 await page.route('**/*',async route=>{const path=new URL(route.request().url()).pathname.replace(/^\/medieval_tactics\//,'/'),name=path==='/'?'index.html':path.slice(1);await route.fulfill({body:await readFile(resolve('dist',name)),contentType:name.endsWith('.js')?'text/javascript':name.endsWith('.css')?'text/css':name.endsWith('.png')?'image/png':name.endsWith('.svg')?'image/svg+xml':'text/html'})});
-await page.addInitScript(()=>{localStorage.setItem('ab-reduce-motion','1');localStorage.setItem('ab-volume','0');localStorage.setItem('ab-speed','1.8')});
+await page.addInitScript(language=>{localStorage.setItem('ab-language',language);localStorage.setItem('ab-reduce-motion','1');localStorage.setItem('ab-volume','0');localStorage.setItem('ab-speed','1.8')},language);
 await mkdir(`workbench/campaign-full-shots/${routeName}`,{recursive:true});
 const saved=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('ab-save')));
 async function readScene(){for(let i=0;i<30&&await page.locator('.novel').count();i++){if(await page.locator('[data-story-choice]:enabled').count())await page.locator('[data-story-choice="people"]').click();await page.locator('#story-next').click()}if(await page.locator('.novel').count())throw Error('Scene did not finish')}
@@ -66,6 +67,6 @@ try{
   const after=await saved();if(after.units.find(u=>u.id===scout.id).hp!==scout.hp-2)throw new Error('Trap did not deal expected damage');
   await page.locator('#pause').click();await page.locator('[data-modal="restart"]').click();await readScene();if((await saved()).campaignMission!=='marsh'||(await saved()).history.length!==0)throw new Error('Campaign restart wrong');
   const story=await page.evaluate(()=>JSON.parse(localStorage.getItem('ab-story')));if(story.seen.filter(id=>!id.endsWith(':defeat')).length!==18)throw Error('Narrative arc incomplete');
-  const report={route:routeName,summaries,completed:progress.completed,story,trapDamage:2,errors};await writeFile(`workbench/campaign-full-${routeName}.json`,JSON.stringify(report,null,2));console.log(JSON.stringify(report));
+  const report={route:routeName,language,summaries,completed:progress.completed,story,trapDamage:2,errors};await writeFile(`workbench/campaign-full-${routeName}${language==='en'?'-en':''}.json`,JSON.stringify(report,null,2));console.log(JSON.stringify(report));
 }finally{await browser.close()}
 if(errors.length)process.exitCode=1;

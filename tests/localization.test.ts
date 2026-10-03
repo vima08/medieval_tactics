@@ -6,6 +6,9 @@ import { campaignScreenHTML, campaignLessonHTML, campaignResultHTML, renderNewCa
 import { scenarioObjectiveHTML } from '../src/campaign-objective-ui';
 import { CAMPAIGN_MISSIONS, createGame, ARCHETYPES, VARIANTS, MODIFIERS, ARTIFACTS } from '../src/engine';
 import { restoreCampaignProgress } from '../src/campaign-progress';
+import { storyHTML } from '../src/story-ui';
+import { STORY_MISSIONS, storyScene } from '../src/story-data';
+import type { StoryProgress } from '../src/story-progress';
 
 const cyrillic = /[А-Яа-яЁё]/;
 function englishOnly(html: string) {
@@ -33,6 +36,16 @@ describe('English presentation catalog', () => {
   });
   it('translates the complete rules guide, including prose interrupted by inline markup', () => {
     englishOnly(howToHTML());
+  });
+  it('translates the actual novel shell, log, unanswered choice and final navigation in all thirty scenes', () => {
+    for (const mission of STORY_MISSIONS) for (const phase of ['intro','outro','defeat'] as const) {
+      const scene=storyScene(mission,phase,{},'en')!;
+      const indices=new Set([0,scene.lines.length-1,...scene.lines.flatMap((line,index)=>line.choice?[index]:[])]);
+      for(const index of indices){
+        const progress:StoryProgress={version:1,seen:[],choices:{},cursor:{mission,phase,index,destination:phase==='intro'?'battle':'campaign'}};
+        for(const showLog of [false,true])expect(englishOnly(storyHTML(progress,false,showLog,'en'))).not.toMatch(cyrillic);
+      }
+    }
   });
   it('translates every campaign briefing, lesson, result, reset, and route choice', () => {
     const progress = restoreCampaignProgress(null);
