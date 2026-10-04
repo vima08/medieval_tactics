@@ -101,6 +101,51 @@ export const CAMPAIGN_MISSIONS: CampaignMission[] = [
     blue:squad('Дозор Серой Короны','shield','archer','spear','scout','engineer'),red:squad('Стража наместника','shield','archer','sword','spear'),
     spawns:{blue:[{x:3,y:4},{x:2,y:2},{x:2,y:4},{x:3,y:7},{x:3,y:5}],red:[{x:9,y:4},{x:9,y:2},{x:7,y:4},{x:8,y:6}]},lessonSteps:[],
   },
+  {
+    id:'thaw_dike',map:'thaw_dike',title:'I · Глиняная дамба',subtitle:'Оборона · первый паводок',introduced:'shield',objective:'defend',target:4,
+    briefing:'Удержите ворота дамбы четыре полных раунда и сохраните инженера Савву. Враг на воротах в конце красного хода означает поражение. Савве не обязательно стоять на воротах.',
+    lesson:'Щит защищает соседей. Копьё держит второй ряд. Инженер может поставить ловушку, но она опасна и для своих.',
+    objectiveConfig:{protectedIds:['blue-4'],defendPoints:[{x:3,y:4}],rounds:4,roundLimit:12},unitNames:{'blue-4':'Савва, мастер дамбы'},
+    blue:squad('Ремонтный дозор','shield','spear','archer','engineer'),red:squad('Сборщики воды','sword','spear','scout'),
+    spawns:{blue:[{x:4,y:4},{x:3,y:3},{x:3,y:2},{x:3,y:4}],red:[{x:8,y:4},{x:8,y:6},{x:9,y:3}]},lessonSteps:[],
+  },
+  {
+    id:'thaw_mill',map:'thaw_mill',title:'II · Мельничный рукав',subtitle:'Сопровождение · два моста',introduced:'engineer',objective:'escort',target:1,
+    briefing:'Проведите Савву к любому восточному выходу за 14 раундов. Его гибель означает поражение. Хрупкий верхний мост короток; нижний путь даёт обход.',
+    lesson:'Мастер идёт вместе с отрядом. Выход отмечен стрелкой; достигнув его, Савва покинет бой. Не ломайте единственный доступный маршрут.',
+    objectiveConfig:{protectedIds:['blue-5'],exits:[{x:12,y:3},{x:12,y:7}],required:1,roundLimit:14},unitNames:{'blue-5':'Савва, мастер мельницы'},
+    blue:squad('Мельничный дозор','shield','sword','archer','scout','engineer'),red:squad('Охрана рукава','spear','archer','sword'),
+    spawns:{blue:[{x:4,y:3},{x:4,y:4},{x:3,y:2},{x:3,y:7},{x:2,y:3}],red:[{x:9,y:3},{x:11,y:2},{x:9,y:7}]},lessonSteps:[],
+  },
+  {
+    id:'thaw_bells',map:'thaw_bells',title:'III · Три колокола',subtitle:'Контроль · три раздельных поста',introduced:'spear',objective:'control',target:2,
+    briefing:'Удержите любые два из трёх сигнальных постов два полных круга подряд. Если останется менее двух, серия сбросится. Победа над защитниками сама по себе не завершает задание.',
+    lesson:'Пять бойцов должны защитить три точки. Выдвигайте щит между постами, а быстрых бойцов направьте на дальние ступени.',
+    objectiveConfig:{roundLimit:16},blue:squad('Сигнальный дозор','shield','sword','archer','spear','scout'),red:squad('Караул колоколов','shield','archer','spear','scout'),
+    spawns:{blue:[{x:3,y:5},{x:3,y:3},{x:2,y:4},{x:3,y:7},{x:2,y:7}],red:[{x:8,y:5},{x:9,y:3},{x:9,y:7},{x:10,y:5}]},lessonSteps:[],
+  },
+  {
+    id:'thaw_ferry',map:'thaw_ferry',title:'IV · Паромная ночь',subtitle:'Эвакуация · двое на двух дорогах',introduced:'scout',objective:'evacuate',target:2,
+    briefing:'Выведите разведчика Мирона и мечника Олега к восточным выходам за 16 раундов. Оба должны выжить. После выхода боец больше не участвует в бою.',
+    lesson:'Один мост можно подорвать, поэтому не собирайте весь отряд на единственном переходе. Прикрытие держит путь до выхода обоих.',
+    objectiveConfig:{protectedIds:['blue-4','blue-5'],exits:[{x:13,y:2},{x:13,y:7}],required:2,roundLimit:16},unitNames:{'blue-4':'Олег, паромщик','blue-5':'Мирон, проводник'},
+    blue:squad('Паромный дозор','shield','archer','spear','sword','scout'),red:squad('Ночной заслон','sword','archer','engineer','scout'),
+    spawns:{blue:[{x:5,y:4},{x:4,y:2},{x:4,y:7},{x:2,y:7},{x:2,y:2}],red:[{x:9,y:2},{x:11,y:4},{x:9,y:7},{x:11,y:8}]},lessonSteps:[],
+  },
+  {
+    id:'thaw_quarry',map:'thaw_quarry',title:'V · Камень для воды',subtitle:'Разгром · бой на двух уступах',introduced:'archer',objective:'elimination',target:1,
+    briefing:'Победите всех бойцов, удерживающих каменоломню, за 16 раундов. Верхний уступ усиливает стрелков, но два лестничных подхода позволяют их обойти.',
+    lesson:'Инженер разрушает укрытие. Копьё бьёт через союзника. Толчок с уступа наносит урон от падения: точный результат показан заранее.',
+    objectiveConfig:{roundLimit:16},blue:squad('Каменный дозор','shield','archer','spear','scout','engineer'),red:squad('Артель вооружённой стражи','shield','archer','spear','engineer'),
+    spawns:{blue:[{x:3,y:3},{x:2,y:2},{x:3,y:6},{x:2,y:7},{x:2,y:5}],red:[{x:7,y:3},{x:9,y:2},{x:7,y:6},{x:9,y:6}]},lessonSteps:[],
+  },
+  {
+    id:'thaw_sluice',map:'thaw_sluice',title:'VI · Верхний затвор',subtitle:'Финал · командир у плотины',introduced:'sword',objective:'commander',target:1,
+    briefing:'Победите командира верхней плотины до конца 16 раунда. Ваш щитоносец-командир должен выжить. Два моста ведут к разным лестницам.',
+    lesson:'Золотой венец отмечает обоих командиров. Изолируйте вражеского щитоносца, не оставляя своего без прикрытия. Победа завершает вторую кампанию.',
+    objectiveConfig:{roundLimit:16},blue:squad('Дозор оттепели','shield','sword','archer','spear','scout'),red:squad('Стража верхней плотины','shield','archer','spear','sword'),
+    spawns:{blue:[{x:6,y:5},{x:6,y:3},{x:5,y:4},{x:6,y:8},{x:5,y:8}],red:[{x:11,y:5},{x:13,y:3},{x:11,y:8},{x:10,y:3}]},lessonSteps:[],
+  },
 ];
 
 export function getCampaignMission(id: string): CampaignMission | undefined { return CAMPAIGN_MISSIONS.find(m => m.id === id); }

@@ -32,7 +32,7 @@ describe('campaign graph and consequential routes',()=>{
   });
   it('gives distinct shared aftermaths and epilogues while retaining the six scene identities',()=>{
     for(const id of COMMON_MISSIONS)expect(storyScene(id,'intro')).toBeDefined();for(const id of ['evacuation','summit'])for(const phase of ['intro','outro'] as const)expect(storyScene(id,phase,{route:'caravan'})!.lines).not.toEqual(storyScene(id,phase,{route:'granary'})!.lines);
-    expect(CAMPAIGN_MISSIONS).toHaveLength(10);
+    expect(CAMPAIGN_MISSIONS.filter(m=>!m.id.startsWith('thaw_'))).toHaveLength(10);
   });
   it('shows the branch picker and nine mission count, never the opposite branch as next',()=>{
     expect(campaignScreenHTML(common(),5)).toContain('data-campaign-route="caravan"');expect(campaignScreenHTML(common(),5)).toContain('/ 9');

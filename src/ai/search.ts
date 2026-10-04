@@ -5,6 +5,8 @@ export interface SearchAdapter<S, A> {
   candidates(state: S): readonly A[];
   apply(state: S, action: A): S;
   evaluate(state: S): number;
+  /** Visible tactical costs not represented by the resulting board (consumed hazards). */
+  actionCost?(state: S, action: A, next: S): number;
   key(action: A): string;
   isTerminal(state: S): boolean;
   isEndTurn(action: A): boolean;
@@ -30,8 +32,9 @@ export function searchAction<S, A>(
   const base = adapter.evaluate(state);
   const ranked = choices.map(action => {
     const next = adapter.apply(state, action);
-    const delta = adapter.evaluate(next) - base;
-    return { action, next, delta, key: adapter.key(action) };
+    const cost = adapter.actionCost?.(state, action, next) ?? 0;
+    const delta = adapter.evaluate(next) - base - cost;
+    return { action, next, delta, cost, key: adapter.key(action) };
   });
   ranked.sort((a, b) => b.delta - a.delta || a.key.localeCompare(b.key));
 
@@ -51,7 +54,8 @@ export function searchAction<S, A>(
       const replies = adapter.candidates(entry.next);
       for (const reply of replies) {
         if (adapter.isEndTurn(reply)) continue;
-        const follow = adapter.evaluate(adapter.apply(entry.next, reply)) - base;
+        const next = adapter.apply(entry.next, reply);
+        const follow = adapter.evaluate(next) - base - entry.cost - (adapter.actionCost?.(entry.next, reply, next) ?? 0);
         score = Math.max(score, follow * 0.93);
       }
     }

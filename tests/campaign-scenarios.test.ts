@@ -14,8 +14,8 @@ describe('campaign scenario objectives',()=>{
     target.hp=1;expect(previewAction(s,command).objectiveProgress).toBeUndefined();expect(applyAction(s,command).winner).toBe('red');
   });
   it('authors four distinct legal deployments with existing classes',()=>{
-    expect(CAMPAIGN_MISSIONS.slice(6).map(m=>m.id)).toEqual(['caravan','granary','evacuation','summit']);
-    for(const m of CAMPAIGN_MISSIONS.slice(6)) {
+    expect(CAMPAIGN_MISSIONS.slice(6,10).map(m=>m.id)).toEqual(['caravan','granary','evacuation','summit']);
+    for(const m of CAMPAIGN_MISSIONS.slice(6,10)) {
       expect(validateBlueprint(m.blue,{minUnits:1})).toEqual([]);expect(validateBlueprint(m.red,{minUnits:1})).toEqual([]);
       const s=createGame({map:m.map,mission:m.id,mode:'ai'});
       expect(new Set(s.units.map(u=>`${u.x},${u.y}`)).size).toBe(s.units.length);

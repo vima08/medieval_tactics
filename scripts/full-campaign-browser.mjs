@@ -5,9 +5,9 @@ import {homedir} from 'node:os';
 import {registerHooks} from 'node:module';
 registerHooks({resolve(specifier,context,nextResolve){if(specifier.startsWith('.')&&!/\.[cm]?[jt]s$/.test(specifier)){try{return nextResolve(`${specifier}.ts`,context)}catch{}try{return nextResolve(`${specifier}/index.ts`,context)}catch{}}return nextResolve(specifier,context)}});
 const {createGame,applyAction,CAMPAIGN_MISSIONS}=await import('../src/engine/index.ts');
-const routeName=process.argv[2]??'caravan';if(!['caravan','granary'].includes(routeName))throw Error('Invalid route');
+const routeName=process.argv[2]??'caravan';if(!['caravan','granary','thaw'].includes(routeName))throw Error('Invalid route');
 const language=process.argv[3]??'ru';if(!['ru','en'].includes(language))throw Error('Invalid language');
-const missions=CAMPAIGN_MISSIONS.filter(m=>!['caravan','granary'].includes(m.id)||m.id===routeName);
+const missions=routeName==='thaw'?CAMPAIGN_MISSIONS.slice(10):CAMPAIGN_MISSIONS.slice(0,10).filter(m=>!['caravan','granary'].includes(m.id)||m.id===routeName);
 let browser;try{browser=await chromium.launch({headless:true})}catch{browser=await chromium.launch({headless:true,executablePath:join(homedir(),'AppData/Local/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-win64/chrome-headless-shell.exe')})}
 const page=await browser.newPage({viewport:{width:1440,height:900}}),errors=[];
 page.on('pageerror',error=>errors.push(error.message));
@@ -21,19 +21,16 @@ async function issue(command,game){
   await page.locator(`[data-unit="${command.unitId}"]`).click();
   if(command.type==='undo'){await page.locator('#undo').click();return}
   if(command.type==='attack'||command.type==='ability')await page.locator(`[data-action="${command.type}"]`).click();
-  const box=await page.locator('#board').boundingBox(),w=game.map.width,h=game.map.height,zoom=w>=16?1.14:w<=9?1.6:1.35;
-  const size=Math.min(62,Math.max(39,box.width/(w*1.7)))*zoom,tile=game.map.tiles[command.y*w+command.x];
-  const target=game.units.find(u=>u.alive&&u.x===command.x&&u.y===command.y);
-  const x=box.x+box.width/2+(command.x-command.y-(w-h)/2)*size*.5,y=box.y+box.height*.48+(w>=16?20:5)+(command.x+command.y-(w+h)/2)*size*.24-tile.h*size*.21;
-  const offsets=target?[[0,-.5],[0,-.6],[0,0],[-.22,-.5],[.22,-.5],[0,-.68],[-.25,-.65],[.25,-.65],[-.25,.12],[.25,.12]]:[[0,0],[-.38,0],[.38,0],[0,-.18],[0,.18],[-.47,0],[.47,0],[-.2,.14],[.2,.14],[0,.24]];
-  for(const [dx,dy]of offsets){await page.mouse.move(x+dx*size,y+dy*size);const coordinate=await page.locator('#help strong').first().textContent();if(coordinate===`${command.x+1}:${command.y+1}`){await page.mouse.click(x+dx*size,y+dy*size);return}}
-  await page.keyboard.down('Alt');
-  try{for(const [dx,dy]of [[0,0],[-.38,0],[.38,0],[0,-.18],[0,.18]]){await page.mouse.move(x+dx*size,y+dy*size);const coordinate=await page.locator('#help strong').first().textContent();if(coordinate===`${command.x+1}:${command.y+1}`){await page.mouse.click(x+dx*size,y+dy*size);return}}}finally{await page.keyboard.up('Alt')}
-  await page.screenshot({path:`workbench/campaign-full-shots/${routeName}/campaign-picking-failure.png`});throw new Error(`Cannot target visible cell ${command.x}:${command.y} command=${JSON.stringify(command)} mission=${game.campaignMission} history=${game.history.length}`);
+  await page.keyboard.press('Home');const unit=game.units.find(u=>u.id===command.unitId);
+  for(let i=0;i<Math.abs(command.x-unit.x);i++)await page.keyboard.press(command.x>unit.x?'ArrowRight':'ArrowLeft');
+  for(let i=0;i<Math.abs(command.y-unit.y);i++)await page.keyboard.press(command.y>unit.y?'ArrowDown':'ArrowUp');
+  const fragile=command.type==='attack'&&game.map.tiles[command.y*game.map.width+command.x].object==='fragile';
+  if(fragile)await page.keyboard.down('Shift');
+  try{await page.keyboard.press('Enter')}finally{if(fragile)await page.keyboard.up('Shift')}
 }
 try{
-  await page.goto('http://game.test/');await page.locator('#campaign').click();
-  if(await page.locator('.chapter:disabled').count()!==9)throw new Error('Initial mission locks wrong');
+  await page.goto('http://game.test/');await page.locator('#campaign').click();await page.locator(`[data-campaign-id="${routeName==='thaw'?'thaw':'embers'}"]`).click();
+  if(await page.locator('.chapter:disabled').count()!== (routeName==='thaw'?5:9))throw new Error('Initial mission locks wrong');
   await page.screenshot({path:`workbench/campaign-full-shots/${routeName}/campaign-map.png`});
   await page.locator('#campaign-start').click();await readScene();await page.screenshot({path:`workbench/campaign-full-shots/${routeName}/campaign-ford.png`});
   // Restore the first mission through the public Continue flow.
@@ -58,15 +55,18 @@ try{
     await page.locator('[data-modal="campaign-story"]').click();await readScene();
     if(index<missions.length-1){if(mission.id==='kiln')await page.locator(`[data-campaign-route="${routeName}"]`).click();const next=CAMPAIGN_MISSIONS.findIndex(m=>m.id===missions[index+1].id);await page.locator(`[data-mission="${next}"]`).click();await page.locator('#campaign-start').click();await readScene();await page.screenshot({path:`workbench/campaign-full-shots/${routeName}/campaign-${missions[index+1].id}.png`})}
   }
-  const progress=await page.evaluate(()=>JSON.parse(localStorage.getItem('ab-campaign')));if(progress.completed.length!==9||progress.route!==routeName)throw new Error('Campaign progress not completed');
+  const progress=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),routeName==='thaw'?'ab-campaign-thaw':'ab-campaign');if(progress.completed.length!==(routeName==='thaw'?6:9)||(routeName!=='thaw'&&progress.route!==routeName))throw new Error('Campaign progress not completed');
   await page.screenshot({path:`workbench/campaign-full-shots/${routeName}/campaign-complete.png`});
   // Real movement onto a visible trap, with actual simulation and visible source.
   const trapGame=createGame({map:'marsh',mode:'ai',mission:'marsh'}),scout=trapGame.units.find(u=>u.team==='blue'&&u.archetype==='scout');
+  // Isolated trap/restart fixture: unlock its first-campaign mission explicitly.
+  // The six earned Thaw victories above remain in their separate storage.
+  if(routeName==='thaw')await page.evaluate(()=>localStorage.setItem('ab-campaign',JSON.stringify({version:2,completed:['ford','watch','steps','gate'],route:null})));
   await page.evaluate(s=>localStorage.setItem('ab-save',JSON.stringify(s)),trapGame);await page.reload();await page.locator('#continue').click();
   const trapCommand={type:'move',unitId:scout.id,x:4,y:6};await issue(trapCommand,trapGame);await page.waitForTimeout(100);await page.screenshot({path:`workbench/campaign-full-shots/${routeName}/damage-trap-source.png`});
   const after=await saved();if(after.units.find(u=>u.id===scout.id).hp!==scout.hp-2)throw new Error('Trap did not deal expected damage');
   await page.locator('#pause').click();await page.locator('[data-modal="restart"]').click();await readScene();if((await saved()).campaignMission!=='marsh'||(await saved()).history.length!==0)throw new Error('Campaign restart wrong');
-  const story=await page.evaluate(()=>JSON.parse(localStorage.getItem('ab-story')));if(story.seen.filter(id=>!id.endsWith(':defeat')).length!==18)throw Error('Narrative arc incomplete');
+  const story=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),routeName==='thaw'?'ab-story-thaw':'ab-story');if(story.seen.filter(id=>!id.endsWith(':defeat')).length!==(routeName==='thaw'?12:18))throw Error('Narrative arc incomplete');
   const report={route:routeName,language,summaries,completed:progress.completed,story,trapDamage:2,errors};await writeFile(`workbench/campaign-full-${routeName}${language==='en'?'-en':''}.json`,JSON.stringify(report,null,2));console.log(JSON.stringify(report));
 }finally{await browser.close()}
 if(errors.length)process.exitCode=1;

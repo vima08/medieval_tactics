@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { translate, localizedHTML } from '../src/i18n';
 import { ENGLISH } from '../src/localization/en';
 import { howToHTML } from '../src/how-to';
-import { campaignScreenHTML, campaignLessonHTML, campaignResultHTML, renderNewCampaignConfirmation, renderCampaignRouteChoice } from '../src/campaign-ui';
+import { campaignScreenHTML, campaignLessonHTML, campaignResultHTML, renderNewCampaignConfirmation, renderCampaignRouteChoice, campaignSelectionHTML } from '../src/campaign-ui';
 import { scenarioObjectiveHTML } from '../src/campaign-objective-ui';
 import { CAMPAIGN_MISSIONS, createGame, ARCHETYPES, VARIANTS, MODIFIERS, ARTIFACTS } from '../src/engine';
 import { restoreCampaignProgress } from '../src/campaign-progress';
@@ -35,9 +35,14 @@ describe('English presentation catalog', () => {
     expect(JSON.stringify({ ARCHETYPES, VARIANTS, MODIFIERS, ARTIFACTS })).toBe(before);
   });
   it('translates the complete rules guide, including prose interrupted by inline markup', () => {
-    englishOnly(howToHTML());
+    const html=englishOnly(howToHTML());
+    expect(html).toContain('Home returns the aim');
+    expect(html).toContain('Ctrl + Enter always ends the turn');
+    expect(html).toContain("Each mission's deadline");
+    expect(translate('Пройдено: 2 / 6 · Продолжить бой','en')).toBe('Completed: 2 / 6 · Continue battle');
   });
-  it('translates the actual novel shell, log, unanswered choice and final navigation in all thirty scenes', () => {
+  it('translates the actual novel shell, log, unanswered choice and final navigation in all forty-eight scenes', () => {
+    expect(STORY_MISSIONS).toHaveLength(16);
     for (const mission of STORY_MISSIONS) for (const phase of ['intro','outro','defeat'] as const) {
       const scene=storyScene(mission,phase,{},'en')!;
       const indices=new Set([0,scene.lines.length-1,...scene.lines.flatMap((line,index)=>line.choice?[index]:[])]);
@@ -48,19 +53,25 @@ describe('English presentation catalog', () => {
     }
   });
   it('translates every campaign briefing, lesson, result, reset, and route choice', () => {
+    expect(CAMPAIGN_MISSIONS).toHaveLength(16);
     const progress = restoreCampaignProgress(null);
+    englishOnly(campaignSelectionHTML());
     for (let index = 0; index < CAMPAIGN_MISSIONS.length; index++) {
-      englishOnly(campaignScreenHTML(progress, index));
+      const missionProgress=restoreCampaignProgress(null,CAMPAIGN_MISSIONS[index].id.startsWith('thaw_')?'thaw':'embers');
+      englishOnly(campaignScreenHTML(missionProgress, index));
       const state = createGame({ mission: CAMPAIGN_MISSIONS[index].id, map: CAMPAIGN_MISSIONS[index].map, mode: 'ai' });
+      for(const text of [state.map.name,...Object.values(CAMPAIGN_MISSIONS[index].unitNames??{})])expect(translate(text,'en')).not.toMatch(cyrillic);
       const before = JSON.stringify(state);
       englishOnly(campaignLessonHTML(state));
-      englishOnly(campaignResultHTML({ ...state, winner: 'blue' }, progress));
-      englishOnly(campaignResultHTML({ ...state, winner: 'red' }, progress));
+      englishOnly(campaignResultHTML({ ...state, winner: 'blue' }, missionProgress));
+      englishOnly(campaignResultHTML({ ...state, winner: 'red' }, missionProgress));
       const objective = scenarioObjectiveHTML(state);
       if (objective) englishOnly(objective);
       expect(JSON.stringify(state)).toBe(before);
     }
     englishOnly(renderNewCampaignConfirmation());
+    englishOnly(renderNewCampaignConfirmation(restoreCampaignProgress(null,'thaw')));
+    englishOnly(campaignScreenHTML({version:2,completed:CAMPAIGN_MISSIONS.filter(m=>m.id.startsWith('thaw_')).map(m=>m.id),route:null,campaignId:'thaw'},15));
     englishOnly(renderCampaignRouteChoice({ ...progress, completed: CAMPAIGN_MISSIONS.slice(0, 6).map(m => m.id) }));
   });
   it('renders compound combat logs, preview consequences, and exits with identifiers and numbers intact', () => {

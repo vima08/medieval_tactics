@@ -36,7 +36,7 @@ export function drawPropSprite(ctx:CanvasRenderingContext2D,key:PropSprite,p:{x:
 
 export function terrainSprite(tile:Tile):PropSprite|undefined{
   if(tile.terrain==='bridge')return 'bridge';
-  if(tile.terrain==='stairs')return 'stairs';
+  // Stairs are drawn as terrain connecting two real heights, never as a prop on top.
   if(tile.terrain==='rubble')return 'rubble';
   return undefined;
 }

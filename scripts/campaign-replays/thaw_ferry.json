@@ -1,0 +1,447 @@
+{
+  "initial": {
+    "map": "thaw_ferry",
+    "mode": "ai",
+    "seed": 1,
+    "mission": "thaw_ferry",
+    "objective": "evacuate",
+    "blueprintA": {
+      "name": "Паромный дозор",
+      "units": [
+        {
+          "archetype": "shield",
+          "variant": ""
+        },
+        {
+          "archetype": "archer",
+          "variant": ""
+        },
+        {
+          "archetype": "spear",
+          "variant": ""
+        },
+        {
+          "archetype": "sword",
+          "variant": ""
+        },
+        {
+          "archetype": "scout",
+          "variant": ""
+        }
+      ]
+    },
+    "blueprintB": {
+      "name": "Ночной заслон",
+      "units": [
+        {
+          "archetype": "sword",
+          "variant": ""
+        },
+        {
+          "archetype": "archer",
+          "variant": ""
+        },
+        {
+          "archetype": "engineer",
+          "variant": ""
+        },
+        {
+          "archetype": "scout",
+          "variant": ""
+        }
+      ]
+    }
+  },
+  "commands": [
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 7,
+      "y": 7
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 4,
+      "y": 7
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-2",
+      "x": 9,
+      "y": 2
+    },
+    {
+      "type": "move",
+      "unitId": "blue-5",
+      "x": 3,
+      "y": 2
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 5,
+      "y": 2
+    },
+    {
+      "type": "attack",
+      "unitId": "blue-3",
+      "x": 9,
+      "y": 7
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 5,
+      "y": 2
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 4,
+      "y": 7
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-5",
+      "x": 5,
+      "y": 0
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-2",
+      "x": 8,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 6,
+      "y": 1
+    },
+    {
+      "type": "move",
+      "unitId": "red-4",
+      "x": 8,
+      "y": 7
+    },
+    {
+      "type": "ability",
+      "unitId": "red-4",
+      "x": 6,
+      "y": 7
+    },
+    {
+      "type": "ability",
+      "unitId": "red-2",
+      "x": 5,
+      "y": 2
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 8,
+      "y": 7
+    },
+    {
+      "type": "ability",
+      "unitId": "red-1",
+      "x": 6,
+      "y": 1
+    },
+    {
+      "type": "attack",
+      "unitId": "red-3",
+      "x": 7,
+      "y": 7
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-5",
+      "x": 1,
+      "y": 0
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 6,
+      "y": 7
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 6,
+      "y": 9
+    },
+    {
+      "type": "attack",
+      "unitId": "blue-2",
+      "x": 5,
+      "y": 7
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-5",
+      "x": 1,
+      "y": 2
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 5,
+      "y": 1
+    },
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 6,
+      "y": 2
+    },
+    {
+      "type": "attack",
+      "unitId": "blue-1",
+      "x": 6,
+      "y": 1
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 6,
+      "y": 9
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 8,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 4,
+      "y": 1
+    },
+    {
+      "type": "move",
+      "unitId": "red-2",
+      "x": 7,
+      "y": 2
+    },
+    {
+      "type": "attack",
+      "unitId": "red-1",
+      "x": 5,
+      "y": 1
+    },
+    {
+      "type": "attack",
+      "unitId": "red-3",
+      "x": 7,
+      "y": 7
+    },
+    {
+      "type": "ability",
+      "unitId": "red-2",
+      "x": 7,
+      "y": 7
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-2",
+      "x": 4,
+      "y": 1
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 4,
+      "y": 7
+    },
+    {
+      "type": "move",
+      "unitId": "blue-5",
+      "x": 4,
+      "y": 1
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-5",
+      "x": 2,
+      "y": 2
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 8,
+      "y": 8
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 8,
+      "y": 9
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 6,
+      "y": 1
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 6,
+      "y": 1
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 4,
+      "y": 7
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "red-2",
+      "x": 6,
+      "y": 1
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-5",
+      "x": 5,
+      "y": 1
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 8,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 8,
+      "y": 7
+    },
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 5,
+      "y": 2
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-2",
+      "x": 7,
+      "y": 2
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 6,
+      "y": 2
+    },
+    {
+      "type": "attack",
+      "unitId": "blue-1",
+      "x": 7,
+      "y": 2
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-5",
+      "x": 7,
+      "y": 2
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 8,
+      "y": 7
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-5",
+      "x": 12,
+      "y": 2
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 12,
+      "y": 7
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 6,
+      "y": 1
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 6,
+      "y": 1
+    },
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 5,
+      "y": 1
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 8,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 12,
+      "y": 7
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-5",
+      "x": 13,
+      "y": 2
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 13,
+      "y": 7
+    }
+  ]
+}

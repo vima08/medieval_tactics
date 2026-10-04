@@ -1,0 +1,247 @@
+{
+  "initial": {
+    "map": "thaw_dike",
+    "mode": "ai",
+    "seed": 1,
+    "mission": "thaw_dike",
+    "objective": "defend",
+    "blueprintA": {
+      "name": "Ремонтный дозор",
+      "units": [
+        {
+          "archetype": "shield",
+          "variant": ""
+        },
+        {
+          "archetype": "spear",
+          "variant": ""
+        },
+        {
+          "archetype": "archer",
+          "variant": ""
+        },
+        {
+          "archetype": "engineer",
+          "variant": ""
+        }
+      ]
+    },
+    "blueprintB": {
+      "name": "Сборщики воды",
+      "units": [
+        {
+          "archetype": "sword",
+          "variant": ""
+        },
+        {
+          "archetype": "spear",
+          "variant": ""
+        },
+        {
+          "archetype": "scout",
+          "variant": ""
+        }
+      ]
+    }
+  },
+  "commands": [
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 4,
+      "y": 2
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 8,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 2,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 5,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 6,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "red-2",
+      "x": 7,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "red-3",
+      "x": 3,
+      "y": 5
+    },
+    {
+      "type": "ability",
+      "unitId": "red-1",
+      "x": 6,
+      "y": 4
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 6,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 4,
+      "y": 5
+    },
+    {
+      "type": "attack",
+      "unitId": "blue-1",
+      "x": 3,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 2,
+      "y": 5
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-2",
+      "x": 3,
+      "y": 5
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-2",
+      "x": 5,
+      "y": 5
+    },
+    {
+      "type": "ability",
+      "unitId": "red-2",
+      "x": 4,
+      "y": 5
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 3,
+      "y": 2
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 5,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 4,
+      "y": 6
+    },
+    {
+      "type": "attack",
+      "unitId": "blue-4",
+      "x": 5,
+      "y": 5
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 3,
+      "y": 5
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-2",
+      "x": 4,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "red-2",
+      "x": 3,
+      "y": 4
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 3,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 4,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 2,
+      "y": 2
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 2,
+      "y": 3
+    },
+    {
+      "type": "attack",
+      "unitId": "blue-1",
+      "x": 4,
+      "y": 4
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "endTurn"
+    }
+  ]
+}

@@ -2,6 +2,7 @@
 import { unansweredChoice, type StoryProgress } from './story-progress';
 import { charactersForLanguage } from './story-data';
 import type { Language } from './i18n';
+import {getCampaign,missionCampaignId} from './campaign-registry';
 const escape=(s:string)=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
 export function storyHTML(progress:StoryProgress,reducedMotion:boolean,showLog=false,language:Language='ru'):string {
   const cursor=progress.cursor;if(!cursor)return '';
@@ -9,7 +10,7 @@ export function storyHTML(progress:StoryProgress,reducedMotion:boolean,showLog=f
   const decision=line.choice&&progress.choices[line.choice.id],reply=line.choice?.options.find(o=>o.value===decision)?.reply;
   return `<section class="novel ${reducedMotion?'still':''} ${line.effect??''}" data-ambience="${scene.ambience}" aria-label="Сюжетная сцена">
     <div class="novel-art" style="background-image:url('${import.meta.env.BASE_URL}story/${scene.art}-v1.png')"></div><div class="novel-vignette"></div><div class="novel-motes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-    <header class="novel-header"><div><span class="eyebrow">Огни под пеплом</span><h1>${escape(scene.title)}</h1><p>${escape(scene.place)}</p></div><div class="novel-header-actions"><button class="btn ghost" id="story-log" aria-expanded="${showLog}">Журнал</button><button class="btn ghost" id="story-settings">Звук</button><button class="btn ghost" id="story-menu">Меню</button></div></header>
+    <header class="novel-header"><div><span class="eyebrow">${getCampaign(missionCampaignId(cursor.mission)).title}</span><h1>${escape(scene.title)}</h1><p>${escape(scene.place)}</p></div><div class="novel-header-actions"><button class="btn ghost" id="story-log" aria-expanded="${showLog}">Журнал</button><button class="btn ghost" id="story-settings">Звук</button><button class="btn ghost" id="story-menu">Меню</button></div></header>
     <div class="novel-dialogue" style="--speaker-color:${character?.color??'#d6c798'}">
       <div class="novel-person"><div class="novel-seal ${line.speaker?'novel-portrait':''} ${line.effect==='impact'||cursor.phase==='defeat'?'tense':''}" ${line.speaker?`style="background-image:url('${import.meta.env.BASE_URL}story/portraits/${line.speaker}-${['vera','rada','tisa'].includes(line.speaker!)?'v2':'v1'}.png')"`:''} aria-hidden="true">${line.speaker?'':'✦'}</div><div><div class="novel-name">${escape(character?.name??'Хроника')}</div><div class="novel-role">${escape(character?.role??'Пограничная долина')}</div></div><div class="novel-caption"><span>${cursor.phase==='intro'?'До сражения':cursor.phase==='outro'?'После сражения':'Отступление'}</span><b>${cursor.index+1} / ${scene.lines.length}</b></div></div>
       <p class="novel-line" aria-live="polite">${escape(line.text)}</p>

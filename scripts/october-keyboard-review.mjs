@@ -1,0 +1,36 @@
+import {chromium} from '@playwright/test';
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {resolve,join} from 'node:path';
+import {homedir} from 'node:os';
+mkdirSync('workbench/october-review',{recursive:true});
+const browser=await chromium.launch({headless:true,executablePath:join(homedir(),'AppData/Local/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-win64/chrome-headless-shell.exe')});
+const page=await browser.newPage({viewport:{width:1440,height:900}}),errors=[],checks=[];
+page.on('pageerror',e=>errors.push(e.message));
+await page.route('**/*',route=>{const path=new URL(route.request().url()).pathname.replace(/^\/medieval_tactics\//,'/'),name=path==='/'?'index.html':path.slice(1);return route.fulfill({body:readFileSync(resolve('dist',name)),contentType:name.endsWith('.js')?'text/javascript':name.endsWith('.css')?'text/css':name.endsWith('.png')?'image/png':name.endsWith('.svg')?'image/svg+xml':'text/html'})});
+await page.addInitScript(()=>{localStorage.setItem('ab-volume','0');localStorage.setItem('ab-music-volume','0');const clear=CanvasRenderingContext2D.prototype.clearRect,move=CanvasRenderingContext2D.prototype.moveTo;CanvasRenderingContext2D.prototype.clearRect=function(...args){if(this.canvas.id==='board')window.__reviewPaths=[];return clear.apply(this,args)};CanvasRenderingContext2D.prototype.moveTo=function(x,y){if(this.canvas.id==='board'&&window.__reviewPaths?.length<8)window.__reviewPaths.push({x,y});return move.call(this,x,y)}});
+await page.goto('http://game.test/');await page.locator('#tutorial').click();await page.locator('[data-unit="blue-1"]').click();await page.keyboard.press('Home');await page.waitForTimeout(100);
+const saved=()=>page.evaluate(()=>localStorage.getItem('ab-save'));
+const path=()=>page.evaluate(()=>window.__reviewPaths[0]);
+const rawBefore=await saved(),origin=await path();
+await page.screenshot({path:'workbench/october-review/keyboard-camera-before.png'});
+for(const [key,dx,dy]of [['w',0,35],['a',35,0],['s',0,-35],['d',-35,0]]){
+ const before=await path();await page.keyboard.press(key);await page.waitForTimeout(80);const after=await path();
+ if(Math.abs(after.x-before.x-dx)>.01||Math.abs(after.y-before.y-dy)>.01)throw Error('Camera shift wrong: '+JSON.stringify({key,before,after}));
+ if(await saved()!==rawBefore)throw Error('Camera key mutated saved battle');
+ checks.push({key,visibleGeometryShift:{x:after.x-before.x,y:after.y-before.y},savedByteExact:true});
+ if(key==='w')await page.screenshot({path:'workbench/october-review/keyboard-camera-after-w.png'});
+}
+const returned=await path();if(returned.x!==origin.x||returned.y!==origin.y)throw Error('WASD loop did not restore camera');
+await page.keyboard.press('ArrowRight');const preview=await page.locator('#preview-panel').innerText(),aim=await page.locator('#help').innerText();
+if(!aim.startsWith('3:3')||!preview.includes('Стоимость 1')||await saved()!==rawBefore)throw Error('Arrow aim preview/state mismatch');
+await page.keyboard.press('Home');if(!(await page.locator('#help').innerText()).startsWith('2:3'))throw Error('Home did not center actor cell');
+await page.keyboard.press('ArrowRight');await page.keyboard.press('Enter');const moved=JSON.parse(await saved()),initial=JSON.parse(rawBefore),actor=moved.units.find(u=>u.id==='blue-1');
+if(actor.x!==2||actor.y!==2||moved.team!=='blue'||moved.history.length!==initial.history.length+1)throw Error('Enter must commit one move');
+await page.keyboard.press('u');const undone=JSON.parse(await saved());if(undone.units.find(u=>u.id==='blue-1').x!==1)throw Error('U did not restore move');
+checks.push({check:'Arrow/Home read-only targeting + Enter one move + U undo',pass:true});
+await page.screenshot({path:'workbench/october-review/keyboard-final-aim.png'});
+const endIndex=undone.history.length;await page.keyboard.press('Control+Enter');const ended=JSON.parse(await saved());
+if(ended.history[endIndex]?.type!=='endTurn')throw Error('CtrlEnter did not commit endTurn');
+checks.push({check:'CtrlEnter ends turn while cursor active',pass:true});
+const result={timestamp:new Date().toISOString(),artifact:readFileSync('dist/index.html','utf8').match(/index-[\w-]+\.js/)?.[0],checks,errors,method:'Canvas first board polygon moveTo measured actual geometry; screenshots verify field shift. Serialized state equality checks cover all camera and aim-only input.'};
+writeFileSync('workbench/october-review/final-keyboard.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result));await browser.close();if(errors.length)process.exitCode=1;

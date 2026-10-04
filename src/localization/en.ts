@@ -1,6 +1,79 @@
 /** Russian source text → English presentation. Longest phrases are matched first. */
 export const ENGLISH: Record<string, string> = Object.fromEntries(`
+Тактическое поле: стрелки выбирают клетку|Tactical field: arrow keys select a tile
+Пройдено:|Completed:
+перетаскивание / WASD|drag / WASD
+Стрелки выбирают клетку даже за бойцом. Home возвращает прицел к выбранному бойцу. Enter подтверждает приказ в прицеле; без прицела завершает ход. Ctrl + Enter всегда завершает ход. Подсветка и точный прогноз обновляются до подтверждения.|Arrow keys select a tile even behind a fighter. Home returns the aim to the selected fighter. Enter confirms the aimed order; when aiming is inactive, it ends the turn. Ctrl + Enter always ends the turn. Highlights and the exact preview update before confirmation.
+Срок каждого задания указан в панели цели; пропуск срока означает поражение. На Воротах даже уничтожение всех защитников не заменяет удержание двух точек. Точное условие всегда в панели цели.|Each mission's deadline is shown in the objective panel; missing it means defeat. At the Gates, defeating every defender does not replace holding two posts. The exact condition is always shown in the objective panel.
+⌖ Стрелки: клетка · Enter: подтвердить приказ · Ctrl+Enter: завершить ход · WASD: камера|⌖ Arrows: tile · Enter: confirm order · Ctrl+Enter: end turn · WASD: camera
+Стрелки: прицел · WASD: камера · H: все высоты|Arrows: aim · WASD: camera · H: all heights
+Выбрать кампанию|Choose a campaign
+Другие кампании|Other campaigns
+Провести защищённого бойца к выходу|Escort the protected fighter to an exit
+Защитить объект и бойца до конца налёта|Defend the site and fighter until the raid ends
+Вывести обоих бойцов через выход|Bring both fighters to an exit
+Продолжить бой|Continue battle
+Выберите кампанию|Choose your campaign
+Одиночная игра|Single player
+заданий|missions
+Дозор раскрывает продажу зимнего запаса. Девять заданий, шесть бойцов и выбор между спасением людей и семян.|The patrol uncovers the sale of winter stores. Nine missions, six classes, and a choice between saving people and seeds.
+Каждая история доступна сразу. Прогресс сохраняется отдельно.|Both stories are available immediately. Progress is saved separately.
+Открыть кампанию →|Open campaign →
+Колокола оттепели|Bells of the Thaw
+Шесть дней до посева|Six days before sowing
+Весенний паводок угрожает деревням. Проведите мастера к мельнице, удержите дамбу и решите, кто вправе распоряжаться водой.|Spring floods threaten the villages. Escort the craftsman to the mill, hold the dike, and decide who has the right to control the water.
+Прогресс оттепели и диалоги будут сброшены. Первая кампания останется без изменений.|Thaw campaign progress and dialogue will reset. The first campaign will remain unchanged.
+Вода снова идёт к полям. Все задания доступны для повторения.|Water is flowing to the fields again. All missions can be replayed.
+Старые задания можно повторить. Прогресс обеих кампаний сохраняется отдельно.|Previous missions can be replayed. Both campaigns save their progress separately.
+Глиняная дамба|Clay Dike
+Оборона · первый паводок|Defense · the first flood
+Удержите ворота дамбы четыре полных раунда и сохраните инженера Савву. Враг на воротах в конце красного хода означает поражение. Савве не обязательно стоять на воротах.|Hold the dike gate for four full rounds and keep the engineer Savva alive. An enemy at the gate at the end of Red's turn means defeat. Savva does not have to stand at the gate.
+Щит защищает соседей. Копьё держит второй ряд. Инженер может поставить ловушку, но она опасна и для своих.|The shield protects adjacent allies. The spear holds the second rank. The engineer can place a trap, but it threatens allies too.
+Савва, мастер дамбы|Savva, dike craftsman
+Ремонтный дозор|Repair patrol
+Сборщики воды|Water collectors
+Мельничный рукав|Mill Channel
+Сопровождение · два моста|Escort · two bridges
+Проведите Савву к любому восточному выходу за 14 раундов. Его гибель означает поражение. Хрупкий верхний мост короток; нижний путь даёт обход.|Escort Savva to either eastern exit within 14 rounds. His death means defeat. The fragile upper bridge is shorter; the lower path offers a detour.
+Мастер идёт вместе с отрядом. Выход отмечен стрелкой; достигнув его, Савва покинет бой. Не ломайте единственный доступный маршрут.|The craftsman moves with the squad. An arrow marks each exit; reaching it removes Savva from battle. Do not destroy the only available route.
+Савва, мастер мельницы|Savva, mill craftsman
+Мельничный дозор|Mill patrol
+Охрана рукава|Channel guards
+Три колокола|Three Bells
+Контроль · три раздельных поста|Control · three separate posts
+Удержите любые два из трёх сигнальных постов два полных круга подряд. Если останется менее двух, серия сбросится. Победа над защитниками сама по себе не завершает задание.|Hold any two of the three signal posts for two consecutive full rounds. Holding fewer than two resets your streak. Defeating the guards alone does not complete the mission.
+Пять бойцов должны защитить три точки. Выдвигайте щит между постами, а быстрых бойцов направьте на дальние ступени.|Five fighters must protect three posts. Move the shield between the posts and send the faster fighters to the distant steps.
+Сигнальный дозор|Signal patrol
+Караул колоколов|Bell watch
+Паромная ночь|Ferry Night
+Эвакуация · двое на двух дорогах|Evacuation · two people on two roads
+Выведите разведчика Мирона и мечника Олега к восточным выходам за 16 раундов. Оба должны выжить. После выхода боец больше не участвует в бою.|Bring the scout Miron and swordsman Oleg to the eastern exits within 16 rounds. Both must survive. After exiting, a fighter no longer participates in battle.
+Один мост можно подорвать, поэтому не собирайте весь отряд на единственном переходе. Прикрытие держит путь до выхода обоих.|One bridge can be destroyed, so do not gather the whole squad on a single crossing. Keep the route covered until both fighters exit.
+Олег, паромщик|Oleg, ferryman
+Паромный дозор|Ferry patrol
+Ночной заслон|Night blockade
+Камень для воды|Stone for Water
+Разгром · бой на двух уступах|Elimination · battle on two ledges
+Победите всех бойцов, удерживающих каменоломню, за 16 раундов. Верхний уступ усиливает стрелков, но два лестничных подхода позволяют их обойти.|Defeat every fighter holding the quarry within 16 rounds. The upper ledge strengthens ranged fighters, but two stair approaches let you flank them.
+Инженер разрушает укрытие. Копьё бьёт через союзника. Толчок с уступа наносит урон от падения: точный результат показан заранее.|The engineer destroys cover. The spear strikes through an ally. Pushing a target off a ledge deals fall damage: the exact result is previewed beforehand.
+Каменный дозор|Stone patrol
+Артель вооружённой стражи|Armed quarry guards
+Верхний затвор|Upper Sluice
+Финал · командир у плотины|Finale · commander at the dam
+Победите командира верхней плотины до конца 16 раунда. Ваш щитоносец-командир должен выжить. Два моста ведут к разным лестницам.|Defeat the upper dam commander by the end of round 16. Your shieldbearer commander must survive. Two bridges lead to different stairs.
+Золотой венец отмечает обоих командиров. Изолируйте вражеского щитоносца, не оставляя своего без прикрытия. Победа завершает вторую кампанию.|A golden crown marks both commanders. Isolate the enemy shieldbearer while keeping yours protected. Victory completes the second campaign.
+Дозор оттепели|Thaw patrol
+Стража верхней плотины|Upper dam guards
 Журнал|Journal
+полных раундов|full rounds
+Сохраните отмеченных защитников.|Keep the marked defenders alive.
+Провести мастера|Escort the craftsman
+Защитить дамбу|Defend the dike
+Победите командира ♛ за|Defeat the commander ♛ within
+раундов. Защитите своего командира.|rounds. Protect your own commander.
+Победите весь вражеский отряд за|Defeat the entire enemy squad within
+Цель за|Deadline:
+Если враг закончит ход на отмеченной клетке — поражение.|If an enemy ends their turn on the marked tile, you lose.
 Касание: выбор и прогноз · один палец: панорама · два пальца: масштаб · приказ: кнопка подтверждения|Tap: select and preview · one finger: pan · two fingers: zoom · order: Confirm button
 Сюжетная сцена|Story scene
 Касание кнопок · Enter / пробел: далее · ←: назад · Esc: меню|Tap the buttons · Enter / Space: next · ←: back · Esc: menu

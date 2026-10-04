@@ -1,0 +1,273 @@
+{
+  "initial": {
+    "map": "thaw_bells",
+    "mode": "ai",
+    "seed": 1,
+    "mission": "thaw_bells",
+    "objective": "control",
+    "blueprintA": {
+      "name": "Сигнальный дозор",
+      "units": [
+        {
+          "archetype": "shield",
+          "variant": ""
+        },
+        {
+          "archetype": "sword",
+          "variant": ""
+        },
+        {
+          "archetype": "archer",
+          "variant": ""
+        },
+        {
+          "archetype": "spear",
+          "variant": ""
+        },
+        {
+          "archetype": "scout",
+          "variant": ""
+        }
+      ]
+    },
+    "blueprintB": {
+      "name": "Караул колоколов",
+      "units": [
+        {
+          "archetype": "shield",
+          "variant": ""
+        },
+        {
+          "archetype": "archer",
+          "variant": ""
+        },
+        {
+          "archetype": "spear",
+          "variant": ""
+        },
+        {
+          "archetype": "scout",
+          "variant": ""
+        }
+      ]
+    }
+  },
+  "commands": [
+    {
+      "type": "move",
+      "unitId": "blue-2",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 4,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-5",
+      "x": 5,
+      "y": 7
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-5",
+      "x": 6,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 5,
+      "y": 7
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 3,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 4,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-2",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-4",
+      "x": 8,
+      "y": 7
+    },
+    {
+      "type": "ability",
+      "unitId": "red-2",
+      "x": 6,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 7,
+      "y": 5
+    },
+    {
+      "type": "attack",
+      "unitId": "red-1",
+      "x": 6,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 9,
+      "y": 8
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-3",
+      "x": 6,
+      "y": 5
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 9,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 7,
+      "y": 6
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-4",
+      "x": 7,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 5,
+      "y": 5
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 5,
+      "y": 5
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-2",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 9,
+      "y": 6
+    },
+    {
+      "type": "attack",
+      "unitId": "red-4",
+      "x": 7,
+      "y": 6
+    },
+    {
+      "type": "ability",
+      "unitId": "red-1",
+      "x": 7,
+      "y": 4
+    },
+    {
+      "type": "move",
+      "unitId": "red-4",
+      "x": 7,
+      "y": 5
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "blue-4",
+      "x": 8,
+      "y": 7
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-3",
+      "x": 7,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-1",
+      "x": 5,
+      "y": 5
+    },
+    {
+      "type": "move",
+      "unitId": "blue-1",
+      "x": 5,
+      "y": 4
+    },
+    {
+      "type": "ability",
+      "unitId": "blue-2",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "type": "endTurn"
+    },
+    {
+      "type": "move",
+      "unitId": "red-1",
+      "x": 8,
+      "y": 3
+    },
+    {
+      "type": "move",
+      "unitId": "red-3",
+      "x": 9,
+      "y": 3
+    },
+    {
+      "type": "ability",
+      "unitId": "red-4",
+      "x": 7,
+      "y": 3
+    },
+    {
+      "type": "ability",
+      "unitId": "red-1",
+      "x": 8,
+      "y": 3
+    },
+    {
+      "type": "endTurn"
+    }
+  ]
+}

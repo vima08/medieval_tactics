@@ -1,5 +1,5 @@
 import { ARCHETYPES } from '../engine/catalog';
-import { applyAction, legalMoves, previewAction } from '../engine';
+import { applyAction, legalMoves, previewAction, tileHazardDamage } from '../engine';
 import type { Command, GameState, Team, Unit } from '../engine/types';
 import { searchAction, type Difficulty } from './search';
 
@@ -169,6 +169,32 @@ export function aiCandidates(state: GameState): Command[] {
   return result;
 }
 
+/** Traps damage both armies. Consuming one never makes its damage disappear from planning. */
+export function visibleOrderCost(state:GameState,action:Command,next:GameState):number {
+  if(action.type==='endTurn'||action.type==='undo'||next.winner===state.team)return 0;
+  const unit=state.units.find(u=>u.id===action.unitId);if(!unit)return 0;
+  const p=previewAction(state,action);
+  let cost=0;
+  if(action.type==='move'||action.type==='ability'&&unit.archetype==='scout'){
+    const damage=p.hazardDamage??0;
+    cost+=damage*10+(damage>=unit.hp?80:0);
+  }
+  if(action.type==='ability'&&unit.archetype==='engineer'&&!p.tileChange){
+    const tile=next.map.tiles.find(t=>t.x===action.x&&t.y===action.y);
+    if(tile?.object==='trap'){
+      const friends=state.units.filter(u=>u.alive&&u.team===unit.team&&u.id!==unit.id);
+      const enemies=state.units.filter(u=>u.alive&&u.team!==unit.team);
+      const enemyDistance=Math.min(...enemies.map(u=>distance(u,action)),99);
+      const alliedTraffic=friends.some(u=>!u.moved&&distance(u,action)<=1);
+      const objectiveLane=state.objective.points.some(p=>distance(p,action)<=1)||(state.objective.exits??[]).some(p=>distance(p,action)<=1)||(state.objective.defendPoints??[]).some(p=>distance(p,action)<=1);
+      // A rearward trap wastes an activation; a trap in an ally's lane must offer real pressure.
+      cost+=enemyDistance>3?7:enemyDistance===1?-3:0;
+      if(alliedTraffic||objectiveLane)cost+=tileHazardDamage(tile)*4;
+    }
+  }
+  return cost;
+}
+
 export function chooseAiCommand(state: GameState, difficulty: Difficulty = 'normal'): Command | null {
   if (state.winner) return null;
   const side = state.team;
@@ -176,9 +202,21 @@ export function chooseAiCommand(state: GameState, difficulty: Difficulty = 'norm
   return searchAction(state, {
     candidates: aiCandidates,
     apply: (position, action) => applyAction(position, action),
+    actionCost: visibleOrderCost,
     evaluate: position => {
-      if (position.team !== side || position.winner) return evaluatePosition(position, side);
-      const now = evaluatePosition(position, side);
+      const allies=position.units.filter(u=>u.alive&&u.team===side),foes=position.units.filter(u=>u.alive&&u.team!==side);
+      const duel=position.objective.kind==='commander'&&allies.length===1&&foes.length===1?
+        -routeDistance(position,allies[0],[foes[0]])*1.5:0;
+      if (position.team !== side || position.winner) return evaluatePosition(position, side)+duel;
+      // Reward an unspent ally's actual attack after moving; mutual distance penalties
+      // otherwise cancel and make waiting look as good as closing a safe flank.
+      const ready=position.units.filter(u=>u.alive&&u.team===side&&!u.acted).reduce((sum,u)=>{
+        const best=Math.max(0,...position.units.filter(e=>e.alive&&e.team!==side).map(e=>{
+          const p=previewAction(position,{type:'attack',unitId:u.id,x:e.x,y:e.y});
+          return p.valid?(p.damage??0)+(p.killed?3:0)-(p.counterDamage??0):0;
+        }));return sum+best*1.4;
+      },0);
+      const now = evaluatePosition(position, side)+ready+duel;
       if (position.team !== 'red' || position.objective.kind !== 'control') return now;
       // Project the imminent round score for every candidate. Without this,
       // only endTurn pays the score cost and the AI burns actions to delay it.

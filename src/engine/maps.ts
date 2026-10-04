@@ -13,6 +13,7 @@ function terrain(x: number, y: number, tutorial: boolean): Tile {
   return { x, y, h, terrain: 'grass' };
 }
 export function makeMap(id: GameMap['id']): GameMap {
+  if(id.startsWith('thaw_'))return thawMap(id);
   if (id !== 'tutorial' && id !== 'highland') return campaignMap(id);
   const tutorial = id === 'tutorial';
   const width = tutorial ? 8 : 18;
@@ -37,6 +38,44 @@ export function makeMap(id: GameMap['id']): GameMap {
     for (const [x,y] of [[3,9],[14,9],[8,9],[9,9]]) put(x,y,{object:'objective'});
   }
   return map;
+}
+
+function thawMap(id:GameMap['id']):GameMap{
+  const specs:Record<string,[string,number,number]>={thaw_dike:['Глиняная дамба',12,9],thaw_mill:['Мельничный рукав',14,10],thaw_bells:['Три колокола',13,11],thaw_ferry:['Паромная ночь',14,10],thaw_quarry:['Камень для воды',12,10],thaw_sluice:['Верхний затвор',15,12]};
+  const [name,width,height]=specs[id];const tiles:Tile[]=[];
+  for(let y=0;y<height;y++)for(let x=0;x<width;x++)tiles.push({x,y,h:0,terrain:'grass'});
+  const put=(x:number,y:number,p:Partial<Tile>)=>Object.assign(tiles[y*width+x],p);
+  if(id==='thaw_dike'){
+    for(let x=0;x<width;x++)put(x,0,{terrain:'water'});
+    for(let x=2;x<=8;x++)put(x,2,{h:1,terrain:'stone'});
+    put(2,2,{terrain:'stairs'});put(8,2,{terrain:'stairs'});put(3,4,{object:'objective'});
+    put(5,4,{object:'cover',hp:2});put(5,6,{object:'cover',hp:2});put(7,5,{terrain:'rubble'});put(9,7,{object:'brazier'});
+  }else if(id==='thaw_mill'){
+    for(let y=0;y<height;y++)if(y!==3&&y!==7){put(6,y,{terrain:'water'});put(7,y,{terrain:'water'});}
+    for(const y of[3,7])for(const x of[6,7])put(x,y,{terrain:'bridge',object:'fragile',hp:2});
+    for(let x=9;x<=12;x++)for(let y=1;y<=3;y++)put(x,y,{h:1,terrain:'stone'});
+    put(9,3,{terrain:'stairs'});put(12,3,{object:'objective'});put(12,7,{object:'objective'});put(8,5,{object:'cover',hp:2});put(4,6,{object:'brazier'});
+  }else if(id==='thaw_bells'){
+    for(const [x,y]of[[4,3],[6,5],[8,7]]){put(x,y,{object:'objective',h:1,terrain:'stairs'});put(x,y-1,{h:1,terrain:'stone'});}
+    for(let y=0;y<height;y++)if(y!==3&&y!==5&&y!==7)put(6,y,{terrain:'water'});
+    put(6,3,{terrain:'bridge'});put(6,7,{terrain:'bridge'});put(5,8,{object:'cover',hp:2});put(7,2,{object:'cover',hp:2});
+  }else if(id==='thaw_ferry'){
+    for(let y=0;y<height;y++)if(y!==2&&y!==7)put(7,y,{terrain:'water'});
+    put(7,2,{terrain:'bridge',object:'fragile',hp:2});put(7,7,{terrain:'stone'});
+    for(let x=9;x<=11;x++)put(x,4,{h:1,terrain:'stone'});put(9,4,{terrain:'stairs'});put(11,4,{terrain:'stairs'});
+    put(13,2,{object:'objective'});put(13,7,{object:'objective'});put(9,6,{object:'cover',hp:2});put(5,3,{object:'brazier'});
+  }else if(id==='thaw_quarry'){
+    for(let x=4;x<=9;x++)for(let y=2;y<=6;y++)put(x,y,{h:x>=7?2:1,terrain:'stone'});
+    put(4,3,{terrain:'stairs'});put(4,6,{terrain:'stairs'});put(7,3,{terrain:'stairs'});put(7,6,{terrain:'stairs'});
+    put(5,4,{object:'cover',hp:2});put(8,4,{object:'cover',hp:2});put(6,7,{terrain:'rubble'});put(9,8,{object:'brazier'});
+  }else{
+    for(let y=0;y<height;y++)if(y!==3&&y!==8)put(7,y,{terrain:'water'});
+    put(7,3,{terrain:'bridge',object:'fragile',hp:2});put(7,8,{terrain:'bridge'});
+    for(let x=9;x<=13;x++)for(let y=2;y<=8;y++)put(x,y,{h:x>=11?2:1,terrain:'stone'});
+    for(const y of[3,8]){put(9,y,{terrain:'stairs'});put(11,y,{terrain:'stairs'});}
+    put(10,5,{object:'cover',hp:2});put(5,6,{object:'cover',hp:2});put(12,6,{object:'brazier'});
+  }
+  return{id,name,width,height,tiles};
 }
 
 /** Small authored dioramas: each has a fast central contact and a safer flank. */
